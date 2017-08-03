@@ -1,0 +1,20 @@
+# Deployment Target
+platform :ios, '8.0'
+
+# Add pods as frameworks so we could add obj-c and swift 3.0 pods
+use_frameworks!
+
+
+target 'ObjectMapperAdditions_Example' do
+    pod 'APExtensions', '~> 3.0'
+    pod 'ObjectMapper'
+    pod 'ObjectMapper+Realm'
+    pod 'ObjectMapperAdditions', :path => '../'
+
+    target 'ObjectMapperAdditions_Tests' do
+        inherit! :search_paths
+
+        pod 'Quick'
+        pod 'Nimble'
+    end
+end
