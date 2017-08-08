@@ -2,8 +2,8 @@
 //  ObjectMapperAdditionsRealm.h
 //  ObjectMapperAdditionsRealm
 //
-//  Created by mac-246 on 8/8/17.
-//
+//  Created by Anton Plebanovich on 8/8/17.
+//  Copyright © 2017 Anton Plebanovich. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
