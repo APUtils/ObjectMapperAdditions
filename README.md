@@ -1,9 +1,10 @@
 # ObjectMapperAdditions
 
-[![CI Status](http://img.shields.io/travis/anton-plebanovich/ObjectMapperAdditions.svg?style=flat)](https://travis-ci.org/anton-plebanovich/ObjectMapperAdditions)
+[![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 [![Version](https://img.shields.io/cocoapods/v/ObjectMapperAdditions.svg?style=flat)](http://cocoapods.org/pods/ObjectMapperAdditions)
 [![License](https://img.shields.io/cocoapods/l/ObjectMapperAdditions.svg?style=flat)](http://cocoapods.org/pods/ObjectMapperAdditions)
 [![Platform](https://img.shields.io/cocoapods/p/ObjectMapperAdditions.svg?style=flat)](http://cocoapods.org/pods/ObjectMapperAdditions)
+[![CI Status](http://img.shields.io/travis/anton-plebanovich/ObjectMapperAdditions.svg?style=flat)](https://travis-ci.org/anton-plebanovich/ObjectMapperAdditions)
 
 - Adds simple calls to include NULL values in output JSON.
 - Adds ability to simply type cast JSON values to specified type.
@@ -14,6 +15,20 @@
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
 ## Installation
+
+#### Carthage
+
+Please check [official guide](https://github.com/Carthage/Carthage#if-youre-building-for-ios-tvos-or-watchos)
+
+Cartfile:
+
+```
+github "APUtils/ObjectMapperAdditions"
+```
+
+If you do not need Realm part, add those frameworks: `ObjectMapperAdditions`, `ObjectMapper`.
+
+If you are going to use Realm part, add those frameworks: `ObjectMapperAdditions`, `ObjectMapperAdditionsRealm`, `ObjectMapper`, `Realm`, `RealmSwift`, `RealmAdditions`.
 
 #### CocoaPods
 

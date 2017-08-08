@@ -1,29 +1,31 @@
 PODS:
-  - APExtensions (3.0.0)
+  - APExtensions (3.4.0):
+    - APExtensions/ViewState (= 3.4.0)
+  - APExtensions/ViewState (3.4.0)
   - Nimble (7.0.1)
   - ObjectMapper (2.2.8)
   - ObjectMapper+Realm (0.3):
     - ObjectMapper
     - RealmSwift
-  - ObjectMapperAdditions (2.0.0):
-    - ObjectMapper (~> 2.2)
-    - ObjectMapperAdditions/Core (= 2.0.0)
-    - ObjectMapperAdditions/Realm (= 2.0.0)
-  - ObjectMapperAdditions/Core (2.0.0):
-    - ObjectMapper (~> 2.2)
-  - ObjectMapperAdditions/Realm (2.0.0):
-    - ObjectMapper (~> 2.2)
+  - ObjectMapperAdditions (2.0.3):
+    - ObjectMapper (~> 2)
+    - ObjectMapperAdditions/Core (= 2.0.3)
+    - ObjectMapperAdditions/Realm (= 2.0.3)
+  - ObjectMapperAdditions/Core (2.0.3):
+    - ObjectMapper (~> 2)
+  - ObjectMapperAdditions/Realm (2.0.3):
+    - ObjectMapper (~> 2)
     - ObjectMapperAdditions/Core
     - RealmAdditions
     - RealmSwift
   - Quick (1.1.0)
-  - Realm (2.9.0):
-    - Realm/Headers (= 2.9.0)
-  - Realm/Headers (2.9.0)
-  - RealmAdditions (1.0.0):
+  - Realm (2.9.1):
+    - Realm/Headers (= 2.9.1)
+  - Realm/Headers (2.9.1)
+  - RealmAdditions (1.0.2):
     - RealmSwift (~> 2)
-  - RealmSwift (2.9.0):
-    - Realm (= 2.9.0)
+  - RealmSwift (2.9.1):
+    - Realm (= 2.9.1)
 
 DEPENDENCIES:
   - APExtensions (~> 3.0)
@@ -35,19 +37,19 @@ DEPENDENCIES:
 
 EXTERNAL SOURCES:
   ObjectMapperAdditions:
-    :path: "../"
+    :path: ../
 
 SPEC CHECKSUMS:
-  APExtensions: df11322fd2d297a514fb4f23427ba4515d93a68b
+  APExtensions: 93c0c307c7dc3ccc6fa9d0aaeaf631b80b392207
   Nimble: 657d000e11df8aebe27cdaf9d244de7f30ed87f7
   ObjectMapper: 3d571bb5af471c779e1160828cd9ad5c4ef90958
   ObjectMapper+Realm: 98992926f775a4fdf1c025541b97c78119f15b8a
-  ObjectMapperAdditions: 73d125ac73bdcde14a74c7d121e9e58d9c2d435f
+  ObjectMapperAdditions: fe821d6a40640811f023eb823b1a9ad260f135fc
   Quick: dafc587e21eed9f4cab3249b9f9015b0b7a7f71d
-  Realm: f14ab1673502559cb16592ddb8f383c474c13e05
-  RealmAdditions: 59760066406c30426b9f759e923fc2035aec8208
-  RealmSwift: 16ad2c187042c4934f49750375582fe508627dcb
+  Realm: f91fb43bd474c4f731a116ebf7392c75dd015920
+  RealmAdditions: 0071b3ca36538b827f952ee6c9a727624a2c68ed
+  RealmSwift: 207f12a4a36b696c5183c60a1c06d70234a23e56
 
 PODFILE CHECKSUM: a4ce8d6b3abb77cdb17bc738462b377b8c5c4e2b
 
-COCOAPODS: 1.2.1
+COCOAPODS: 1.3.1

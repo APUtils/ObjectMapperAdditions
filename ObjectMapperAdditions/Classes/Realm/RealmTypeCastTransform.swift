@@ -10,6 +10,10 @@ import RealmSwift
 import RealmAdditions
 import ObjectMapper
 
+#if !COCOAPODS
+    import ObjectMapperAdditions
+#endif
+
 
 /// Transforms Swift Arrays to Realm Arrays. E.g. [String] to List<RealmString>.
 /// It supports Int, Double, Bool and String types.

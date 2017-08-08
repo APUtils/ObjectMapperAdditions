@@ -2,6 +2,12 @@
 All notable changes to this project will be documented in this file.
 `ObjectMapperAdditions` adheres to [Semantic Versioning](http://semver.org/).
 
+## [2.0.0](https://github.com/APUtils/ObjectMapperAdditions/releases/tag/2.0.4)
+Released on 08/08/2017.
+
+#### Added
+- Carthage support
+
 ## [2.0.0](https://github.com/APUtils/ObjectMapperAdditions/releases/tag/2.0.0)
 Released on 07/28/2017.
 
