@@ -1,6 +1,6 @@
 //
 //  MyRealmModel.swift
-//  <#PROJECT_NAME#>
+//  ObjectMapperAdditions
 //
 //  Created by mac-246 on 07/27/17.
 //  Copyright © 2017 mac-246. All rights reserved.
@@ -15,9 +15,9 @@ import RealmAdditions
 
 
 public class MyRealmModel: Object, Mappable {
-    public dynamic var double: Double = 0
-    public dynamic var string: String?
-    public dynamic var myOtherRealmModel: MyOtherRealmModel?
+    @objc public dynamic var double: Double = 0
+    @objc public dynamic var string: String?
+    @objc public dynamic var myOtherRealmModel: MyOtherRealmModel?
     
     // Please take a note it's `var` and is not optional
     public var myOtherRealmModels: List<MyOtherRealmModel> = List<MyOtherRealmModel>()

@@ -10,13 +10,13 @@ PODS:
   - ObjectMapper+Realm (0.3):
     - ObjectMapper
     - RealmSwift
-  - ObjectMapperAdditions (2.0.3):
+  - ObjectMapperAdditions (3.0.0):
     - ObjectMapper (~> 2)
-    - ObjectMapperAdditions/Core (= 2.0.3)
-    - ObjectMapperAdditions/Realm (= 2.0.3)
-  - ObjectMapperAdditions/Core (2.0.3):
+    - ObjectMapperAdditions/Core (= 3.0.0)
+    - ObjectMapperAdditions/Realm (= 3.0.0)
+  - ObjectMapperAdditions/Core (3.0.0):
     - ObjectMapper (~> 2)
-  - ObjectMapperAdditions/Realm (2.0.3):
+  - ObjectMapperAdditions/Realm (3.0.0):
     - ObjectMapper (~> 2)
     - ObjectMapperAdditions/Core
     - RealmAdditions
@@ -47,7 +47,7 @@ SPEC CHECKSUMS:
   Nimble: 657d000e11df8aebe27cdaf9d244de7f30ed87f7
   ObjectMapper: 3d571bb5af471c779e1160828cd9ad5c4ef90958
   ObjectMapper+Realm: 98992926f775a4fdf1c025541b97c78119f15b8a
-  ObjectMapperAdditions: fe821d6a40640811f023eb823b1a9ad260f135fc
+  ObjectMapperAdditions: bbb6921b1fd92226809a09a02fdf709888d2b215
   Quick: dafc587e21eed9f4cab3249b9f9015b0b7a7f71d
   Realm: 98b3a25643cf6b3e07d2b99fb43fe0eb9c801dec
   RealmAdditions: 0071b3ca36538b827f952ee6c9a727624a2c68ed

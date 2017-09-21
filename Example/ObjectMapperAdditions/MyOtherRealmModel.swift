@@ -1,6 +1,6 @@
 //
 //  MyOtherRealmModel.swift
-//  <#PROJECT_NAME#>
+//  ObjectMapperAdditions
 //
 //  Created by mac-246 on 07/27/17.
 //  Copyright © 2017 mac-246. All rights reserved.
