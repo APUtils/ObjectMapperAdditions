@@ -6,7 +6,7 @@ use_frameworks!
 
 
 target 'ObjectMapperAdditions_Example' do
-    pod 'APExtensions', '~> 3.0'
+    pod 'APExtensions'
     pod 'ObjectMapper'
     pod 'ObjectMapper+Realm'
     pod 'ObjectMapperAdditions', :path => '../'

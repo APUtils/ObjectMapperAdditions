@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'ObjectMapperAdditions'
-  s.version          = '3.0.1'
+  s.version          = '3.0.2'
   s.summary          = 'ObjectMapper Extensions and Transforms'
 
 # This description is used to generate tags and improve search results.
@@ -39,7 +39,7 @@ Pod::Spec.new do |s|
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   s.frameworks = 'Foundation', 'UIKit'
-  s.dependency 'ObjectMapper', '~> 2'
+  s.dependency 'ObjectMapper'
 
   s.subspec 'Core' do |core|
     core.source_files = 'ObjectMapperAdditions/Classes/Core/**/*'
