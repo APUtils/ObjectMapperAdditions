@@ -28,8 +28,8 @@ PODS:
   - Realm (2.10.1):
     - Realm/Headers (= 2.10.1)
   - Realm/Headers (2.10.1)
-  - RealmAdditions (1.0.2):
-    - RealmSwift (~> 2)
+  - RealmAdditions (2.0.0):
+    - RealmSwift
   - RealmSwift (2.10.1):
     - Realm (= 2.10.1)
 
@@ -53,7 +53,7 @@ SPEC CHECKSUMS:
   ObjectMapperAdditions: 1a5837e5c116a6fbf1ea0518cfa9d36a83c30c44
   Quick: dafc587e21eed9f4cab3249b9f9015b0b7a7f71d
   Realm: fc7a317a5c2c9ba91f5f235ede4e2ea76e9eba0c
-  RealmAdditions: 0071b3ca36538b827f952ee6c9a727624a2c68ed
+  RealmAdditions: 2a2b59ad4186b4b3c2392d57e44320db7b907c8c
   RealmSwift: 505ed6c15942a2e76f5cfa78a8667cfa997ee75b
 
 PODFILE CHECKSUM: 1ecf833443c847fcd86247e5d9f0623760369e1f
