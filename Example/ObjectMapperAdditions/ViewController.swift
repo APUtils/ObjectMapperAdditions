@@ -21,10 +21,19 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         //-----------------------------------------------------------------------------
-        // MARK: - TimestampTransform
+        // MARK: - ISO8601Formatter
         //-----------------------------------------------------------------------------
         
         let date = Date()
+        let dateToDateString = ISO8601JustDateTransform().transformToJSON(date)!
+        let dateStringToDate = ISO8601JustDateTransform().transformFromJSON(dateToDateString)!
+        print("Date - \(date) to ISO8601 date string transform - \(dateToDateString)")
+        print("ISO8601 date string - \(dateToDateString) to date transform - \(dateStringToDate)")
+        
+        //-----------------------------------------------------------------------------
+        // MARK: - TimestampTransform
+        //-----------------------------------------------------------------------------
+        
         let dateToTimestamp = TimestampTransform().transformToJSON(date)!
         let timestampToDate = TimestampTransform().transformFromJSON(dateToTimestamp)!
         print("Date - \(date) to timestamp transform - \(dateToTimestamp)")

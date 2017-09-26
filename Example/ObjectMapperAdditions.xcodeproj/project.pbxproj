@@ -22,6 +22,7 @@
 		B0B644811F2A11FC00C3739E /* MyOtherRealmModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0B6447F1F2A11FC00C3739E /* MyOtherRealmModel.swift */; };
 		B0B644821F2A11FC00C3739E /* MyRealmModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0B644801F2A11FC00C3739E /* MyRealmModel.swift */; };
 		B0D3A0331F7A54E90062AD2B /* TimestampTransformSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D3A0311F7A54BC0062AD2B /* TimestampTransformSpec.swift */; };
+		B0D3A03A1F7A5D740062AD2B /* ISO8601JustDateTransformSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D3A0381F7A5D710062AD2B /* ISO8601JustDateTransformSpec.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,7 @@
 		B0B6447F1F2A11FC00C3739E /* MyOtherRealmModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyOtherRealmModel.swift; sourceTree = "<group>"; };
 		B0B644801F2A11FC00C3739E /* MyRealmModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyRealmModel.swift; sourceTree = "<group>"; };
 		B0D3A0311F7A54BC0062AD2B /* TimestampTransformSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimestampTransformSpec.swift; sourceTree = "<group>"; };
+		B0D3A0381F7A5D710062AD2B /* ISO8601JustDateTransformSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ISO8601JustDateTransformSpec.swift; sourceTree = "<group>"; };
 		C4D05D631BC1A7024D3C6249 /* .travis.yml */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = .travis.yml; path = ../.travis.yml; sourceTree = "<group>"; };
 		CC7012B6B5FC05C395C0B729 /* Pods-ObjectMapperAdditions_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ObjectMapperAdditions_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-ObjectMapperAdditions_Example/Pods-ObjectMapperAdditions_Example.release.xcconfig"; sourceTree = "<group>"; };
 		D46646B272B8B5A8181F666B /* .cocoadocs.yml */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = .cocoadocs.yml; path = ../.cocoadocs.yml; sourceTree = "<group>"; };
@@ -142,6 +144,7 @@
 			isa = PBXGroup;
 			children = (
 				607FACE91AFB9204008FA782 /* _Supporting Files */,
+				B0D3A0381F7A5D710062AD2B /* ISO8601JustDateTransformSpec.swift */,
 				B02194961F2BAE7B00E228EB /* RealmSpec.swift */,
 				B0D3A0311F7A54BC0062AD2B /* TimestampTransformSpec.swift */,
 				607FACEB1AFB9204008FA782 /* TypeCastSpec.swift */,
@@ -452,6 +455,7 @@
 			files = (
 				B02194981F2BAF3700E228EB /* RealmSpec.swift in Sources */,
 				B0D3A0331F7A54E90062AD2B /* TimestampTransformSpec.swift in Sources */,
+				B0D3A03A1F7A5D740062AD2B /* ISO8601JustDateTransformSpec.swift in Sources */,
 				607FACEC1AFB9204008FA782 /* TypeCastSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

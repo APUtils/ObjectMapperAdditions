@@ -8,7 +8,9 @@
 
 - Adds simple calls to include NULL values in output JSON.
 - Adds ability to simply type cast JSON values to specified type.
-- Adds ability to map Swift base type arrays into Realm arrays
+- Adds ability to map Swift base type arrays into Realm arrays.
+- Adds `TimestampTransform` to simply transform to/from UNIX timestamps.
+- Adds `ISO8601JustDateTransform` to simplty transform to/from ISO8601 **date** string. Because ObjectMapper's `ISO8601DateTransform` actually is **date and time** transform.
 
 ## Example
 
@@ -97,6 +99,15 @@ struct MyModel: Mappable {
 Right now there are 4 base type transforms you could use: `BoolTransform`, `DoubleTransform`, `IntTransform` and `StringTransform`. But for basic types it's easier to just use `TypeCastTransform` which will type cast to proper type automatically.
 
 Moreover this pod has extension to simplify creation of JSON with NULL values included from objects. Just call `.toJSON(shouldIncludeNilValues: true)` on `BaseMappable` object or array/set.
+
+Date transformers example usage:
+```swift
+// If date in timestamp format (1506423767)
+date <- (map["date"], TimestampTransform())
+
+// If date in ISO8601 full-date format (yyyy-MM-dd)
+date <- (map["date"], ISO8601JustDateTransform())
+```
 
 See example and tests projects for more details.
 
