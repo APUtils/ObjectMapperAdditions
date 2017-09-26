@@ -21,6 +21,16 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         //-----------------------------------------------------------------------------
+        // MARK: - TimestampTransform
+        //-----------------------------------------------------------------------------
+        
+        let date = Date()
+        let dateToTimestamp = TimestampTransform().transformToJSON(date)!
+        let timestampToDate = TimestampTransform().transformFromJSON(dateToTimestamp)!
+        print("Date - \(date) to timestamp transform - \(dateToTimestamp)")
+        print("Timestamp - \(dateToTimestamp) to date transform - \(timestampToDate)")
+        
+        //-----------------------------------------------------------------------------
         // MARK: - Type Cast Example
         //-----------------------------------------------------------------------------
         

@@ -2,6 +2,13 @@
 All notable changes to this project will be documented in this file.
 `ObjectMapperAdditions` adheres to [Semantic Versioning](http://semver.org/).
 
+## [3.0.4](https://github.com/APUtils/ObjectMapperAdditions/releases/tag/3.0.4)
+Released on 09/26/2017.
+
+#### Added
+- TimestampTransform. Transforms UNIX timestamp (aka POSIX timestamp or epoch) to/from Date.
+
+
 ## [3.0.1](https://github.com/APUtils/ObjectMapperAdditions/releases/tag/3.0.1)
 Released on 09/21/2017.
 
