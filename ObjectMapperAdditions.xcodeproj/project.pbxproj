@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B00F4EAB1F7A7608004F9676 /* TimestampTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00F4EA91F7A7608004F9676 /* TimestampTransform.swift */; };
+		B00F4EAC1F7A7608004F9676 /* ISO8601JustDateTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00F4EAA1F7A7608004F9676 /* ISO8601JustDateTransform.swift */; };
 		B0A073561F3A43D7001B8CC6 /* ObjectMapperAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = B0A073541F3A43D7001B8CC6 /* ObjectMapperAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B0A073651F3A43E9001B8CC6 /* BaseMappable+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A0735B1F3A43E9001B8CC6 /* BaseMappable+Additions.swift */; };
 		B0A073661F3A43E9001B8CC6 /* BoolTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A0735C1F3A43E9001B8CC6 /* BoolTransform.swift */; };
@@ -26,6 +28,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B00F4EA91F7A7608004F9676 /* TimestampTransform.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimestampTransform.swift; sourceTree = "<group>"; };
+		B00F4EAA1F7A7608004F9676 /* ISO8601JustDateTransform.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ISO8601JustDateTransform.swift; sourceTree = "<group>"; };
 		B0A073511F3A43D7001B8CC6 /* ObjectMapperAdditions.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ObjectMapperAdditions.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0A073541F3A43D7001B8CC6 /* ObjectMapperAdditions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ObjectMapperAdditions.h; sourceTree = "<group>"; };
 		B0A073551F3A43D7001B8CC6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -107,8 +111,10 @@
 				B0A0735C1F3A43E9001B8CC6 /* BoolTransform.swift */,
 				B0A0735D1F3A43E9001B8CC6 /* DoubleTransform.swift */,
 				B0A0735E1F3A43E9001B8CC6 /* IntTransform.swift */,
+				B00F4EAA1F7A7608004F9676 /* ISO8601JustDateTransform.swift */,
 				B0A0735F1F3A43E9001B8CC6 /* ObjectMapper+Additions.swift */,
 				B0A073601F3A43E9001B8CC6 /* StringTransform.swift */,
+				B00F4EA91F7A7608004F9676 /* TimestampTransform.swift */,
 				B0A073611F3A43E9001B8CC6 /* TypeCastTransform.swift */,
 			);
 			name = Core;
@@ -264,7 +270,9 @@
 			files = (
 				B0A073681F3A43E9001B8CC6 /* IntTransform.swift in Sources */,
 				B0A073661F3A43E9001B8CC6 /* BoolTransform.swift in Sources */,
+				B00F4EAC1F7A7608004F9676 /* ISO8601JustDateTransform.swift in Sources */,
 				B0A073671F3A43E9001B8CC6 /* DoubleTransform.swift in Sources */,
+				B00F4EAB1F7A7608004F9676 /* TimestampTransform.swift in Sources */,
 				B0A0736B1F3A43E9001B8CC6 /* TypeCastTransform.swift in Sources */,
 				B0A0736A1F3A43E9001B8CC6 /* StringTransform.swift in Sources */,
 				B0A073691F3A43E9001B8CC6 /* ObjectMapper+Additions.swift in Sources */,
