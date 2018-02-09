@@ -60,7 +60,6 @@ Example model:
 
 ``` swift
 import Foundation
-import APExtensions
 import ObjectMapper
 import ObjectMapperAdditions
 
@@ -161,9 +160,9 @@ class MyRealmModel: Object, Mappable {
 }
 ```
 
-Swift arrays cast to realm arrays this way: `[String]` -> `List<RealmString>`, `[Int]` -> `List<RealmInt>`, `[Double]` -> `List<RealmDouble>`, `[Bool]` -> `List<RealmBool>`.
+Swift arrays cast to realm arrays this way: `[String]` -> `List<String>`, `[Int]` -> `List<String>`, `[Double]` -> `List<Double>`, `[Bool]` -> `List<Bool>`, etc.
 
-**Be sure to check that properties of type `List` are not dynamic and not optional. Also despite of they defined as `var` they should be handled as a constants. Use `.removeAll()` and `append(objectsIn:)` methods to change `List` content**
+**Be sure to check that properties of type `List` are not dynamic and not optional. Also despite of they defined as `var` they should be handled as constants if model is added to Realm. Use `.removeAll()` and `append(objectsIn:)` methods to change `List` content**
 
 See example and tests projects for more details.
 
