@@ -21,7 +21,6 @@
 		B0A0737B1F3A4525001B8CC6 /* RealmTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A073631F3A43E9001B8CC6 /* RealmTransform.swift */; };
 		B0A073801F3A4835001B8CC6 /* ObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0A0737E1F3A482F001B8CC6 /* ObjectMapper.framework */; };
 		B0A073841F3A4835001B8CC6 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0A073811F3A4835001B8CC6 /* Realm.framework */; };
-		B0A073851F3A4835001B8CC6 /* RealmAdditions.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0A073821F3A4835001B8CC6 /* RealmAdditions.framework */; };
 		B0A073861F3A4835001B8CC6 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0A073831F3A4835001B8CC6 /* RealmSwift.framework */; };
 		B0A0739C1F3A4F32001B8CC6 /* RealmTypeCastTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A073641F3A43E9001B8CC6 /* RealmTypeCastTransform.swift */; };
 		B0C4CCC91F74609500B4F810 /* ObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0A0737E1F3A482F001B8CC6 /* ObjectMapper.framework */; };
@@ -65,7 +64,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				B0A073841F3A4835001B8CC6 /* Realm.framework in Frameworks */,
-				B0A073851F3A4835001B8CC6 /* RealmAdditions.framework in Frameworks */,
 				B0A073861F3A4835001B8CC6 /* RealmSwift.framework in Frameworks */,
 				B0A073801F3A4835001B8CC6 /* ObjectMapper.framework in Frameworks */,
 			);
