@@ -30,7 +30,7 @@ github "APUtils/ObjectMapperAdditions"
 
 If you do not need Realm part, add those frameworks: `ObjectMapperAdditions`, `ObjectMapper`.
 
-If you are going to use Realm part, add those frameworks: `ObjectMapperAdditions`, `ObjectMapperAdditionsRealm`, `ObjectMapper`, `Realm`, `RealmSwift`, `RealmAdditions`.
+If you are going to use Realm part, add those frameworks: `ObjectMapperAdditions`, `ObjectMapperAdditionsRealm`, `ObjectMapper`, `Realm`, `RealmSwift`.
 
 #### CocoaPods
 
