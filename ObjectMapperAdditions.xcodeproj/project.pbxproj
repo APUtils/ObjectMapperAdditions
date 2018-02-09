@@ -46,7 +46,6 @@
 		B0A073761F3A4518001B8CC6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B0A0737E1F3A482F001B8CC6 /* ObjectMapper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ObjectMapper.framework; path = Carthage/Build/iOS/ObjectMapper.framework; sourceTree = "<group>"; };
 		B0A073811F3A4835001B8CC6 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = Carthage/Build/iOS/Realm.framework; sourceTree = "<group>"; };
-		B0A073821F3A4835001B8CC6 /* RealmAdditions.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmAdditions.framework; path = Carthage/Build/iOS/RealmAdditions.framework; sourceTree = "<group>"; };
 		B0A073831F3A4835001B8CC6 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = Carthage/Build/iOS/RealmSwift.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -142,7 +141,6 @@
 			isa = PBXGroup;
 			children = (
 				B0A073811F3A4835001B8CC6 /* Realm.framework */,
-				B0A073821F3A4835001B8CC6 /* RealmAdditions.framework */,
 				B0A073831F3A4835001B8CC6 /* RealmSwift.framework */,
 				B0A0737E1F3A482F001B8CC6 /* ObjectMapper.framework */,
 			);
