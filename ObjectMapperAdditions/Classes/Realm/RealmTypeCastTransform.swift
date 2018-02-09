@@ -15,10 +15,9 @@ import ObjectMapper
 #endif
 
 
-/// Transforms Swift Arrays to Realm Arrays. E.g. [String] to List<RealmString>.
-/// It supports Int, Double, Bool and String types.
+/// Transforms Swift Arrays to Realm Arrays. E.g. [String] to List<String>.
 /// Additionally, it will type cast value if type mismatches. E.g. "123" String to 123 Int.
-public class RealmTypeCastTransform<T: Object>: TransformType where T: RealmValue {
+public class RealmTypeCastTransform<T: RealmCollectionValue>: TransformType {
     public typealias Object = List<T>
     public typealias JSON = [Any]
     
@@ -27,14 +26,8 @@ public class RealmTypeCastTransform<T: Object>: TransformType where T: RealmValu
     public func transformFromJSON(_ value: Any?) -> Object? {
         guard let array = value as? [Any] else { return nil }
         
-        let realmValues: [T] = array.flatMap({
-            guard let value = TypeCastTransform<T.ValueType>().transformFromJSON($0) else { return nil }
-            
-            let realmValue = T()
-            realmValue.value = value
-            
-            return realmValue
-        })
+        let typeCastTransform = TypeCastTransform<T>()
+        let realmValues: [T] = array.flatMap { typeCastTransform.transformFromJSON($0) }
         
         let list = List<T>()
         list.append(objectsIn: realmValues)
@@ -45,6 +38,6 @@ public class RealmTypeCastTransform<T: Object>: TransformType where T: RealmValu
     public func transformToJSON(_ value: Object?) -> JSON? {
         guard let value = value else { return nil }
         
-        return value.map({ $0.value })
+        return Array(value)
     }
 }

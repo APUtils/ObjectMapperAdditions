@@ -37,7 +37,7 @@
 
 /* Begin PBXFileReference section */
 		1E6A5436B00ACF85E4A03951 /* podCheck.command */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; name = podCheck.command; path = ../podCheck.command; sourceTree = "<group>"; };
-		3306BDD26A7024542AF11D3D /* ObjectMapperAdditions.podspec */ = {isa = PBXFileReference; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = ObjectMapperAdditions.podspec; path = ../ObjectMapperAdditions.podspec; sourceTree = "<group>"; tabWidth = 2; };
+		3306BDD26A7024542AF11D3D /* ObjectMapperAdditions.podspec */ = {isa = PBXFileReference; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = ObjectMapperAdditions.podspec; path = ../ObjectMapperAdditions.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		43260D3A6963AE16EDA55BBC /* Pods-ObjectMapperAdditions_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ObjectMapperAdditions_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ObjectMapperAdditions_Example/Pods-ObjectMapperAdditions_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		5CAD258AE7CB612216344F76 /* .gitignore */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = .gitignore; path = ../.gitignore; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* ObjectMapperAdditions_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ObjectMapperAdditions_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };

@@ -2,6 +2,15 @@
 All notable changes to this project will be documented in this file.
 `ObjectMapperAdditions` adheres to [Semantic Versioning](http://semver.org/).
 
+## [4.0.0](https://github.com/APUtils/ObjectMapperAdditions/releases/tag/4.0.0)
+Released on 02/09/2018.
+
+#### Added
+- Realm 3 support for basic types.
+
+#### Removed
+- RealmAdditions dependency is not required anymore.
+
 ## [3.0.5](https://github.com/APUtils/ObjectMapperAdditions/releases/tag/3.0.5)
 Released on 09/26/2017.
 

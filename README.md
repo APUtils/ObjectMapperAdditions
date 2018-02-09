@@ -60,6 +60,7 @@ Example model:
 
 ``` swift
 import Foundation
+import APExtensions
 import ObjectMapper
 import ObjectMapperAdditions
 
@@ -124,31 +125,15 @@ import RealmSwift
 
 
 class MyRealmModel: Object, Mappable {
-    dynamic var double: Double = 0
-    dynamic var string: String?
-    dynamic var myOtherRealmModel: MyOtherRealmModel?
+    @objc dynamic var double: Double = 0
+    @objc dynamic var string: String?
+    @objc dynamic var myOtherRealmModel: MyOtherRealmModel?
     
     // Please take a note it's `var` and is not optional
     var myOtherRealmModels: List<MyOtherRealmModel> = List<MyOtherRealmModel>()
     
     // Strings array will be casted to List<RealmString>
-    var strings: List<RealmString> = List<RealmString>()
-    
-    // You could add computed property to simplify set and get:
-    var _strings: [String] {
-        get {
-            return strings.map({ $0.value })
-        }
-        set {
-            strings.removeAll()
-            strings.append(objectsIn: newValue.map(RealmString.init(swiftValue:)))
-        }
-    }
-    
-    // Do not forget to ignore our helper property
-    override static func ignoredProperties() -> [String] {
-        return ["_strings"]
-    }
+    var strings: List<String> = List<String>()
 
     required convenience init?(map: Map) { self.init() }
 
@@ -166,10 +151,10 @@ class MyRealmModel: Object, Mappable {
         myOtherRealmModels <- (map["myOtherRealmModels"], ListTransform<MyOtherRealmModel>())
         
         // Using ObjectMapperAdditions's RealmTypeCastTransform
-        strings <- (map["strings"], RealmTypeCastTransform<RealmString>())
+        strings <- (map["strings"], RealmTypeCastTransform())
         
         // You could also use RealmTransform if you don't like type cast
-//        strings <- (map["strings"], RealmTransform<RealmString>())
+//        strings <- (map["strings"], RealmTransform())
 
         isWriteRequired ? try? realm?.commitWrite() : ()
     }

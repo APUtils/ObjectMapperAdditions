@@ -9,10 +9,11 @@
 import UIKit
 import ObjectMapperAdditions
 import RealmSwift
+import ContactsUI
 
 
 class ViewController: UIViewController {
-    
+    // CNContactPickerDelegate
     //-----------------------------------------------------------------------------
     // MARK: - UIViewController Methods
     //-----------------------------------------------------------------------------
@@ -87,7 +88,7 @@ class ViewController: UIViewController {
             success = success && realmModel.string == storedModel?.string && realmModel.string == realmJSON.string(forKey: "string")
             success = success && realmModel.myOtherRealmModel == storedModel?.myOtherRealmModel
             success = success && Array(realmModel.myOtherRealmModels) == Array(storedModel!.myOtherRealmModels)
-            success = success && Array(realmModel._strings) == Array(storedModel!._strings) && realmModel._strings == (realmJSON["strings"] as! [String])
+            success = success && Array(realmModel.strings) == Array(storedModel!.strings) && Array(realmModel.strings) == (realmJSON["strings"] as! [String])
             
             print(success ? "Data is not lost" : "Some data is lost")
         }

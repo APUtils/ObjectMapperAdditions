@@ -1,3 +1,2 @@
-github "APUtils/RealmAdditions" "1.0.3"
-github "Hearst-DD/ObjectMapper" "2.2.9"
-github "realm/realm-cocoa" "v2.10.1"
+github "Hearst-DD/ObjectMapper" "3.1.0"
+github "realm/realm-cocoa" "v3.1.1"

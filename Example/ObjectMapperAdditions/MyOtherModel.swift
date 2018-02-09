@@ -11,9 +11,9 @@ import ObjectMapper
 import ObjectMapperAdditions
 
 
-public struct MyOtherModel: Mappable {
-    public init?(map: Map) {}
-    public mutating func mapping(map: Map) {}
+struct MyOtherModel: Mappable {
+    init?(map: Map) {}
+    mutating func mapping(map: Map) {}
 }
 
 //-----------------------------------------------------------------------------
@@ -21,7 +21,7 @@ public struct MyOtherModel: Mappable {
 //-----------------------------------------------------------------------------
 
 extension MyOtherModel: Equatable {
-    public static func ==(lhs: MyOtherModel, rhs: MyOtherModel) -> Bool {
+    static func ==(lhs: MyOtherModel, rhs: MyOtherModel) -> Bool {
         return true
     }
 }

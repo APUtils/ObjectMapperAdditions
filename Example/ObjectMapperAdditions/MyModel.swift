@@ -12,16 +12,16 @@ import ObjectMapper
 import ObjectMapperAdditions
 
 
-public struct MyModel: Mappable {
-    public var string: String?
-    public var stringsArray: [String]?
-    public var double: Double?
-    public var myOtherModel: MyOtherModel?
-    public var myOtherModelsArray: [MyOtherModel]?
+struct MyModel: Mappable {
+    var string: String?
+    var stringsArray: [String]?
+    var double: Double?
+    var myOtherModel: MyOtherModel?
+    var myOtherModelsArray: [MyOtherModel]?
     
-    public init?(map: Map) {}
+    init?(map: Map) {}
     
-    public mutating func mapping(map: Map) {
+    mutating func mapping(map: Map) {
         // You could specify proper type transform directly
         string <- (map["string"], StringTransform())
         
@@ -48,7 +48,7 @@ public struct MyModel: Mappable {
 //-----------------------------------------------------------------------------
 
 extension MyModel: Equatable {
-    public static func ==(lhs: MyModel, rhs: MyModel) -> Bool {
+    static func ==(lhs: MyModel, rhs: MyModel) -> Bool {
         return lhs.string == rhs.string
             && lhs.stringsArray == rhs.stringsArray
             && lhs.double == rhs.double

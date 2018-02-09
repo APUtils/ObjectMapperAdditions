@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'ObjectMapperAdditions'
-  s.version          = '3.0.6'
+  s.version          = '4.0.0'
   s.summary          = 'ObjectMapper Extensions and Transforms'
 
 # This description is used to generate tags and improve search results.
@@ -49,6 +49,5 @@ Pod::Spec.new do |s|
     realm.source_files = 'ObjectMapperAdditions/Classes/Realm/**/*'
     realm.dependency 'ObjectMapperAdditions/Core'
     realm.dependency 'RealmSwift'
-    realm.dependency 'RealmAdditions'
   end
 end

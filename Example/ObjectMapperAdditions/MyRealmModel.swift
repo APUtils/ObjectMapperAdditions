@@ -11,39 +11,22 @@ import ObjectMapper
 import ObjectMapperAdditions
 import ObjectMapper_Realm
 import RealmSwift
-import RealmAdditions
 
 
-public class MyRealmModel: Object, Mappable {
-    @objc public dynamic var double: Double = 0
-    @objc public dynamic var string: String?
-    @objc public dynamic var myOtherRealmModel: MyOtherRealmModel?
+class MyRealmModel: Object, Mappable {
+    @objc dynamic var double: Double = 0
+    @objc dynamic var string: String?
+    @objc dynamic var myOtherRealmModel: MyOtherRealmModel?
     
     // Please take a note it's `var` and is not optional
-    public var myOtherRealmModels: List<MyOtherRealmModel> = List<MyOtherRealmModel>()
+    var myOtherRealmModels: List<MyOtherRealmModel> = List<MyOtherRealmModel>()
     
     // Strings array will be casted to List<RealmString>
-    public var strings: List<RealmString> = List<RealmString>()
-    
-    // You could add computed property to simplify set and get:
-    public var _strings: [String] {
-        get {
-            return strings.map({ $0.value })
-        }
-        set {
-            strings.removeAll()
-            strings.append(objectsIn: newValue.map(RealmString.init(swiftValue:)))
-        }
-    }
-    
-    // Do not forget to ignore our helper property
-    public override static func ignoredProperties() -> [String] {
-        return ["_strings"]
-    }
+    var strings: List<String> = List<String>()
 
-    public required convenience init?(map: Map) { self.init() }
+    required convenience init?(map: Map) { self.init() }
 
-    public func mapping(map: Map) {
+    func mapping(map: Map) {
         // .toJSON() requires Realm write transaction or it'll crash
         let isWriteRequired = realm != nil && realm?.isInWriteTransaction == false
         isWriteRequired ? realm?.beginWrite() : ()
@@ -57,10 +40,10 @@ public class MyRealmModel: Object, Mappable {
         myOtherRealmModels <- (map["myOtherRealmModels"], ListTransform<MyOtherRealmModel>())
         
         // Using ObjectMapperAdditions's RealmTypeCastTransform
-        strings <- (map["strings"], RealmTypeCastTransform<RealmString>())
+        strings <- (map["strings"], RealmTypeCastTransform())
         
         // You could also use RealmTransform if you don't like type cast
-//        strings <- (map["strings"], RealmTransform<RealmString>())
+//        strings <- (map["strings"], RealmTransform())
 
         isWriteRequired ? try? realm?.commitWrite() : ()
     }

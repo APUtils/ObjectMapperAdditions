@@ -30,9 +30,7 @@ public class TypeCastTransform<T>: TransformType {
         } else if T.self == String.self {
             return StringTransform().transformFromJSON(value) as? T
         } else {
-            #if DEBUG
-                print("Can not cast value \(value!) of type \(type(of: value!)) to type \(T.self)")
-            #endif
+            print("ObjectMapperAdditions. Can not cast value \(value!) of type \(type(of: value!)) to type \(T.self)")
             
             return nil
         }

@@ -8,7 +8,7 @@ import ObjectMapper
 import ObjectMapper_Realm
 import ObjectMapperAdditions
 import APExtensions
-import ObjectMapperAdditions_Example
+@testable import ObjectMapperAdditions_Example
 
 
 class RealmSpec: QuickSpec {
@@ -27,7 +27,7 @@ class RealmSpec: QuickSpec {
                     let model = MyRealmModel(JSON: realmJSON)
                     expect(model?.double).to(equal(1.1))
                     expect(model?.string).to(equal("123"))
-                    expect(model?._strings).to(equal(["123.0", "321.0"]))
+                    expect(Array(model!.strings)).to(equal(["123.0", "321.0"]))
                     expect(model?.myOtherRealmModels.count).to(equal(2))
                 }
             }
@@ -48,7 +48,7 @@ class RealmSpec: QuickSpec {
                     model.string = "123"
                     model.myOtherRealmModel = MyOtherRealmModel()
                     model.myOtherRealmModels.append(objectsIn: [MyOtherRealmModel(), MyOtherRealmModel()])
-                    model._strings = ["123.0", "321.0"]
+                    model.strings.append(objectsIn: ["123.0", "321.0"])
                 }
                 
                 it("should be saved and restored successfully") {

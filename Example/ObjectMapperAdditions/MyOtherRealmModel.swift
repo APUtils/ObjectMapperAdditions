@@ -13,7 +13,11 @@ import ObjectMapper_Realm
 import RealmSwift
 
 
-public class MyOtherRealmModel: Object, Mappable {
-    public required convenience init?(map: Map) { self.init() }
-    public func mapping(map: Map) {}
+class MyOtherRealmModel: Object, Mappable {
+    required convenience init?(map: Map) { self.init() }
+    func mapping(map: Map) {}
+    
+    override func isEqual(_ object: Any?) -> Bool {
+        return true
+    }
 }

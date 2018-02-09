@@ -6,7 +6,7 @@ import ObjectMapper
 import ObjectMapper_Realm
 import ObjectMapperAdditions
 import APExtensions
-import ObjectMapperAdditions_Example
+@testable import ObjectMapperAdditions_Example
 
 
 class TypeCastSpec: QuickSpec {
