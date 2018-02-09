@@ -3,7 +3,6 @@
 import Quick
 import Nimble
 import RealmSwift
-import RealmAdditions
 import ObjectMapper
 import ObjectMapper_Realm
 import ObjectMapperAdditions
