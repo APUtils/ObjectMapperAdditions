@@ -15,11 +15,17 @@ import RealmSwift
 
 class MyRealmModel: Object, Mappable {
     @objc dynamic var double: Double = 0
+    
+    // Please take a note it's `var` and is not optional
+    // However new value should be assigned through `.value`
+    var optionalDouble = RealmOptional<Double>()
+    
     @objc dynamic var string: String?
     @objc dynamic var myOtherRealmModel: MyOtherRealmModel?
     
     // Please take a note it's `var` and is not optional
-    var myOtherRealmModels: List<MyOtherRealmModel> = List<MyOtherRealmModel>()
+    // However, new value should be assigned through `.append(_:)`
+    var myOtherRealmModels = List<MyOtherRealmModel>()
     
     // Strings array will be casted to List<RealmString>
     var strings: List<String> = List<String>()
@@ -33,6 +39,12 @@ class MyRealmModel: Object, Mappable {
 
         // Same as for ordinary model
         double <- (map["double"], DoubleTransform())
+        
+        // Using ObjectMapperAdditions's RealmOptionalTypeCastTransform
+        optionalDouble <- (map["optionalDouble"], RealmOptionalTypeCastTransform())
+        // You could also use RealmTransform if you don't like type cast
+//        optionalDouble <- (map["optionalDouble"], RealmOptionalTransform())
+        
         string <- (map["string"], StringTransform())
         myOtherRealmModel <- map["myOtherRealmModel"]
         
@@ -41,10 +53,9 @@ class MyRealmModel: Object, Mappable {
         
         // Using ObjectMapperAdditions's RealmTypeCastTransform
         strings <- (map["strings"], RealmTypeCastTransform())
-        
         // You could also use RealmTransform if you don't like type cast
 //        strings <- (map["strings"], RealmTransform())
-
+        
         isWriteRequired ? try? realm?.commitWrite() : ()
     }
 }

@@ -16,6 +16,7 @@ class RealmSpec: QuickSpec {
             context("when JSON contains proper type params") {
                 let realmJSON: [String: Any] = [
                     "double": 1.1,
+                    "optionalDouble": "2.2",
                     "string": "123",
                     "myOtherRealmModel": [:],
                     "myOtherRealmModels": [[:], [:]],
@@ -25,6 +26,7 @@ class RealmSpec: QuickSpec {
                 it("should map properly from JSON") {
                     let model = MyRealmModel(JSON: realmJSON)
                     expect(model?.double).to(equal(1.1))
+                    expect(model?.optionalDouble.value).to(equal(2.2))
                     expect(model?.string).to(equal("123"))
                     expect(Array(model!.strings)).to(equal(["123.0", "321.0"]))
                     expect(model?.myOtherRealmModels.count).to(equal(2))
@@ -44,6 +46,7 @@ class RealmSpec: QuickSpec {
                     
                     model = MyRealmModel()
                     model.double = 1.1
+                    model.optionalDouble.value = 2.2
                     model.string = "123"
                     model.myOtherRealmModel = MyOtherRealmModel()
                     model.myOtherRealmModels.append(objectsIn: [MyOtherRealmModel(), MyOtherRealmModel()])

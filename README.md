@@ -113,7 +113,7 @@ See example and tests projects for more details.
 
 #### Realm Features
 
-This part of ObjectMapperAdditions solves issues that prevent simply using ObjectMapper and Realm in one model. There is already [ObjectMapper-Realm](https://github.com/Jakenberg/ObjectMapper-Realm) framework which allows to transform arrays of custom type to realm lists, but it can't transform simple type arrays.
+This part of ObjectMapperAdditions solves issues that prevent simply using ObjectMapper and Realm in one model. There is already [ObjectMapper-Realm](https://github.com/Jakenberg/ObjectMapper-Realm) framework which allows to transform arrays of custom type to realm lists, but it can't transform simple type arrays nor optional values.
 
 ``` swift
 import Foundation
@@ -125,11 +125,17 @@ import RealmSwift
 
 class MyRealmModel: Object, Mappable {
     @objc dynamic var double: Double = 0
+    
+    // Please take a note it's `var` and is not optional
+    // However new value should be assigned through `.value`
+    var optionalDouble = RealmOptional<Double>()
+    
     @objc dynamic var string: String?
     @objc dynamic var myOtherRealmModel: MyOtherRealmModel?
     
     // Please take a note it's `var` and is not optional
-    var myOtherRealmModels: List<MyOtherRealmModel> = List<MyOtherRealmModel>()
+    // However, new value should be assigned through `.append(_:)`
+    var myOtherRealmModels = List<MyOtherRealmModel>()
     
     // Strings array will be casted to List<RealmString>
     var strings: List<String> = List<String>()
@@ -143,6 +149,12 @@ class MyRealmModel: Object, Mappable {
 
         // Same as for ordinary model
         double <- (map["double"], DoubleTransform())
+        
+        // Using ObjectMapperAdditions's RealmOptionalTypeCastTransform
+        optionalDouble <- (map["optionalDouble"], RealmOptionalTypeCastTransform())
+        // You could also use RealmTransform if you don't like type cast
+//        optionalDouble <- (map["optionalDouble"], RealmOptionalTransform())
+
         string <- (map["string"], StringTransform())
         myOtherRealmModel <- map["myOtherRealmModel"]
         
@@ -151,18 +163,18 @@ class MyRealmModel: Object, Mappable {
         
         // Using ObjectMapperAdditions's RealmTypeCastTransform
         strings <- (map["strings"], RealmTypeCastTransform())
-        
         // You could also use RealmTransform if you don't like type cast
 //        strings <- (map["strings"], RealmTransform())
 
         isWriteRequired ? try? realm?.commitWrite() : ()
     }
-}
-```
+}```
+
+Swift optionals cast to realm optionals this way: `Int?` -> `RealmOptional<Int>`, `Double?` -> `RealmOptional<Double>`, `Bool?` -> `RealmOptional<Bool>`, etc.
 
 Swift arrays cast to realm arrays this way: `[String]` -> `List<String>`, `[Int]` -> `List<String>`, `[Double]` -> `List<Double>`, `[Bool]` -> `List<Bool>`, etc.
 
-**Be sure to check that properties of type `List` are not dynamic and not optional. Also despite of they defined as `var` they should be handled as constants if model is added to Realm. Use `.removeAll()` and `append(objectsIn:)` methods to change `List` content**
+**Be sure to check that properties of type `RealmOptional` and `List` are not dynamic nor optional. Also despite of they defined as `var` they should be handled as constants if model is added to Realm. Use `.value` to change `RealmOptional` value or use `.removeAll()` and `append(objectsIn:)` methods to change `List` content**
 
 See example and tests projects for more details.
 

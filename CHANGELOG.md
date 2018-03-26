@@ -2,6 +2,13 @@
 All notable changes to this project will be documented in this file.
 `ObjectMapperAdditions` adheres to [Semantic Versioning](http://semver.org/).
 
+## [4.1.0](https://github.com/APUtils/ObjectMapperAdditions/releases/tag/4.1.0)
+Released on 03/27/2018.
+
+#### Added
+- RealmOptionalTransform and RealmOptionalTypeCastTransform to trannsform to RealmOptional type
+
+
 ## [4.0.0](https://github.com/APUtils/ObjectMapperAdditions/releases/tag/4.0.0)
 Released on 02/09/2018.
 
