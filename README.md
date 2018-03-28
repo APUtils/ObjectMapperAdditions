@@ -168,7 +168,8 @@ class MyRealmModel: Object, Mappable {
 
         isWriteRequired ? try? realm?.commitWrite() : ()
     }
-}```
+}
+```
 
 Swift optionals cast to realm optionals this way: `Int?` -> `RealmOptional<Int>`, `Double?` -> `RealmOptional<Double>`, `Bool?` -> `RealmOptional<Bool>`, etc.
 
