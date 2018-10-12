@@ -1,0 +1,7 @@
+- Assure `CarthageSupport/ObjectMapperAdditions.xcodeproj` and `Example/ObjectMapperAdditions.xcworkspace` projects compile properly
+- Change version in podspec
+- Update CHANGELOG.md
+- Update README.md with new version
+- Push changes in git
+- Add git tag
+- Run `podPush.command`

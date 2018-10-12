@@ -26,7 +26,7 @@ public class RealmTypeCastTransform<T: RealmCollectionValue>: TransformType {
         guard let array = value as? [Any] else { return nil }
         
         let typeCastTransform = TypeCastTransform<T>()
-        let realmValues: [T] = array.flatMap { typeCastTransform.transformFromJSON($0) }
+        let realmValues: [T] = array.compactMap { typeCastTransform.transformFromJSON($0) }
         
         let list = List<T>()
         list.append(objectsIn: realmValues)

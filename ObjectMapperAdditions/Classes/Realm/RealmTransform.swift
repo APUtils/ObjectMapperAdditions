@@ -21,7 +21,7 @@ public class RealmTransform<T: RealmCollectionValue>: TransformType {
         guard let array = value as? [Any] else { return nil }
         
         let list = List<T>()
-        let realmValues: [T] = array.flatMap { $0 as? T }
+        let realmValues: [T] = array.compactMap { $0 as? T }
         list.append(objectsIn: realmValues)
         
         return list

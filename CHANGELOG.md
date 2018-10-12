@@ -2,6 +2,16 @@
 All notable changes to this project will be documented in this file.
 `ObjectMapperAdditions` adheres to [Semantic Versioning](http://semver.org/).
 
+## [4.2.0](https://github.com/APUtils/ObjectMapperAdditions/releases/tag/4.2.0)
+Released on 10/13/2018.
+
+#### Added
+- Cocoapods support for tvOS
+
+#### Fixed
+- Warnings
+
+
 ## [4.1.0](https://github.com/APUtils/ObjectMapperAdditions/releases/tag/4.1.0)
 Released on 03/27/2018.
 
