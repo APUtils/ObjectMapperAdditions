@@ -15,13 +15,13 @@ PODS:
   - "ObjectMapper+Realm (0.6)":
     - ObjectMapper
     - RealmSwift
-  - ObjectMapperAdditions (4.2.0):
+  - ObjectMapperAdditions (4.2.1):
     - ObjectMapper
-    - ObjectMapperAdditions/Core (= 4.2.0)
-    - ObjectMapperAdditions/Realm (= 4.2.0)
-  - ObjectMapperAdditions/Core (4.2.0):
+    - ObjectMapperAdditions/Core (= 4.2.1)
+    - ObjectMapperAdditions/Realm (= 4.2.1)
+  - ObjectMapperAdditions/Core (4.2.1):
     - ObjectMapper
-  - ObjectMapperAdditions/Realm (4.2.0):
+  - ObjectMapperAdditions/Realm (4.2.1):
     - ObjectMapper
     - ObjectMapperAdditions/Core
     - RealmSwift
@@ -59,11 +59,11 @@ SPEC CHECKSUMS:
   Nimble: 04f732da099ea4d153122aec8c2a88fd0c7219ae
   ObjectMapper: b612bf8c8e99c4dc0bb6013a51f7c27966ed5da9
   "ObjectMapper+Realm": 4cf44ed3202a73f08594e21e13eb3f8aa9b5a664
-  ObjectMapperAdditions: 9297bbd3388158e9221de89b1dab682b7ab0b61e
+  ObjectMapperAdditions: 9456c3e8708e2e5e9ff1341b83ff42d70d0f73e0
   Quick: 2623cb30d7a7f41ca62f684f679586558f483d46
   Realm: 92f09a102692b96a9a10e9617f214f15c5ab85fc
   RealmSwift: 5f0481cd658bb751c509314b964a35eaa264d2cf
 
-PODFILE CHECKSUM: 17b8277317cc3824f70b09e44d8e1b1d13591425
+PODFILE CHECKSUM: fe286d75a60a66c1a58ac66636d41168849d2348
 
 COCOAPODS: 1.5.3
