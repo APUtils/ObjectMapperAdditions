@@ -1,4 +1,4 @@
-- Assure `CarthageSupport/ObjectMapperAdditions.xcodeproj` and `Example/ObjectMapperAdditions.xcworkspace` projects compile properly
+- Run `projectCheck.command`
 - Change version in podspec
 - Update CHANGELOG.md
 - Update README.md with new version
