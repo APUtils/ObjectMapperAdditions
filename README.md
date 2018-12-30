@@ -137,7 +137,7 @@ class MyRealmModel: Object, Mappable {
     // However, new value should be assigned through `.append(_:)`
     var myOtherRealmModels = List<MyOtherRealmModel>()
     
-    // Strings array will be casted to List<RealmString>
+    // Strings array will be casted to List<String>
     var strings: List<String> = List<String>()
 
     required convenience init?(map: Map) { self.init() }

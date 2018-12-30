@@ -2,6 +2,14 @@
 All notable changes to this project will be documented in this file.
 `ObjectMapperAdditions` adheres to [Semantic Versioning](http://semver.org/).
 
+
+## [5.0.0](https://github.com/APUtils/ObjectMapperAdditions/releases/tag/5.0.0)
+Released on 12/30/2018.
+
+#### Added
+- Swift 4.2
+
+
 ## [4.2.1](https://github.com/APUtils/ObjectMapperAdditions/releases/tag/4.2.1)
 Released on 10/13/2018.
 
