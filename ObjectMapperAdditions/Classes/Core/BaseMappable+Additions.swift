@@ -10,19 +10,19 @@ import ObjectMapper
 
 
 public extension BaseMappable {
-    public func toJSON(shouldIncludeNilValues: Bool) -> [String: Any] {
+    func toJSON(shouldIncludeNilValues: Bool) -> [String: Any] {
         return Mapper(shouldIncludeNilValues: shouldIncludeNilValues).toJSON(self)
     }
 }
 
 public extension Array where Element: BaseMappable {
-    public func toJSON(shouldIncludeNilValues: Bool) -> [[String: Any]] {
+    func toJSON(shouldIncludeNilValues: Bool) -> [[String: Any]] {
         return Mapper(shouldIncludeNilValues: shouldIncludeNilValues).toJSONArray(self)
     }
 }
 
 public extension Set where Element: BaseMappable {
-    public func toJSON(shouldIncludeNilValues: Bool) -> [[String: Any]] {
+    func toJSON(shouldIncludeNilValues: Bool) -> [[String: Any]] {
         return Mapper(shouldIncludeNilValues: shouldIncludeNilValues).toJSONSet(self)
     }
 }

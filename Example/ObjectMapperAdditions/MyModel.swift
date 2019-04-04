@@ -17,6 +17,8 @@ struct MyModel: Mappable {
     var double: Double?
     var myOtherModel: MyOtherModel?
     var myOtherModelsArray: [MyOtherModel]?
+    var intEnum: ExampleIntEnum?
+    var stringEnum: ExampleStringEnum?
     
     init?(map: Map) {}
     
@@ -39,6 +41,9 @@ struct MyModel: Mappable {
         // No need to transform your types. They should specify transforms by themselfs.
         myOtherModel <- map["myOtherModel"]
         myOtherModelsArray <- map["myOtherModelsArray"]
+        
+        intEnum <- (map["intEnum"], EnumTypeCastTransform())
+        stringEnum <- (map["stringEnum"], EnumTypeCastTransform())
     }
 }
 

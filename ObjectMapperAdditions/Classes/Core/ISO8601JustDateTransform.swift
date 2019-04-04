@@ -10,11 +10,11 @@ import ObjectMapper
 
 
 fileprivate extension DateFormatter {
-    fileprivate convenience init(withFormat format: String, timeZone: TimeZone) {
+    convenience init(withFormat format: String, timeZone: TimeZone) {
         self.init()
         
         self.timeZone = timeZone
-        dateFormat = format
+        self.dateFormat = format
     }
 }
 

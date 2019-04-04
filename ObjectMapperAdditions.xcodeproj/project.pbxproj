@@ -26,6 +26,7 @@
 		B0AF241C20699C200094C84F /* RealmOptionalTypeCastTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0AF241A20699C200094C84F /* RealmOptionalTypeCastTransform.swift */; };
 		B0AF241D20699C200094C84F /* RealmOptionalTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0AF241B20699C200094C84F /* RealmOptionalTransform.swift */; };
 		B0C4CCC91F74609500B4F810 /* ObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0A0737E1F3A482F001B8CC6 /* ObjectMapper.framework */; };
+		E289273D2256160700CAA647 /* EnumTypeCastTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = E289273C2256160700CAA647 /* EnumTypeCastTransform.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,6 +52,7 @@
 		B0A073831F3A4835001B8CC6 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = Carthage/Build/iOS/RealmSwift.framework; sourceTree = "<group>"; };
 		B0AF241A20699C200094C84F /* RealmOptionalTypeCastTransform.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmOptionalTypeCastTransform.swift; sourceTree = "<group>"; };
 		B0AF241B20699C200094C84F /* RealmOptionalTransform.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmOptionalTransform.swift; sourceTree = "<group>"; };
+		E289273C2256160700CAA647 /* EnumTypeCastTransform.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnumTypeCastTransform.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +113,7 @@
 				B0A0735B1F3A43E9001B8CC6 /* BaseMappable+Additions.swift */,
 				B0A0735C1F3A43E9001B8CC6 /* BoolTransform.swift */,
 				B0A0735D1F3A43E9001B8CC6 /* DoubleTransform.swift */,
+				E289273C2256160700CAA647 /* EnumTypeCastTransform.swift */,
 				B0A0735E1F3A43E9001B8CC6 /* IntTransform.swift */,
 				B00F4EAA1F7A7608004F9676 /* ISO8601JustDateTransform.swift */,
 				B0A0735F1F3A43E9001B8CC6 /* ObjectMapper+Additions.swift */,
@@ -235,6 +238,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 			);
 			mainGroup = B0A073451F3A43C0001B8CC6;
@@ -272,6 +276,7 @@
 			files = (
 				B0A073681F3A43E9001B8CC6 /* IntTransform.swift in Sources */,
 				B0A073661F3A43E9001B8CC6 /* BoolTransform.swift in Sources */,
+				E289273D2256160700CAA647 /* EnumTypeCastTransform.swift in Sources */,
 				B00F4EAC1F7A7608004F9676 /* ISO8601JustDateTransform.swift in Sources */,
 				B0A073671F3A43E9001B8CC6 /* DoubleTransform.swift in Sources */,
 				B00F4EAB1F7A7608004F9676 /* TimestampTransform.swift in Sources */,

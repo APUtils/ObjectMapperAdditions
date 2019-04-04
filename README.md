@@ -25,7 +25,7 @@ Please check [official guide](https://github.com/Carthage/Carthage#if-youre-buil
 Cartfile:
 
 ```
-github "APUtils/ObjectMapperAdditions" ~> 4.1
+github "APUtils/ObjectMapperAdditions" ~> 6.0
 ```
 
 If you do not need Realm part, add those frameworks: `ObjectMapperAdditions`, `ObjectMapper`.
@@ -39,13 +39,13 @@ ObjectMapperAdditions is available through [CocoaPods](http://cocoapods.org).
 To install Core features, simply add the following line to your Podfile:
 
 ```ruby
-pod 'ObjectMapperAdditions/Core', '~> 4.1'
+pod 'ObjectMapperAdditions/Core', '~> 6.0'
 ```
 
 To add Realm transform to your project add the following line to your Podfile:
 
 ```ruby
-pod 'ObjectMapperAdditions/Realm', '~> 4.1'
+pod 'ObjectMapperAdditions/Realm', '~> 6.0'
 ```
 
 ## Usage
@@ -97,6 +97,8 @@ struct MyModel: Mappable {
 ```
 
 Right now there are 4 base type transforms you could use: `BoolTransform`, `DoubleTransform`, `IntTransform` and `StringTransform`. But for basic types it's easier to just use `TypeCastTransform` which will type cast to proper type automatically.
+
+Typecasting for `Bool`, `Double`, `Int` and `String` raw representable enums are also supported with `EnumTypeCastTransform`.
 
 Moreover this pod has extension to simplify creation of JSON with NULL values included from objects. Just call `.toJSON(shouldIncludeNilValues: true)` on `BaseMappable` object or array/set.
 

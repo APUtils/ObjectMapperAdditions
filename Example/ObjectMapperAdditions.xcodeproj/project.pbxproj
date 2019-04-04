@@ -23,6 +23,7 @@
 		B0B644821F2A11FC00C3739E /* MyRealmModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0B644801F2A11FC00C3739E /* MyRealmModel.swift */; };
 		B0D3A0331F7A54E90062AD2B /* TimestampTransformSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D3A0311F7A54BC0062AD2B /* TimestampTransformSpec.swift */; };
 		B0D3A03A1F7A5D740062AD2B /* ISO8601JustDateTransformSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D3A0381F7A5D710062AD2B /* ISO8601JustDateTransformSpec.swift */; };
+		E28C98D72255F4AA00C5DA49 /* ExampleEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = E28C98D62255F4AA00C5DA49 /* ExampleEnums.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +72,8 @@
 		D46646B272B8B5A8181F666B /* .cocoadocs.yml */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = .cocoadocs.yml; path = ../.cocoadocs.yml; sourceTree = "<group>"; };
 		D99D6198B7EB09C279219FB2 /* podPush.command */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; name = podPush.command; path = ../podPush.command; sourceTree = "<group>"; };
 		DDEDDCD09D65355F843EFBC5 /* Pods_ObjectMapperAdditions_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ObjectMapperAdditions_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E289273E2256165A00CAA647 /* carthageUpdate.command */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; name = carthageUpdate.command; path = ../carthageUpdate.command; sourceTree = "<group>"; };
+		E28C98D62255F4AA00C5DA49 /* ExampleEnums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleEnums.swift; sourceTree = "<group>"; };
 		F253760DFAA3796C1818AA2F /* CHANGELOG.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = CHANGELOG.md; path = ../CHANGELOG.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -122,14 +125,15 @@
 				B06688E41F13EAB300A02878 /* _Images */,
 				607FACD31AFB9204008FA782 /* _Supporting Files */,
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
+				E28C98D62255F4AA00C5DA49 /* ExampleEnums.swift */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
-				607FACD71AFB9204008FA782 /* ViewController.swift */,
 				B0B644791F2A07A100C3739E /* MyModel.swift */,
 				B0B6447B1F2A07EC00C3739E /* MyOtherModel.swift */,
-				B0B644801F2A11FC00C3739E /* MyRealmModel.swift */,
 				B0B6447F1F2A11FC00C3739E /* MyOtherRealmModel.swift */,
+				B0B644801F2A11FC00C3739E /* MyRealmModel.swift */,
+				607FACD71AFB9204008FA782 /* ViewController.swift */,
 			);
 			name = "Example for ObjectMapperAdditions";
 			path = ObjectMapperAdditions;
@@ -173,6 +177,7 @@
 				0D2D24CD2171632B006817DE /* DEPLOY PROCESS.md */,
 				9DFE7F9B21F6E89955E35AA5 /* LICENSE */,
 				3306BDD26A7024542AF11D3D /* ObjectMapperAdditions.podspec */,
+				E289273E2256165A00CAA647 /* carthageUpdate.command */,
 				1E6A5436B00ACF85E4A03951 /* podCheck.command */,
 				B02371051F2BA2D500EA36DE /* podInstall.command */,
 				D99D6198B7EB09C279219FB2 /* podPush.command */,
@@ -266,16 +271,16 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0720;
-				LastUpgradeCheck = 0940;
+				LastUpgradeCheck = 1020;
 				ORGANIZATIONNAME = CocoaPods;
 				TargetAttributes = {
 					607FACCF1AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
-						LastSwiftMigration = 1010;
+						LastSwiftMigration = 1020;
 					};
 					607FACE41AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
-						LastSwiftMigration = 1010;
+						LastSwiftMigration = 1020;
 						TestTargetID = 607FACCF1AFB9204008FA782;
 					};
 				};
@@ -285,6 +290,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -345,7 +351,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-ObjectMapperAdditions_Example/Pods-ObjectMapperAdditions_Example-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-ObjectMapperAdditions_Example/Pods-ObjectMapperAdditions_Example-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/APExtensions/APExtensions.framework",
 				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
 				"${BUILT_PRODUCTS_DIR}/ObjectMapper+Realm/ObjectMapper_Realm.framework",
@@ -364,7 +370,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ObjectMapperAdditions_Example/Pods-ObjectMapperAdditions_Example-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ObjectMapperAdditions_Example/Pods-ObjectMapperAdditions_Example-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		3A0E6AEB31E9F1C2B6EB8F85 /* [CP] Embed Pods Frameworks */ = {
@@ -373,7 +379,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-ObjectMapperAdditions_Tests/Pods-ObjectMapperAdditions_Tests-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-ObjectMapperAdditions_Tests/Pods-ObjectMapperAdditions_Tests-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Nimble/Nimble.framework",
 				"${BUILT_PRODUCTS_DIR}/Quick/Quick.framework",
 			);
@@ -384,7 +390,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ObjectMapperAdditions_Tests/Pods-ObjectMapperAdditions_Tests-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ObjectMapperAdditions_Tests/Pods-ObjectMapperAdditions_Tests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		B5B2F63AD54CECD6335D733B /* [CP] Check Pods Manifest.lock */ = {
@@ -412,6 +418,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E28C98D72255F4AA00C5DA49 /* ExampleEnums.swift in Sources */,
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
 				B02194911F2BAB3200E228EB /* MyModel.swift in Sources */,
 				B0B6447C1F2A07EC00C3739E /* MyOtherModel.swift in Sources */,
@@ -466,6 +473,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -522,6 +530,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -578,7 +587,7 @@
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.anton-plebanovich.ObjectMapperAdditions-Example";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -593,7 +602,7 @@
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.anton-plebanovich.ObjectMapperAdditions-Example";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
@@ -611,7 +620,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ObjectMapperAdditions_Example.app/ObjectMapperAdditions_Example";
 			};
 			name = Debug;
@@ -626,7 +635,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ObjectMapperAdditions_Example.app/ObjectMapperAdditions_Example";
 			};
 			name = Release;
