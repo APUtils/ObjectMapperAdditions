@@ -3,6 +3,16 @@ All notable changes to this project will be documented in this file.
 `ObjectMapperAdditions` adheres to [Semantic Versioning](http://semver.org/).
 
 
+## [6.0.1](https://github.com/APUtils/ObjectMapperAdditions/releases/tag/6.0.1)
+Released on 05/23/2019.
+
+#### Fixed
+- Swift 5.0 support fix.
+
+#### Changed
+- Removed dependency on `ObjectMapper+Realm` framework.
+
+
 ## [6.0.0](https://github.com/APUtils/ObjectMapperAdditions/releases/tag/6.0.0)
 Released on 04/04/2019.
 

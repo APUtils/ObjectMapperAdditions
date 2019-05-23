@@ -9,7 +9,6 @@
 import Foundation
 import ObjectMapper
 import ObjectMapperAdditions
-import ObjectMapper_Realm
 import RealmSwift
 
 

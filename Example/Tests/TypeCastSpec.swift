@@ -3,7 +3,6 @@
 import Quick
 import Nimble
 import ObjectMapper
-import ObjectMapper_Realm
 import ObjectMapperAdditions
 import APExtensions
 @testable import ObjectMapperAdditions_Example

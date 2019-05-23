@@ -9,7 +9,6 @@
 import Foundation
 import ObjectMapper
 import ObjectMapperAdditions
-import ObjectMapper_Realm
 import RealmSwift
 
 
@@ -48,8 +47,8 @@ class MyRealmModel: Object, Mappable {
         string <- (map["string"], StringTransform())
         myOtherRealmModel <- map["myOtherRealmModel"]
         
-        // Using ObjectMapper+Realm's ListTransform to transform custom types
-        myOtherRealmModels <- (map["myOtherRealmModels"], ListTransform<MyOtherRealmModel>())
+        // Using ObjectMapper+Realm's RealmListTransform to transform custom types
+        myOtherRealmModels <- (map["myOtherRealmModels"], RealmListTransform<MyOtherRealmModel>())
         
         // Using ObjectMapperAdditions's RealmTypeCastTransform
         strings <- (map["strings"], RealmTypeCastTransform())
