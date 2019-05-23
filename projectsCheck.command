@@ -7,11 +7,11 @@ cd "$base_dir"
 
 echo ""
 
-set -o pipefail && xcodebuild -workspace "Example/ObjectMapperAdditions.xcworkspace" -scheme "ObjectMapperAdditions-Example" -configuration "Release"  -sdk iphonesimulator12.2 | xcpretty
+set -o pipefail && xcodebuild -workspace "Example/ObjectMapperAdditions.xcworkspace" -scheme "ObjectMapperAdditions-Example" -configuration "Release"  -sdk iphonesimulator | xcpretty
 
 echo
 
-xcodebuild -project "ObjectMapperAdditions.xcodeproj" -alltargets  -sdk iphonesimulator12.2 | xcpretty
+xcodebuild -project "ObjectMapperAdditions.xcodeproj" -alltargets  -sdk iphonesimulator | xcpretty
 
 echo ""
 echo "SUCCESS!"
