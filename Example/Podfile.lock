@@ -53,7 +53,7 @@ SPEC CHECKSUMS:
   APExtensions: 9a7a7b6ff5b9785b245962de89fbbdaf4c10f10e
   Nimble: 622629381bda1dd5678162f21f1368cec7cbba60
   ObjectMapper: 70187b8941977c62ccfb423caf6b50be405cabf0
-  ObjectMapperAdditions: 64989683be936c908c36de2c5dd2490d5b7906a3
+  ObjectMapperAdditions: e54eaeb8ad67db1c305e4e48d31045557ba1e6aa
   Quick: 4be43f6634acfa727dd106bdf3929ce125ffa79d
   Realm: 5a1d9d47bfc101dd597668b1a8af4288a2557f6d
   RealmSwift: b7fdc2d18616621c31df5c7a398a45a2163f8eb0
