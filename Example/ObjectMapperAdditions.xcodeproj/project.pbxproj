@@ -39,7 +39,7 @@
 /* Begin PBXFileReference section */
 		0D2D24CD2171632B006817DE /* DEPLOY PROCESS.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = "DEPLOY PROCESS.md"; path = "../DEPLOY PROCESS.md"; sourceTree = "<group>"; };
 		0D2D24CE21716420006817DE /* podUpdate.command */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = podUpdate.command; sourceTree = "<group>"; };
-		0D2D24CF21716F8F006817DE /* projectsCheck.command */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; name = projectsCheck.command; path = ../projectsCheck.command; sourceTree = "<group>"; };
+		0D2D24CF21716F8F006817DE /* checkBuild.command */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; name = checkBuild.command; path = ../checkBuild.command; sourceTree = "<group>"; };
 		1E6A5436B00ACF85E4A03951 /* podCheck.command */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; name = podCheck.command; path = ../podCheck.command; sourceTree = "<group>"; };
 		3306BDD26A7024542AF11D3D /* ObjectMapperAdditions.podspec */ = {isa = PBXFileReference; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = ObjectMapperAdditions.podspec; path = ../ObjectMapperAdditions.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		43260D3A6963AE16EDA55BBC /* Pods-ObjectMapperAdditions_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ObjectMapperAdditions_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ObjectMapperAdditions_Example/Pods-ObjectMapperAdditions_Example.debug.xcconfig"; sourceTree = "<group>"; };
@@ -178,11 +178,11 @@
 				9DFE7F9B21F6E89955E35AA5 /* LICENSE */,
 				3306BDD26A7024542AF11D3D /* ObjectMapperAdditions.podspec */,
 				E289273E2256165A00CAA647 /* carthageUpdate.command */,
+				0D2D24CF21716F8F006817DE /* checkBuild.command */,
 				1E6A5436B00ACF85E4A03951 /* podCheck.command */,
 				B02371051F2BA2D500EA36DE /* podInstall.command */,
 				D99D6198B7EB09C279219FB2 /* podPush.command */,
 				0D2D24CE21716420006817DE /* podUpdate.command */,
-				0D2D24CF21716F8F006817DE /* projectsCheck.command */,
 				A7D8958764C84B431CB2CCEE /* README.md */,
 			);
 			name = "Podspec Metadata";

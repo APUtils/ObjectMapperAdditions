@@ -1,6 +1,6 @@
 //
-//  ObjectMapperAdditions.h
-//  ObjectMapperAdditions
+//  ObjectMapperAdditions_iOS.h
+//  ObjectMapperAdditions-iOS
 //
 //  Created by Anton Plebanovich on 8/8/17.
 //  Copyright © 2017 Anton Plebanovich. All rights reserved.

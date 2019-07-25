@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		B00F4EAB1F7A7608004F9676 /* TimestampTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00F4EA91F7A7608004F9676 /* TimestampTransform.swift */; };
 		B00F4EAC1F7A7608004F9676 /* ISO8601JustDateTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00F4EAA1F7A7608004F9676 /* ISO8601JustDateTransform.swift */; };
-		B0A073561F3A43D7001B8CC6 /* ObjectMapperAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = B0A073541F3A43D7001B8CC6 /* ObjectMapperAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B0A073561F3A43D7001B8CC6 /* ObjectMapperAdditions_iOS.h in Headers */ = {isa = PBXBuildFile; fileRef = B0A073541F3A43D7001B8CC6 /* ObjectMapperAdditions_iOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B0A073651F3A43E9001B8CC6 /* BaseMappable+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A0735B1F3A43E9001B8CC6 /* BaseMappable+Additions.swift */; };
 		B0A073661F3A43E9001B8CC6 /* BoolTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A0735C1F3A43E9001B8CC6 /* BoolTransform.swift */; };
 		B0A073671F3A43E9001B8CC6 /* DoubleTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A0735D1F3A43E9001B8CC6 /* DoubleTransform.swift */; };
@@ -26,14 +26,21 @@
 		B0AF241C20699C200094C84F /* RealmOptionalTypeCastTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0AF241A20699C200094C84F /* RealmOptionalTypeCastTransform.swift */; };
 		B0AF241D20699C200094C84F /* RealmOptionalTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0AF241B20699C200094C84F /* RealmOptionalTransform.swift */; };
 		B0C4CCC91F74609500B4F810 /* ObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0A0737E1F3A482F001B8CC6 /* ObjectMapper.framework */; };
+		E281799522E9AFC20078A909 /* ObjectMapperAdditions_watchOS.h in Headers */ = {isa = PBXBuildFile; fileRef = E281799322E9AFC20078A909 /* ObjectMapperAdditions_watchOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E28179A222E9AFCE0078A909 /* ObjectMapperAdditions_tvOS.h in Headers */ = {isa = PBXBuildFile; fileRef = E28179A022E9AFCE0078A909 /* ObjectMapperAdditions_tvOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E28179AF22E9AFDB0078A909 /* ObjectMapperAdditions_macOS.h in Headers */ = {isa = PBXBuildFile; fileRef = E28179AD22E9AFDB0078A909 /* ObjectMapperAdditions_macOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E289273D2256160700CAA647 /* EnumTypeCastTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = E289273C2256160700CAA647 /* EnumTypeCastTransform.swift */; };
+		E2BD7CA522E9B6D60020932D /* ObjectMapperAdditions.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0A073511F3A43D7001B8CC6 /* ObjectMapperAdditions.framework */; };
+		E2BD7CA822E9B7A00020932D /* ObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2BD7CA722E9B7A00020932D /* ObjectMapper.framework */; };
+		E2BD7CAC22E9B7E20020932D /* ObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2BD7CAB22E9B7E20020932D /* ObjectMapper.framework */; };
+		E2BD7CB022E9B8770020932D /* ObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2BD7CAF22E9B8770020932D /* ObjectMapper.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		B00F4EA91F7A7608004F9676 /* TimestampTransform.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimestampTransform.swift; sourceTree = "<group>"; };
 		B00F4EAA1F7A7608004F9676 /* ISO8601JustDateTransform.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ISO8601JustDateTransform.swift; sourceTree = "<group>"; };
 		B0A073511F3A43D7001B8CC6 /* ObjectMapperAdditions.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ObjectMapperAdditions.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		B0A073541F3A43D7001B8CC6 /* ObjectMapperAdditions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ObjectMapperAdditions.h; sourceTree = "<group>"; };
+		B0A073541F3A43D7001B8CC6 /* ObjectMapperAdditions_iOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ObjectMapperAdditions_iOS.h; sourceTree = "<group>"; };
 		B0A073551F3A43D7001B8CC6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B0A0735B1F3A43E9001B8CC6 /* BaseMappable+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "BaseMappable+Additions.swift"; sourceTree = "<group>"; };
 		B0A0735C1F3A43E9001B8CC6 /* BoolTransform.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoolTransform.swift; sourceTree = "<group>"; };
@@ -52,7 +59,19 @@
 		B0A073831F3A4835001B8CC6 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = Carthage/Build/iOS/RealmSwift.framework; sourceTree = "<group>"; };
 		B0AF241A20699C200094C84F /* RealmOptionalTypeCastTransform.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmOptionalTypeCastTransform.swift; sourceTree = "<group>"; };
 		B0AF241B20699C200094C84F /* RealmOptionalTransform.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmOptionalTransform.swift; sourceTree = "<group>"; };
+		E281799122E9AFC10078A909 /* ObjectMapperAdditions.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ObjectMapperAdditions.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E281799322E9AFC20078A909 /* ObjectMapperAdditions_watchOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ObjectMapperAdditions_watchOS.h; sourceTree = "<group>"; };
+		E281799422E9AFC20078A909 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E281799E22E9AFCE0078A909 /* ObjectMapperAdditions.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ObjectMapperAdditions.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E28179A022E9AFCE0078A909 /* ObjectMapperAdditions_tvOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ObjectMapperAdditions_tvOS.h; sourceTree = "<group>"; };
+		E28179A122E9AFCE0078A909 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E28179AB22E9AFDB0078A909 /* ObjectMapperAdditions.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ObjectMapperAdditions.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E28179AD22E9AFDB0078A909 /* ObjectMapperAdditions_macOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ObjectMapperAdditions_macOS.h; sourceTree = "<group>"; };
+		E28179AE22E9AFDB0078A909 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E289273C2256160700CAA647 /* EnumTypeCastTransform.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnumTypeCastTransform.swift; sourceTree = "<group>"; };
+		E2BD7CA722E9B7A00020932D /* ObjectMapper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ObjectMapper.framework; path = Carthage/Build/Mac/ObjectMapper.framework; sourceTree = "<group>"; };
+		E2BD7CAB22E9B7E20020932D /* ObjectMapper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ObjectMapper.framework; path = Carthage/Build/tvOS/ObjectMapper.framework; sourceTree = "<group>"; };
+		E2BD7CAF22E9B8770020932D /* ObjectMapper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ObjectMapper.framework; path = Carthage/Build/watchOS/ObjectMapper.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,9 +87,34 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E2BD7CA522E9B6D60020932D /* ObjectMapperAdditions.framework in Frameworks */,
 				B0A073841F3A4835001B8CC6 /* Realm.framework in Frameworks */,
 				B0A073861F3A4835001B8CC6 /* RealmSwift.framework in Frameworks */,
 				B0A073801F3A4835001B8CC6 /* ObjectMapper.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E281798E22E9AFC10078A909 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E2BD7CB022E9B8770020932D /* ObjectMapper.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E281799B22E9AFCE0078A909 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E2BD7CAC22E9B7E20020932D /* ObjectMapper.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E28179A822E9AFDB0078A909 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E2BD7CA822E9B7A00020932D /* ObjectMapper.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -80,10 +124,14 @@
 		B0A073451F3A43C0001B8CC6 = {
 			isa = PBXGroup;
 			children = (
+				B0A0737D1F3A482F001B8CC6 /* Frameworks */,
 				B0A073531F3A43D7001B8CC6 /* ObjectMapperAdditions */,
+				E2BD7CA422E9B6770020932D /* ObjectMapperAdditions-iOS */,
+				E28179AC22E9AFDB0078A909 /* ObjectMapperAdditions-macOS */,
+				E281799F22E9AFCE0078A909 /* ObjectMapperAdditions-tvOS */,
+				E281799222E9AFC20078A909 /* ObjectMapperAdditions-watchOS */,
 				B0A073741F3A4518001B8CC6 /* ObjectMapperAdditionsRealm */,
 				B0A073521F3A43D7001B8CC6 /* Products */,
-				B0A0737D1F3A482F001B8CC6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -92,6 +140,9 @@
 			children = (
 				B0A073511F3A43D7001B8CC6 /* ObjectMapperAdditions.framework */,
 				B0A073731F3A4518001B8CC6 /* ObjectMapperAdditionsRealm.framework */,
+				E281799122E9AFC10078A909 /* ObjectMapperAdditions.framework */,
+				E281799E22E9AFCE0078A909 /* ObjectMapperAdditions.framework */,
+				E28179AB22E9AFDB0078A909 /* ObjectMapperAdditions.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -101,8 +152,6 @@
 			children = (
 				B0A0735A1F3A43E9001B8CC6 /* Core */,
 				B0A073621F3A43E9001B8CC6 /* Realm */,
-				B0A073541F3A43D7001B8CC6 /* ObjectMapperAdditions.h */,
-				B0A073551F3A43D7001B8CC6 /* Info.plist */,
 			);
 			path = ObjectMapperAdditions;
 			sourceTree = "<group>";
@@ -149,11 +198,50 @@
 		B0A0737D1F3A482F001B8CC6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E2BD7CAB22E9B7E20020932D /* ObjectMapper.framework */,
+				E2BD7CA722E9B7A00020932D /* ObjectMapper.framework */,
+				B0A0737E1F3A482F001B8CC6 /* ObjectMapper.framework */,
+				E2BD7CAF22E9B8770020932D /* ObjectMapper.framework */,
 				B0A073811F3A4835001B8CC6 /* Realm.framework */,
 				B0A073831F3A4835001B8CC6 /* RealmSwift.framework */,
-				B0A0737E1F3A482F001B8CC6 /* ObjectMapper.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E281799222E9AFC20078A909 /* ObjectMapperAdditions-watchOS */ = {
+			isa = PBXGroup;
+			children = (
+				E281799322E9AFC20078A909 /* ObjectMapperAdditions_watchOS.h */,
+				E281799422E9AFC20078A909 /* Info.plist */,
+			);
+			path = "ObjectMapperAdditions-watchOS";
+			sourceTree = "<group>";
+		};
+		E281799F22E9AFCE0078A909 /* ObjectMapperAdditions-tvOS */ = {
+			isa = PBXGroup;
+			children = (
+				E28179A022E9AFCE0078A909 /* ObjectMapperAdditions_tvOS.h */,
+				E28179A122E9AFCE0078A909 /* Info.plist */,
+			);
+			path = "ObjectMapperAdditions-tvOS";
+			sourceTree = "<group>";
+		};
+		E28179AC22E9AFDB0078A909 /* ObjectMapperAdditions-macOS */ = {
+			isa = PBXGroup;
+			children = (
+				E28179AD22E9AFDB0078A909 /* ObjectMapperAdditions_macOS.h */,
+				E28179AE22E9AFDB0078A909 /* Info.plist */,
+			);
+			path = "ObjectMapperAdditions-macOS";
+			sourceTree = "<group>";
+		};
+		E2BD7CA422E9B6770020932D /* ObjectMapperAdditions-iOS */ = {
+			isa = PBXGroup;
+			children = (
+				B0A073541F3A43D7001B8CC6 /* ObjectMapperAdditions_iOS.h */,
+				B0A073551F3A43D7001B8CC6 /* Info.plist */,
+			);
+			path = "ObjectMapperAdditions-iOS";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -163,7 +251,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B0A073561F3A43D7001B8CC6 /* ObjectMapperAdditions.h in Headers */,
+				B0A073561F3A43D7001B8CC6 /* ObjectMapperAdditions_iOS.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -175,12 +263,36 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E281798C22E9AFC10078A909 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E281799522E9AFC20078A909 /* ObjectMapperAdditions_watchOS.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E281799922E9AFCE0078A909 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E28179A222E9AFCE0078A909 /* ObjectMapperAdditions_tvOS.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E28179A622E9AFDB0078A909 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E28179AF22E9AFDB0078A909 /* ObjectMapperAdditions_macOS.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		B0A073501F3A43D7001B8CC6 /* ObjectMapperAdditions */ = {
+		B0A073501F3A43D7001B8CC6 /* ObjectMapperAdditions-iOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B0A073591F3A43D7001B8CC6 /* Build configuration list for PBXNativeTarget "ObjectMapperAdditions" */;
+			buildConfigurationList = B0A073591F3A43D7001B8CC6 /* Build configuration list for PBXNativeTarget "ObjectMapperAdditions-iOS" */;
 			buildPhases = (
 				B0A0734C1F3A43D7001B8CC6 /* Sources */,
 				B0A0734D1F3A43D7001B8CC6 /* Frameworks */,
@@ -191,7 +303,7 @@
 			);
 			dependencies = (
 			);
-			name = ObjectMapperAdditions;
+			name = "ObjectMapperAdditions-iOS";
 			productName = ObjectMapperAdditions;
 			productReference = B0A073511F3A43D7001B8CC6 /* ObjectMapperAdditions.framework */;
 			productType = "com.apple.product-type.framework";
@@ -214,6 +326,60 @@
 			productReference = B0A073731F3A4518001B8CC6 /* ObjectMapperAdditionsRealm.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		E281799022E9AFC10078A909 /* ObjectMapperAdditions-watchOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E281799622E9AFC20078A909 /* Build configuration list for PBXNativeTarget "ObjectMapperAdditions-watchOS" */;
+			buildPhases = (
+				E281798C22E9AFC10078A909 /* Headers */,
+				E281798D22E9AFC10078A909 /* Sources */,
+				E281798E22E9AFC10078A909 /* Frameworks */,
+				E281798F22E9AFC10078A909 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "ObjectMapperAdditions-watchOS";
+			productName = "ObjectMapperAdditions-watchOS";
+			productReference = E281799122E9AFC10078A909 /* ObjectMapperAdditions.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		E281799D22E9AFCE0078A909 /* ObjectMapperAdditions-tvOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E28179A322E9AFCE0078A909 /* Build configuration list for PBXNativeTarget "ObjectMapperAdditions-tvOS" */;
+			buildPhases = (
+				E281799922E9AFCE0078A909 /* Headers */,
+				E281799A22E9AFCE0078A909 /* Sources */,
+				E281799B22E9AFCE0078A909 /* Frameworks */,
+				E281799C22E9AFCE0078A909 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "ObjectMapperAdditions-tvOS";
+			productName = "ObjectMapperAdditions-tvOS";
+			productReference = E281799E22E9AFCE0078A909 /* ObjectMapperAdditions.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		E28179AA22E9AFDB0078A909 /* ObjectMapperAdditions-macOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E28179B022E9AFDB0078A909 /* Build configuration list for PBXNativeTarget "ObjectMapperAdditions-macOS" */;
+			buildPhases = (
+				E28179A622E9AFDB0078A909 /* Headers */,
+				E28179A722E9AFDB0078A909 /* Sources */,
+				E28179A822E9AFDB0078A909 /* Frameworks */,
+				E28179A922E9AFDB0078A909 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "ObjectMapperAdditions-macOS";
+			productName = "ObjectMapperAdditions-macOS";
+			productReference = E28179AB22E9AFDB0078A909 /* ObjectMapperAdditions.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -231,6 +397,18 @@
 						CreatedOnToolsVersion = 8.3.3;
 						ProvisioningStyle = Automatic;
 					};
+					E281799022E9AFC10078A909 = {
+						CreatedOnToolsVersion = 10.3;
+						ProvisioningStyle = Automatic;
+					};
+					E281799D22E9AFCE0078A909 = {
+						CreatedOnToolsVersion = 10.3;
+						ProvisioningStyle = Automatic;
+					};
+					E28179AA22E9AFDB0078A909 = {
+						CreatedOnToolsVersion = 10.3;
+						ProvisioningStyle = Automatic;
+					};
 				};
 			};
 			buildConfigurationList = B0A073491F3A43C0001B8CC6 /* Build configuration list for PBXProject "ObjectMapperAdditions" */;
@@ -246,8 +424,11 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				B0A073501F3A43D7001B8CC6 /* ObjectMapperAdditions */,
+				B0A073501F3A43D7001B8CC6 /* ObjectMapperAdditions-iOS */,
 				B0A073721F3A4518001B8CC6 /* ObjectMapperAdditionsRealm */,
+				E281799022E9AFC10078A909 /* ObjectMapperAdditions-watchOS */,
+				E281799D22E9AFCE0078A909 /* ObjectMapperAdditions-tvOS */,
+				E28179AA22E9AFDB0078A909 /* ObjectMapperAdditions-macOS */,
 			);
 		};
 /* End PBXProject section */
@@ -261,6 +442,27 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		B0A073711F3A4518001B8CC6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E281798F22E9AFC10078A909 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E281799C22E9AFCE0078A909 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E28179A922E9AFDB0078A909 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -295,6 +497,27 @@
 				B0A0737B1F3A4525001B8CC6 /* RealmTransform.swift in Sources */,
 				B0AF241D20699C200094C84F /* RealmOptionalTransform.swift in Sources */,
 				B0A0739C1F3A4F32001B8CC6 /* RealmTypeCastTransform.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E281798D22E9AFC10078A909 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E281799A22E9AFCE0078A909 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E28179A722E9AFDB0078A909 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -333,6 +556,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -366,6 +590,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -420,20 +645,19 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				INFOPLIST_FILE = ObjectMapperAdditions/Info.plist;
+				INFOPLIST_FILE = "ObjectMapperAdditions-iOS/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.anton-plebanovich.ObjectMapperAdditions";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = ObjectMapperAdditions;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -484,18 +708,17 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				INFOPLIST_FILE = ObjectMapperAdditions/Info.plist;
+				INFOPLIST_FILE = "ObjectMapperAdditions-iOS/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.anton-plebanovich.ObjectMapperAdditions";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = ObjectMapperAdditions;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -565,7 +788,6 @@
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -626,8 +848,331 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		E281799722E9AFC20078A909 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/watchOS",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = "ObjectMapperAdditions-watchOS/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.anton-plebanovich.ObjectMapperAdditions-watchOS";
+				PRODUCT_NAME = ObjectMapperAdditions;
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Debug;
+		};
+		E281799822E9AFC20078A909 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_NS_ASSERTIONS = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/watchOS",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = "ObjectMapperAdditions-watchOS/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.anton-plebanovich.ObjectMapperAdditions-watchOS";
+				PRODUCT_NAME = ObjectMapperAdditions;
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Release;
+		};
+		E28179A422E9AFCE0078A909 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/tvOS",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = "ObjectMapperAdditions-tvOS/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.anton-plebanovich.ObjectMapperAdditions-tvOS";
+				PRODUCT_NAME = ObjectMapperAdditions;
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		E28179A522E9AFCE0078A909 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_NS_ASSERTIONS = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/tvOS",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = "ObjectMapperAdditions-tvOS/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.anton-plebanovich.ObjectMapperAdditions-tvOS";
+				PRODUCT_NAME = ObjectMapperAdditions;
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		E28179B122E9AFDB0078A909 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
+				FRAMEWORK_VERSION = A;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = "ObjectMapperAdditions-macOS/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.anton-plebanovich.ObjectMapperAdditions-macOS";
+				PRODUCT_NAME = ObjectMapperAdditions;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		E28179B222E9AFDB0078A909 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_NS_ASSERTIONS = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
+				FRAMEWORK_VERSION = A;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = "ObjectMapperAdditions-macOS/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.anton-plebanovich.ObjectMapperAdditions-macOS";
+				PRODUCT_NAME = ObjectMapperAdditions;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -645,7 +1190,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B0A073591F3A43D7001B8CC6 /* Build configuration list for PBXNativeTarget "ObjectMapperAdditions" */ = {
+		B0A073591F3A43D7001B8CC6 /* Build configuration list for PBXNativeTarget "ObjectMapperAdditions-iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B0A073571F3A43D7001B8CC6 /* Debug */,
@@ -659,6 +1204,33 @@
 			buildConfigurations = (
 				B0A073791F3A4518001B8CC6 /* Debug */,
 				B0A0737A1F3A4518001B8CC6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E281799622E9AFC20078A909 /* Build configuration list for PBXNativeTarget "ObjectMapperAdditions-watchOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E281799722E9AFC20078A909 /* Debug */,
+				E281799822E9AFC20078A909 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E28179A322E9AFCE0078A909 /* Build configuration list for PBXNativeTarget "ObjectMapperAdditions-tvOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E28179A422E9AFCE0078A909 /* Debug */,
+				E28179A522E9AFCE0078A909 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E28179B022E9AFDB0078A909 /* Build configuration list for PBXNativeTarget "ObjectMapperAdditions-macOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E28179B122E9AFDB0078A909 /* Debug */,
+				E28179B222E9AFDB0078A909 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -16,7 +16,7 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "B0A073501F3A43D7001B8CC6"
                BuildableName = "ObjectMapperAdditions.framework"
-               BlueprintName = "ObjectMapperAdditions"
+               BlueprintName = "ObjectMapperAdditions-iOS"
                ReferencedContainer = "container:ObjectMapperAdditions.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -47,7 +47,7 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "B0A073501F3A43D7001B8CC6"
             BuildableName = "ObjectMapperAdditions.framework"
-            BlueprintName = "ObjectMapperAdditions"
+            BlueprintName = "ObjectMapperAdditions-iOS"
             ReferencedContainer = "container:ObjectMapperAdditions.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -65,7 +65,7 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "B0A073501F3A43D7001B8CC6"
             BuildableName = "ObjectMapperAdditions.framework"
-            BlueprintName = "ObjectMapperAdditions"
+            BlueprintName = "ObjectMapperAdditions-iOS"
             ReferencedContainer = "container:ObjectMapperAdditions.xcodeproj">
          </BuildableReference>
       </MacroExpansion>

@@ -3,6 +3,13 @@ All notable changes to this project will be documented in this file.
 `ObjectMapperAdditions` adheres to [Semantic Versioning](http://semver.org/).
 
 
+## [6.0.2](https://github.com/APUtils/ObjectMapperAdditions/releases/tag/6.0.2)
+Released on 07/25/2019.
+
+#### Added
+- MacOS support for Cocoapods and Carthage
+
+
 ## [6.0.1](https://github.com/APUtils/ObjectMapperAdditions/releases/tag/6.0.1)
 Released on 05/23/2019.
 
