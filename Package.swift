@@ -17,10 +17,6 @@ let package = Package(
         .library(
             name: "ObjectMapperAdditions",
             targets: ["ObjectMapperAdditions"]
-        ),
-        .library(
-            name: "ObjectMapperAdditions",
-            targets: ["ObjectMapperAdditions"]
         )
     ],
     dependencies: [
