@@ -9,7 +9,9 @@
 import RealmSwift
 import ObjectMapper
 
-#if !COCOAPODS
+#if SPM
+    import ObjectMapperAdditions_Core
+#elseif !COCOAPODS
     import ObjectMapperAdditions
 #endif
 
