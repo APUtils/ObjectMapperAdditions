@@ -16,11 +16,11 @@ let package = Package(
     products: [
         .library(
             name: "ObjectMapperAdditions",
-            targets: ["ObjectMapperAdditions/Core"]
+            targets: ["ObjectMapperAdditions"]
         ),
         .library(
             name: "ObjectMapperAdditions",
-            targets: ["ObjectMapperAdditions/Realm"]
+            targets: ["ObjectMapperAdditions"]
         )
     ],
     dependencies: [
@@ -29,20 +29,12 @@ let package = Package(
     ],
     targets: [
         .target(
-            name: "ObjectMapperAdditions/Core",
+            name: "ObjectMapperAdditions",
             dependencies: [
-                "ObjectMapper"
-            ],
-            path: "ObjectMapperAdditions/Classes/Core"
-        ),
-        .target(
-            name: "ObjectMapperAdditions/Realm",
-            dependencies: [
-                "ObjectMapperAdditions/Core",
                 "RealmSwift",
                 "ObjectMapper"
             ],
-            path: "ObjectMapperAdditions/Classes/Realm",
+            path: "ObjectMapperAdditions/Classes/",
             swiftSettings: [
                 .define("SPM"),
             ]
