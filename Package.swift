@@ -15,11 +15,11 @@ let package = Package(
     ],
     products: [
         .library(
-            name: "ObjectMapperAdditions/Core",
+            name: "ObjectMapperAdditions",
             targets: ["ObjectMapperAdditions/Core"]
         ),
         .library(
-            name: "ObjectMapperAdditions/Realm",
+            name: "ObjectMapperAdditions",
             targets: ["ObjectMapperAdditions/Realm"]
         )
     ],
@@ -33,9 +33,7 @@ let package = Package(
             dependencies: [
                 "ObjectMapper"
             ],
-            path: "ObjectMapperAdditions/Classes/Core",
-            exclude: [
-            ]
+            path: "ObjectMapperAdditions/Classes/Core"
         ),
         .target(
             name: "ObjectMapperAdditions/Realm",
