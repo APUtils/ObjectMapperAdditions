@@ -20,7 +20,16 @@ echo -e "\nBuilding with Carthage..."
 carthage build --no-skip-current --cache-builds
 
 echo -e "\nPerforming tests..."
-set -o pipefail && xcodebuild -workspace "Example/ObjectMapperAdditions.xcworkspace" -sdk iphonesimulator -scheme "ObjectMapperAdditions-Example" -destination "platform=iOS Simulator,name=iPhone SE,OS=12.4" test | xcpretty
+simulator_id="$(xcrun simctl list devices available | grep "iPhone SE" | tail -1 | sed -e "s/.*iPhone SE (//g" -e "s/).*//g")"
+if [ -z "${simulator_id}" ]; then
+    echo "error: Please install 'iPhone SE' simulator."
+    echo " "
+    exit 1
+else
+    echo "Using iPhone SE simulator with ID: '${simulator_id}'"
+fi
+
+set -o pipefail && xcodebuild -workspace "Example/ObjectMapperAdditions.xcworkspace" -sdk iphonesimulator -scheme "ObjectMapperAdditions-Example" -destination "platform=iOS Simulator,id=${simulator_id}" test | xcpretty
 
 echo ""
 echo "SUCCESS!"

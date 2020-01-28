@@ -1,7 +1,13 @@
 #!/bin/bash
 
+# Assume scripts are placed in /Scripts/Cocoapods dir
 base_dir=$(dirname "$0")
 cd "$base_dir"
+
+. utils
+
+cd ..
+cd ..
 
 # Listing available pods
 echo ""
@@ -11,7 +17,7 @@ echo "Pods list:"
 printf '\033[0;34m'
 
 # Pods list
-grep -o "pod \'[a-zA-Z0-9\.\/-]*\'" Podfile | sed -e "s/^pod \'//" -e "s/\'$//"
+grep -o "pod \'[a-zA-Z0-9\.\/-]*\'" Podfile | sed -e "s/^pod \'//" -e "s/\'$//" | sort -fu
 
 # No color
 printf '\033[0m'
@@ -28,3 +34,6 @@ else
     # Trigger specific or all pod update
     pod update $pod_name
 fi
+
+echo "Fixing warnings"
+fixWarnings

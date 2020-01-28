@@ -17,7 +17,6 @@
 		679BB5C7D1BC010448F5314B /* Pods_ObjectMapperAdditions_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7232033871E2CE8DA1F1FBD7 /* Pods_ObjectMapperAdditions_Example.framework */; };
 		B02194911F2BAB3200E228EB /* MyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0B644791F2A07A100C3739E /* MyModel.swift */; };
 		B02194981F2BAF3700E228EB /* RealmSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = B02194961F2BAE7B00E228EB /* RealmSpec.swift */; };
-		B02371061F2BA2D500EA36DE /* podInstall.command in Resources */ = {isa = PBXBuildFile; fileRef = B02371051F2BA2D500EA36DE /* podInstall.command */; };
 		B0B6447C1F2A07EC00C3739E /* MyOtherModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0B6447B1F2A07EC00C3739E /* MyOtherModel.swift */; };
 		B0B644811F2A11FC00C3739E /* MyOtherRealmModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0B6447F1F2A11FC00C3739E /* MyOtherRealmModel.swift */; };
 		B0B644821F2A11FC00C3739E /* MyRealmModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0B644801F2A11FC00C3739E /* MyRealmModel.swift */; };
@@ -38,7 +37,6 @@
 
 /* Begin PBXFileReference section */
 		0D2D24CD2171632B006817DE /* DEPLOY PROCESS.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = "DEPLOY PROCESS.md"; path = "../DEPLOY PROCESS.md"; sourceTree = "<group>"; };
-		0D2D24CE21716420006817DE /* podUpdate.command */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = podUpdate.command; sourceTree = "<group>"; };
 		0D2D24CF21716F8F006817DE /* checkBuild.command */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; name = checkBuild.command; path = ../checkBuild.command; sourceTree = "<group>"; };
 		1E6A5436B00ACF85E4A03951 /* podCheck.command */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; name = podCheck.command; path = ../podCheck.command; sourceTree = "<group>"; };
 		3306BDD26A7024542AF11D3D /* ObjectMapperAdditions.podspec */ = {isa = PBXFileReference; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = ObjectMapperAdditions.podspec; path = ../ObjectMapperAdditions.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
@@ -60,7 +58,6 @@
 		9DFE7F9B21F6E89955E35AA5 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		A7D8958764C84B431CB2CCEE /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		B02194961F2BAE7B00E228EB /* RealmSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmSpec.swift; sourceTree = "<group>"; };
-		B02371051F2BA2D500EA36DE /* podInstall.command */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = podInstall.command; sourceTree = "<group>"; };
 		B0B644791F2A07A100C3739E /* MyModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyModel.swift; sourceTree = "<group>"; };
 		B0B6447B1F2A07EC00C3739E /* MyOtherModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyOtherModel.swift; sourceTree = "<group>"; };
 		B0B6447F1F2A11FC00C3739E /* MyOtherRealmModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyOtherRealmModel.swift; sourceTree = "<group>"; };
@@ -180,9 +177,7 @@
 				E289273E2256165A00CAA647 /* carthageUpdate.command */,
 				0D2D24CF21716F8F006817DE /* checkBuild.command */,
 				1E6A5436B00ACF85E4A03951 /* podCheck.command */,
-				B02371051F2BA2D500EA36DE /* podInstall.command */,
 				D99D6198B7EB09C279219FB2 /* podPush.command */,
-				0D2D24CE21716420006817DE /* podUpdate.command */,
 				A7D8958764C84B431CB2CCEE /* README.md */,
 			);
 			name = "Podspec Metadata";
@@ -271,7 +266,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0720;
-				LastUpgradeCheck = 1020;
+				LastUpgradeCheck = 1130;
 				ORGANIZATIONNAME = CocoaPods;
 				TargetAttributes = {
 					607FACCF1AFB9204008FA782 = {
@@ -311,7 +306,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */,
-				B02371061F2BA2D500EA36DE /* podInstall.command in Resources */,
 				607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */,
 				607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */,
 			);
