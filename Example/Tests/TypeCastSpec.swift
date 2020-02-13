@@ -113,6 +113,7 @@ class TypeCastSpec: QuickSpec {
 //                        "double11": 0.10000000000000001
 //                    }
                     let jsonString = doubleModel.toJSONString()!
+                    print(jsonString)
                     
                     // This one fails because of the Apple JSON mapping
 //                    expect(jsonString.contains("10000000000000001")).to(beFalse())
