@@ -23,11 +23,11 @@ PODS:
     - ObjectMapperAdditions/Core
     - RealmSwift
   - Quick (2.2.0)
-  - Realm (4.3.1):
-    - Realm/Headers (= 4.3.1)
-  - Realm/Headers (4.3.1)
-  - RealmSwift (4.3.1):
-    - Realm (= 4.3.1)
+  - Realm (4.3.2):
+    - Realm/Headers (= 4.3.2)
+  - Realm/Headers (4.3.2)
+  - RealmSwift (4.3.2):
+    - Realm (= 4.3.2)
 
 DEPENDENCIES:
   - APExtensions
@@ -55,8 +55,8 @@ SPEC CHECKSUMS:
   ObjectMapper: 70187b8941977c62ccfb423caf6b50be405cabf0
   ObjectMapperAdditions: e54eaeb8ad67db1c305e4e48d31045557ba1e6aa
   Quick: 7fb19e13be07b5dfb3b90d4f9824c855a11af40e
-  Realm: 31dc40934081ef740f60feedc46d88473cbfeb40
-  RealmSwift: b5199e9a41f67b99f51acf6874a6166f5fbe93d1
+  Realm: 5e92902e2875dff4bb0fd02f67bb737c3d5db2bc
+  RealmSwift: 9a360fc7bae04fc2e308a34fbd899d5faa2d6b22
 
 PODFILE CHECKSUM: b1ad17f9a8a9a7a9a5e8d1e0f6cb4f99d98a896c
 
