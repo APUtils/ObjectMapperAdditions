@@ -59,6 +59,7 @@ class TypeCastSpec: QuickSpec {
                     "double6": "1000000.0001",
                     "double7": "-2.66",
                     "double8": -1000000,
+                    "double9": 1.0,
                 ]
                 
                 it("should map it propertly") {
@@ -71,6 +72,7 @@ class TypeCastSpec: QuickSpec {
                     expect(model?.double6).to(equal(1000000.0001))
                     expect(model?.double7).to(equal(-2.66))
                     expect(model?.double8).to(equal(-1000000))
+                    expect(model?.double9).to(equal(1))
                 }
             }
         }
@@ -86,6 +88,7 @@ private struct MyDoubleModel: Mappable {
     var double6: Double?
     var double7: Double?
     var double8: Double?
+    var double9: Double?
     
     init?(map: Map) {}
     
@@ -98,5 +101,6 @@ private struct MyDoubleModel: Mappable {
         double6 <- (map["double6"], TypeCastTransform())
         double7 <- (map["double7"], TypeCastTransform())
         double8 <- (map["double8"], TypeCastTransform())
+        double9 <- (map["double9"], TypeCastTransform())
     }
 }
