@@ -25,7 +25,7 @@ Please check [official guide](https://github.com/Carthage/Carthage#if-youre-buil
 Cartfile:
 
 ```
-github "APUtils/ObjectMapperAdditions" ~> 6.0
+github "APUtils/ObjectMapperAdditions" ~> 7.0
 ```
 
 If you do not need Realm part, add those frameworks: `ObjectMapperAdditions`, `ObjectMapper`.
@@ -39,13 +39,13 @@ ObjectMapperAdditions is available through [CocoaPods](http://cocoapods.org).
 To install Core features, simply add the following line to your Podfile:
 
 ```ruby
-pod 'ObjectMapperAdditions/Core', '~> 6.0'
+pod 'ObjectMapperAdditions/Core', '~> 7.0'
 ```
 
 To add Realm transform to your project add the following line to your Podfile:
 
 ```ruby
-pod 'ObjectMapperAdditions/Realm', '~> 6.0'
+pod 'ObjectMapperAdditions/Realm', '~> 7.0'
 ```
 
 ## Usage

@@ -1,5 +1,5 @@
 # Deployment Target
-platform :ios, '8.0'
+platform :ios, '10.0'
 
 # Add pods as frameworks so we could add obj-c and swift 3.0 pods
 use_frameworks!

@@ -3,6 +3,13 @@ All notable changes to this project will be documented in this file.
 `ObjectMapperAdditions` adheres to [Semantic Versioning](http://semver.org/).
 
 
+## [7.0.0](https://github.com/APUtils/ObjectMapperAdditions/releases/tag/7.0.0)
+Released on 05/20/2020.
+
+#### Changed
+- Set minimum iOS deployment target to 10.0 to match ObjectMapper requirements.
+
+
 ## [6.0.2](https://github.com/APUtils/ObjectMapperAdditions/releases/tag/6.0.2)
 Released on 07/25/2019.
 
