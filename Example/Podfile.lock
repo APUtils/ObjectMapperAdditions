@@ -10,7 +10,7 @@ PODS:
   - APExtensions/Storyboard (7.0.1)
   - APExtensions/ViewConfiguration (7.0.1)
   - APExtensions/ViewState (7.0.1)
-  - Nimble (8.0.9)
+  - Nimble (8.1.1)
   - ObjectMapper (4.2.0)
   - ObjectMapperAdditions (7.0.0):
     - ObjectMapper
@@ -22,12 +22,12 @@ PODS:
     - ObjectMapper
     - ObjectMapperAdditions/Core
     - RealmSwift
-  - Quick (2.2.0)
-  - Realm (5.0.0):
-    - Realm/Headers (= 5.0.0)
-  - Realm/Headers (5.0.0)
-  - RealmSwift (5.0.0):
-    - Realm (= 5.0.0)
+  - Quick (3.0.0)
+  - Realm (5.2.0):
+    - Realm/Headers (= 5.2.0)
+  - Realm/Headers (5.2.0)
+  - RealmSwift (5.2.0):
+    - Realm (= 5.2.0)
 
 DEPENDENCIES:
   - APExtensions
@@ -37,7 +37,7 @@ DEPENDENCIES:
   - Quick
 
 SPEC REPOS:
-  trunk:
+  https://github.com/CocoaPods/Specs.git:
     - APExtensions
     - Nimble
     - ObjectMapper
@@ -51,13 +51,13 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   APExtensions: 9a7a7b6ff5b9785b245962de89fbbdaf4c10f10e
-  Nimble: 98b888285a615fd34f20e61753cf58ea1402bde4
+  Nimble: 5f8a2fb6fa343a7242dfdd9d42f7267419d464b2
   ObjectMapper: 1eb41f610210777375fa806bf161dc39fb832b81
   ObjectMapperAdditions: 90599007c533d46f6b4c05dca6931a9c0060424a
-  Quick: 7fb19e13be07b5dfb3b90d4f9824c855a11af40e
-  Realm: 76066d333de26f97e9caedaa85ee3ff4a62ca265
-  RealmSwift: c1bdff09b422569dc6881410d9ccf712bcdb79b0
+  Quick: 6d9559f40647bc4d510103842ef2fdd882d753e2
+  Realm: f749c723e272f08fdf1939af5e61d2bd09b203e8
+  RealmSwift: bf0ab78b52c5bafba8b3ad73be8dfb4c1ea5cf01
 
-PODFILE CHECKSUM: 63d7f50ea4e3ca4e6b6043137775d0b2932cadf8
+PODFILE CHECKSUM: 6d09de2dd5fe7b1cf0978d1846c852a9cdd1570e
 
-COCOAPODS: 1.9.1
+COCOAPODS: 1.9.3
