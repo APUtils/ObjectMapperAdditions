@@ -8,8 +8,8 @@ let objectMapperVersionStr = "3.5.1"
 let package = Package(
     name: "ObjectMapperAdditions",
     platforms: [
-        .iOS(.v9),
-        .tvOS(.v9),
+        .iOS(.v11),
+        .tvOS(.v10),
         .macOS(.v10_10),
         .watchOS(.v2),
     ],
@@ -20,8 +20,8 @@ let package = Package(
         )
     ],
     dependencies: [
-        .package(url: "https://github.com/realm/realm-cocoa.git", .exact(Version(realmVersionStr)!)),
-        .package(url: "https://github.com/tristanhimmelman/ObjectMapper.git", .exact(Version(objectMapperVersionStr)!)),
+        .package(url: "https://github.com/realm/realm-cocoa.git", .upToNextMajor(from: "10.6.0")),
+        .package(url: "https://github.com/tristanhimmelman/ObjectMapper.git", .upToNextMajor(from: "4.2.0")),
     ],
     targets: [
         .target(
