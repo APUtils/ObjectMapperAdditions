@@ -2,9 +2,6 @@
 // The swift-tools-version declares the minimum version of Swift required to build this package.
 import PackageDescription
 
-let realmVersionStr = "3.20.0"
-let objectMapperVersionStr = "3.5.1"
-
 let package = Package(
     name: "ObjectMapperAdditions",
     platforms: [
