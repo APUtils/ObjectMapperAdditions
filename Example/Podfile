@@ -1,6 +1,3 @@
-source 'https://github.com/CocoaPods/Specs.git'
-source 'https://github.com/Artsy/Specs.git'
-
 # Deployment Target
 platform :ios, '11.0'
 
@@ -19,8 +16,6 @@ target 'ObjectMapperAdditions_Example' do
     pod 'Nimble'
   end
 end
-
-
 
 post_install do |installer|
   # Add podInstall.command and podUpdate.command shell scripts to Pods project
