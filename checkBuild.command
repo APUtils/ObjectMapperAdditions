@@ -43,8 +43,7 @@ echo ""
 applyXcode12Workaround
 
 if [ "${CONTINUOUS_INTEGRATION}" = "true" ]; then
-    echo -e "Building with Carthage for iOS only on CI..."
-    carthage build --no-skip-current --platform iOS --cache-builds
+    echo -e "Skipping build with Carthage on CI"
     echo ""
     
 else

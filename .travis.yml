@@ -8,7 +8,6 @@ language: swift
 
 cache:
     directories:
-     - Carthage
      - Example/Pods
 
 before_install:
