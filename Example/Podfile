@@ -2,23 +2,22 @@ source 'https://github.com/CocoaPods/Specs.git'
 source 'https://github.com/Artsy/Specs.git'
 
 # Deployment Target
-platform :ios, '10.0'
+platform :ios, '11.0'
 
 # Add pods as frameworks so we could add obj-c and swift 3.0 pods
 use_frameworks!
 
 
 target 'ObjectMapperAdditions_Example' do
-    pod 'APExtensions'
-    pod 'ObjectMapper'
-    pod 'ObjectMapperAdditions', :path => '../'
-
-    target 'ObjectMapperAdditions_Tests' do
-        inherit! :search_paths
-
-        pod 'Quick'
-        pod 'Nimble'
-    end
+  pod 'APExtensions', :git => 'https://github.com/APUtils/APExtensions'
+  pod 'ObjectMapperAdditions', :path => '../'
+  
+  target 'ObjectMapperAdditions_Tests' do
+    inherit! :search_paths
+    
+    pod 'Quick'
+    pod 'Nimble'
+  end
 end
 
 
@@ -28,7 +27,7 @@ post_install do |installer|
   pods_project = installer.pods_project
   pods_project.new_file "../Scripts/Cocoapods/podInstall.command"
   pods_project.new_file "../Scripts/Cocoapods/podUpdate.command"
-
+  
   # Silence Pods project warning
   installer.pods_project.build_configurations.each do |config|
     config.build_settings['CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED'] = 'YES'

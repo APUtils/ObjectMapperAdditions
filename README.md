@@ -1,6 +1,7 @@
 # ObjectMapperAdditions
 
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
+[![Swift Package Manager compatible](https://img.shields.io/badge/Swift%20Package%20Manager-compatible-brightgreen.svg)](https://github.com/apple/swift-package-manager)
 [![Version](https://img.shields.io/cocoapods/v/ObjectMapperAdditions.svg?style=flat)](http://cocoapods.org/pods/ObjectMapperAdditions)
 [![License](https://img.shields.io/cocoapods/l/ObjectMapperAdditions.svg?style=flat)](http://cocoapods.org/pods/ObjectMapperAdditions)
 [![Platform](https://img.shields.io/cocoapods/p/ObjectMapperAdditions.svg?style=flat)](http://cocoapods.org/pods/ObjectMapperAdditions)
@@ -25,7 +26,7 @@ Please check [official guide](https://github.com/Carthage/Carthage#if-youre-buil
 Cartfile:
 
 ```
-github "APUtils/ObjectMapperAdditions" ~> 7.0
+github "APUtils/ObjectMapperAdditions" ~> 8.0
 ```
 
 If you do not need Realm part, add those frameworks: `ObjectMapperAdditions`, `ObjectMapper`.
@@ -39,13 +40,25 @@ ObjectMapperAdditions is available through [CocoaPods](http://cocoapods.org).
 To install Core features, simply add the following line to your Podfile:
 
 ```ruby
-pod 'ObjectMapperAdditions/Core', '~> 7.0'
+pod 'ObjectMapperAdditions/Core', '~> 8.0'
 ```
 
 To add Realm transform to your project add the following line to your Podfile:
 
 ```ruby
-pod 'ObjectMapperAdditions/Realm', '~> 7.0'
+pod 'ObjectMapperAdditions/Realm', '~> 8.0'
+```
+
+#### Swift Package Manager
+
+The Swift Package Manager is a tool for automating the distribution of Swift code and is integrated into the swift compiler.
+
+Once you have your Swift package set up, adding `ObjectMapperAdditions` as a dependency is as easy as adding it to the dependencies value of your `Package.swift`.
+
+```swift
+dependencies: [
+    .package(url: "https://github.com/APUtils/ObjectMapperAdditions.git", .upToNextMajor(from: "8.0.0"))
+]
 ```
 
 ## Usage

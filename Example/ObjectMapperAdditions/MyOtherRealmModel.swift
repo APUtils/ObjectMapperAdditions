@@ -13,6 +13,7 @@ import RealmSwift
 
 
 class MyOtherRealmModel: Object, Mappable {
+    @objc dynamic var string: String?
     required convenience init?(map: Map) { self.init() }
     func mapping(map: Map) {}
     

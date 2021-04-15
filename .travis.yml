@@ -2,13 +2,21 @@
 # * http://www.objc.io/issue-6/travis-ci.html
 # * https://github.com/supermarin/xcpretty#usage
 
-osx_image: xcode8.3
-language: objective-c
-cache: cocoapods
-podfile: Example/Podfile
+osx_image: xcode12.4
+
+language: swift
+
+cache:
+    directories:
+     - Carthage
+     - Example/Pods
+
 before_install:
-- gem install cocoapods # Since Travis is not always on latest version
-- pod repo update
-- pod install --project-directory=Example
+- Example/Scripts/Cocoapods/podInstall.command
+- brew install carthage
+- Scripts/Carthage/carthageInstallTests.command
+
 script:
-- set -o pipefail && xcodebuild test -workspace Example/ObjectMapperAdditions.xcworkspace -scheme ObjectMapperAdditions-Example -destination "platform=iOS Simulator,OS=10.3.1,name=iPhone 7 Plus" ONLY_ACTIVE_ARCH=NO | xcpretty
+- bash checkBuild.command
+- pod lib lint
+- pod spec lint

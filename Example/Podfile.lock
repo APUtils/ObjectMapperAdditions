@@ -1,44 +1,41 @@
 PODS:
-  - APExtensions (7.0.1):
-    - APExtensions/Abstractions (= 7.0.1)
-    - APExtensions/Core (= 7.0.1)
-    - APExtensions/Storyboard (= 7.0.1)
-    - APExtensions/ViewConfiguration (= 7.0.1)
-    - APExtensions/ViewState (= 7.0.1)
-  - APExtensions/Abstractions (7.0.1)
-  - APExtensions/Core (7.0.1)
-  - APExtensions/Storyboard (7.0.1)
-  - APExtensions/ViewConfiguration (7.0.1)
-  - APExtensions/ViewState (7.0.1)
-  - Nimble (8.1.1)
+  - APExtensions (10.0.0):
+    - APExtensions/Core (= 10.0.0)
+    - APExtensions/Storyboard (= 10.0.0)
+    - APExtensions/ViewConfiguration (= 10.0.0)
+  - APExtensions/Core (10.0.0):
+    - LogsManager/RoutableLogger (>= 9.1.5)
+  - APExtensions/Storyboard (10.0.0)
+  - APExtensions/ViewConfiguration (10.0.0)
+  - LogsManager/RoutableLogger (9.1.5)
+  - Nimble (9.0.0)
   - ObjectMapper (4.2.0)
-  - ObjectMapperAdditions (7.0.0):
+  - ObjectMapperAdditions (8.0.0):
     - ObjectMapper
-    - ObjectMapperAdditions/Core (= 7.0.0)
-    - ObjectMapperAdditions/Realm (= 7.0.0)
-  - ObjectMapperAdditions/Core (7.0.0):
+    - ObjectMapperAdditions/Core (= 8.0.0)
+    - ObjectMapperAdditions/Realm (= 8.0.0)
+  - ObjectMapperAdditions/Core (8.0.0):
     - ObjectMapper
-  - ObjectMapperAdditions/Realm (7.0.0):
+  - ObjectMapperAdditions/Realm (8.0.0):
     - ObjectMapper
     - ObjectMapperAdditions/Core
     - RealmSwift
-  - Quick (3.0.0)
-  - Realm (5.2.0):
-    - Realm/Headers (= 5.2.0)
-  - Realm/Headers (5.2.0)
-  - RealmSwift (5.2.0):
-    - Realm (= 5.2.0)
+  - Quick (3.1.2)
+  - Realm (10.7.2):
+    - Realm/Headers (= 10.7.2)
+  - Realm/Headers (10.7.2)
+  - RealmSwift (10.7.2):
+    - Realm (= 10.7.2)
 
 DEPENDENCIES:
-  - APExtensions
+  - APExtensions (from `https://github.com/APUtils/APExtensions`)
   - Nimble
-  - ObjectMapper
   - ObjectMapperAdditions (from `../`)
   - Quick
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
-    - APExtensions
+    - LogsManager
     - Nimble
     - ObjectMapper
     - Quick
@@ -46,18 +43,26 @@ SPEC REPOS:
     - RealmSwift
 
 EXTERNAL SOURCES:
+  APExtensions:
+    :git: https://github.com/APUtils/APExtensions
   ObjectMapperAdditions:
     :path: "../"
 
+CHECKOUT OPTIONS:
+  APExtensions:
+    :commit: ae784925e948a39dbc9d521e538a32bef9544936
+    :git: https://github.com/APUtils/APExtensions
+
 SPEC CHECKSUMS:
-  APExtensions: 9a7a7b6ff5b9785b245962de89fbbdaf4c10f10e
-  Nimble: 5f8a2fb6fa343a7242dfdd9d42f7267419d464b2
+  APExtensions: b46cab78fe5d291e1157838fd78962a886e627df
+  LogsManager: e821cea87e608e96cf39a68009d830579098a2cb
+  Nimble: 3b4ec3fd40f1dc178058e0981107721c615643d8
   ObjectMapper: 1eb41f610210777375fa806bf161dc39fb832b81
-  ObjectMapperAdditions: 90599007c533d46f6b4c05dca6931a9c0060424a
-  Quick: 6d9559f40647bc4d510103842ef2fdd882d753e2
-  Realm: f749c723e272f08fdf1939af5e61d2bd09b203e8
-  RealmSwift: bf0ab78b52c5bafba8b3ad73be8dfb4c1ea5cf01
+  ObjectMapperAdditions: a7f82e0143a8f099f786554e7907ac283e472cb1
+  Quick: 60f0ea3b8e0cfc0df3259a5c06a238ad8b3c46e0
+  Realm: e523da9ade306c5ae87e85dc09fdef148d3e1cc1
+  RealmSwift: 4f6758c3adbdcc87f7b7777107226532a077f61c
 
-PODFILE CHECKSUM: 6d09de2dd5fe7b1cf0978d1846c852a9cdd1570e
+PODFILE CHECKSUM: 2345daafd9f51e324482c4a7703e71b80af7b7c3
 
-COCOAPODS: 1.9.3
+COCOAPODS: 1.10.1
