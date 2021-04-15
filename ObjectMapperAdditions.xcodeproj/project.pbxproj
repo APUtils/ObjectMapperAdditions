@@ -7,6 +7,47 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0D673F802628662C005F308D /* RealmListTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D673F7E2628662C005F308D /* RealmListTransform.swift */; };
+		0D673F8E2628664E005F308D /* BaseMappable+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A0735B1F3A43E9001B8CC6 /* BaseMappable+Additions.swift */; };
+		0D673F8F2628664E005F308D /* BoolTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A0735C1F3A43E9001B8CC6 /* BoolTransform.swift */; };
+		0D673F902628664E005F308D /* StringTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A073601F3A43E9001B8CC6 /* StringTransform.swift */; };
+		0D673F912628664E005F308D /* ISO8601JustDateTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00F4EAA1F7A7608004F9676 /* ISO8601JustDateTransform.swift */; };
+		0D673F922628664E005F308D /* IntTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A0735E1F3A43E9001B8CC6 /* IntTransform.swift */; };
+		0D673F932628664E005F308D /* ObjectMapper+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A0735F1F3A43E9001B8CC6 /* ObjectMapper+Additions.swift */; };
+		0D673F942628664E005F308D /* TimestampTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00F4EA91F7A7608004F9676 /* TimestampTransform.swift */; };
+		0D673F952628664E005F308D /* TypeCastTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A073611F3A43E9001B8CC6 /* TypeCastTransform.swift */; };
+		0D673F962628664E005F308D /* DoubleTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A0735D1F3A43E9001B8CC6 /* DoubleTransform.swift */; };
+		0D673F972628664E005F308D /* EnumTypeCastTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = E289273C2256160700CAA647 /* EnumTypeCastTransform.swift */; };
+		0D673F9D2628664E005F308D /* BaseMappable+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A0735B1F3A43E9001B8CC6 /* BaseMappable+Additions.swift */; };
+		0D673F9E2628664E005F308D /* BoolTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A0735C1F3A43E9001B8CC6 /* BoolTransform.swift */; };
+		0D673F9F2628664E005F308D /* StringTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A073601F3A43E9001B8CC6 /* StringTransform.swift */; };
+		0D673FA02628664E005F308D /* ISO8601JustDateTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00F4EAA1F7A7608004F9676 /* ISO8601JustDateTransform.swift */; };
+		0D673FA12628664E005F308D /* IntTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A0735E1F3A43E9001B8CC6 /* IntTransform.swift */; };
+		0D673FA22628664E005F308D /* ObjectMapper+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A0735F1F3A43E9001B8CC6 /* ObjectMapper+Additions.swift */; };
+		0D673FA32628664E005F308D /* TimestampTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00F4EA91F7A7608004F9676 /* TimestampTransform.swift */; };
+		0D673FA42628664E005F308D /* TypeCastTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A073611F3A43E9001B8CC6 /* TypeCastTransform.swift */; };
+		0D673FA52628664E005F308D /* DoubleTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A0735D1F3A43E9001B8CC6 /* DoubleTransform.swift */; };
+		0D673FA62628664E005F308D /* EnumTypeCastTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = E289273C2256160700CAA647 /* EnumTypeCastTransform.swift */; };
+		0D673FAC2628664F005F308D /* BaseMappable+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A0735B1F3A43E9001B8CC6 /* BaseMappable+Additions.swift */; };
+		0D673FAD2628664F005F308D /* BoolTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A0735C1F3A43E9001B8CC6 /* BoolTransform.swift */; };
+		0D673FAE2628664F005F308D /* StringTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A073601F3A43E9001B8CC6 /* StringTransform.swift */; };
+		0D673FAF2628664F005F308D /* ISO8601JustDateTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00F4EAA1F7A7608004F9676 /* ISO8601JustDateTransform.swift */; };
+		0D673FB02628664F005F308D /* IntTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A0735E1F3A43E9001B8CC6 /* IntTransform.swift */; };
+		0D673FB12628664F005F308D /* ObjectMapper+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A0735F1F3A43E9001B8CC6 /* ObjectMapper+Additions.swift */; };
+		0D673FB22628664F005F308D /* TimestampTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00F4EA91F7A7608004F9676 /* TimestampTransform.swift */; };
+		0D673FB32628664F005F308D /* TypeCastTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A073611F3A43E9001B8CC6 /* TypeCastTransform.swift */; };
+		0D673FB42628664F005F308D /* DoubleTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A0735D1F3A43E9001B8CC6 /* DoubleTransform.swift */; };
+		0D673FB52628664F005F308D /* EnumTypeCastTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = E289273C2256160700CAA647 /* EnumTypeCastTransform.swift */; };
+		0D673FBB2628665A005F308D /* BaseMappable+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A0735B1F3A43E9001B8CC6 /* BaseMappable+Additions.swift */; };
+		0D673FBC2628665A005F308D /* ObjectMapper+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A0735F1F3A43E9001B8CC6 /* ObjectMapper+Additions.swift */; };
+		0D673FBD2628665A005F308D /* StringTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A073601F3A43E9001B8CC6 /* StringTransform.swift */; };
+		0D673FBE2628665A005F308D /* TimestampTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00F4EA91F7A7608004F9676 /* TimestampTransform.swift */; };
+		0D673FBF2628665A005F308D /* ISO8601JustDateTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00F4EAA1F7A7608004F9676 /* ISO8601JustDateTransform.swift */; };
+		0D673FC02628665A005F308D /* BoolTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A0735C1F3A43E9001B8CC6 /* BoolTransform.swift */; };
+		0D673FC12628665A005F308D /* TypeCastTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A073611F3A43E9001B8CC6 /* TypeCastTransform.swift */; };
+		0D673FC22628665A005F308D /* IntTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A0735E1F3A43E9001B8CC6 /* IntTransform.swift */; };
+		0D673FC32628665A005F308D /* EnumTypeCastTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = E289273C2256160700CAA647 /* EnumTypeCastTransform.swift */; };
+		0D673FC42628665A005F308D /* DoubleTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A0735D1F3A43E9001B8CC6 /* DoubleTransform.swift */; };
 		B00F4EAB1F7A7608004F9676 /* TimestampTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00F4EA91F7A7608004F9676 /* TimestampTransform.swift */; };
 		B00F4EAC1F7A7608004F9676 /* ISO8601JustDateTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00F4EAA1F7A7608004F9676 /* ISO8601JustDateTransform.swift */; };
 		B0A073561F3A43D7001B8CC6 /* ObjectMapperAdditions_iOS.h in Headers */ = {isa = PBXBuildFile; fileRef = B0A073541F3A43D7001B8CC6 /* ObjectMapperAdditions_iOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -37,6 +78,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0D673F7E2628662C005F308D /* RealmListTransform.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmListTransform.swift; sourceTree = "<group>"; };
 		B00F4EA91F7A7608004F9676 /* TimestampTransform.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimestampTransform.swift; sourceTree = "<group>"; };
 		B00F4EAA1F7A7608004F9676 /* ISO8601JustDateTransform.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ISO8601JustDateTransform.swift; sourceTree = "<group>"; };
 		B0A073511F3A43D7001B8CC6 /* ObjectMapperAdditions.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ObjectMapperAdditions.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -177,6 +219,7 @@
 		B0A073621F3A43E9001B8CC6 /* Realm */ = {
 			isa = PBXGroup;
 			children = (
+				0D673F7E2628662C005F308D /* RealmListTransform.swift */,
 				B0AF241B20699C200094C84F /* RealmOptionalTransform.swift */,
 				B0AF241A20699C200094C84F /* RealmOptionalTypeCastTransform.swift */,
 				B0A073631F3A43E9001B8CC6 /* RealmTransform.swift */,
@@ -399,14 +442,17 @@
 					};
 					E281799022E9AFC10078A909 = {
 						CreatedOnToolsVersion = 10.3;
+						LastSwiftMigration = 1240;
 						ProvisioningStyle = Automatic;
 					};
 					E281799D22E9AFCE0078A909 = {
 						CreatedOnToolsVersion = 10.3;
+						LastSwiftMigration = 1240;
 						ProvisioningStyle = Automatic;
 					};
 					E28179AA22E9AFDB0078A909 = {
 						CreatedOnToolsVersion = 10.3;
+						LastSwiftMigration = 1240;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -493,9 +539,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0D673FC02628665A005F308D /* BoolTransform.swift in Sources */,
+				0D673FBC2628665A005F308D /* ObjectMapper+Additions.swift in Sources */,
 				B0AF241C20699C200094C84F /* RealmOptionalTypeCastTransform.swift in Sources */,
+				0D673FC12628665A005F308D /* TypeCastTransform.swift in Sources */,
+				0D673FC32628665A005F308D /* EnumTypeCastTransform.swift in Sources */,
 				B0A0737B1F3A4525001B8CC6 /* RealmTransform.swift in Sources */,
+				0D673FC22628665A005F308D /* IntTransform.swift in Sources */,
+				0D673FC42628665A005F308D /* DoubleTransform.swift in Sources */,
+				0D673FBD2628665A005F308D /* StringTransform.swift in Sources */,
+				0D673FBB2628665A005F308D /* BaseMappable+Additions.swift in Sources */,
+				0D673F802628662C005F308D /* RealmListTransform.swift in Sources */,
 				B0AF241D20699C200094C84F /* RealmOptionalTransform.swift in Sources */,
+				0D673FBF2628665A005F308D /* ISO8601JustDateTransform.swift in Sources */,
+				0D673FBE2628665A005F308D /* TimestampTransform.swift in Sources */,
 				B0A0739C1F3A4F32001B8CC6 /* RealmTypeCastTransform.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -504,6 +561,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0D673FAE2628664F005F308D /* StringTransform.swift in Sources */,
+				0D673FB12628664F005F308D /* ObjectMapper+Additions.swift in Sources */,
+				0D673FB52628664F005F308D /* EnumTypeCastTransform.swift in Sources */,
+				0D673FB22628664F005F308D /* TimestampTransform.swift in Sources */,
+				0D673FB32628664F005F308D /* TypeCastTransform.swift in Sources */,
+				0D673FAD2628664F005F308D /* BoolTransform.swift in Sources */,
+				0D673FAC2628664F005F308D /* BaseMappable+Additions.swift in Sources */,
+				0D673FB02628664F005F308D /* IntTransform.swift in Sources */,
+				0D673FB42628664F005F308D /* DoubleTransform.swift in Sources */,
+				0D673FAF2628664F005F308D /* ISO8601JustDateTransform.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -511,6 +578,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0D673F9F2628664E005F308D /* StringTransform.swift in Sources */,
+				0D673FA22628664E005F308D /* ObjectMapper+Additions.swift in Sources */,
+				0D673FA62628664E005F308D /* EnumTypeCastTransform.swift in Sources */,
+				0D673FA32628664E005F308D /* TimestampTransform.swift in Sources */,
+				0D673FA42628664E005F308D /* TypeCastTransform.swift in Sources */,
+				0D673F9E2628664E005F308D /* BoolTransform.swift in Sources */,
+				0D673F9D2628664E005F308D /* BaseMappable+Additions.swift in Sources */,
+				0D673FA12628664E005F308D /* IntTransform.swift in Sources */,
+				0D673FA52628664E005F308D /* DoubleTransform.swift in Sources */,
+				0D673FA02628664E005F308D /* ISO8601JustDateTransform.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -518,6 +595,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0D673F902628664E005F308D /* StringTransform.swift in Sources */,
+				0D673F932628664E005F308D /* ObjectMapper+Additions.swift in Sources */,
+				0D673F972628664E005F308D /* EnumTypeCastTransform.swift in Sources */,
+				0D673F942628664E005F308D /* TimestampTransform.swift in Sources */,
+				0D673F952628664E005F308D /* TypeCastTransform.swift in Sources */,
+				0D673F8F2628664E005F308D /* BoolTransform.swift in Sources */,
+				0D673F8E2628664E005F308D /* BaseMappable+Additions.swift in Sources */,
+				0D673F922628664E005F308D /* IntTransform.swift in Sources */,
+				0D673F962628664E005F308D /* DoubleTransform.swift in Sources */,
+				0D673F912628664E005F308D /* ISO8601JustDateTransform.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -2,6 +2,17 @@
 All notable changes to this project will be documented in this file.
 `ObjectMapperAdditions` adheres to [Semantic Versioning](http://semver.org/).
 
+## [8.0.0](https://github.com/APUtils/ObjectMapperAdditions/releases/tag/8.0.0)
+Released on 04/15/2021.
+
+#### Changed
+- SPM support for the latest Realm and ObjectMapper versions [[@dams229](https://github.com/dams229)]
+- iOS 11.0 min
+- OSx 10.10 min
+
+#### Fixed 
+- Carthage project
+
 
 ## [7.0.0](https://github.com/APUtils/ObjectMapperAdditions/releases/tag/7.0.0)
 Released on 05/20/2020.

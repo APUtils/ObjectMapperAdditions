@@ -6,7 +6,7 @@ let package = Package(
     name: "ObjectMapperAdditions",
     platforms: [
         .iOS(.v11),
-        .tvOS(.v10),
+        .tvOS(.v9),
         .macOS(.v10_10),
         .watchOS(.v2),
     ],
@@ -17,8 +17,8 @@ let package = Package(
         )
     ],
     dependencies: [
-        .package(url: "https://github.com/realm/realm-cocoa.git", .upToNextMajor(from: "10.6.0")),
-        .package(url: "https://github.com/tristanhimmelman/ObjectMapper.git", .upToNextMajor(from: "4.2.0")),
+        .package(url: "https://github.com/realm/realm-cocoa.git", .upToNextMajor(from: "10.0.0")),
+        .package(url: "https://github.com/tristanhimmelman/ObjectMapper.git", .upToNextMajor(from: "4.0.0")),
     ],
     targets: [
         .target(
@@ -35,4 +35,3 @@ let package = Package(
     ],
     swiftLanguageVersions: [.v5]
 )
-let version = Version(6, 0, 2)
