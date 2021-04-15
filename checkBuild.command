@@ -39,22 +39,30 @@ echo "Building Pods project..."
 set -o pipefail && xcodebuild -workspace "Example/ObjectMapperAdditions.xcworkspace" -scheme "ObjectMapperAdditions-Example" -configuration "Release" -sdk iphonesimulator | xcpretty
 echo ""
 
-echo -e "Building Carthage dependencies..."
-bash "./Scripts/Carthage/carthageInstallTests.command"
-echo ""
-
-echo -e "Building Carthage project..."
 . "./Scripts/Carthage/utils.sh"
 applyXcode12Workaround
-set -o pipefail && xcodebuild -project "ObjectMapperAdditions.xcodeproj" -sdk iphonesimulator -target "ObjectMapperAdditions-iOS" | xcpretty
-set -o pipefail && xcodebuild -project "ObjectMapperAdditions.xcodeproj" -sdk macosx -target "ObjectMapperAdditions-macOS" | xcpretty
-set -o pipefail && xcodebuild -project "ObjectMapperAdditions.xcodeproj" -sdk appletvsimulator -target "ObjectMapperAdditions-tvOS" | xcpretty
-set -o pipefail && xcodebuild -project "ObjectMapperAdditions.xcodeproj" -sdk watchsimulator -target "ObjectMapperAdditions-watchOS" | xcpretty
-echo ""
 
-echo -e "Building with Carthage..."
-carthage build --no-skip-current --cache-builds
-echo ""
+if [ "${CONTINUOUS_INTEGRATION}" = "true" ]; then
+    echo -e "Building with Carthage for iOS only on CI..."
+    carthage build --no-skip-current --platform iOS --cache-builds
+    echo ""
+    
+else
+    echo -e "Building Carthage dependencies..."
+    bash "./Scripts/Carthage/carthageInstallTests.command"
+    echo ""
+
+    echo -e "Building Carthage project..."
+    set -o pipefail && xcodebuild -project "ObjectMapperAdditions.xcodeproj" -sdk iphonesimulator -target "ObjectMapperAdditions-iOS" | xcpretty
+    set -o pipefail && xcodebuild -project "ObjectMapperAdditions.xcodeproj" -sdk macosx -target "ObjectMapperAdditions-macOS" | xcpretty
+    set -o pipefail && xcodebuild -project "ObjectMapperAdditions.xcodeproj" -sdk appletvsimulator -target "ObjectMapperAdditions-tvOS" | xcpretty
+    set -o pipefail && xcodebuild -project "ObjectMapperAdditions.xcodeproj" -sdk watchsimulator -target "ObjectMapperAdditions-watchOS" | xcpretty
+    echo ""
+
+    echo -e "Building with Carthage..."
+    carthage build --no-skip-current --cache-builds
+    echo ""
+fi
 
 echo -e "Performing tests..."
 simulator_id="$(xcrun simctl list devices available iPhone | grep " SE " | tail -1 | sed -e "s/.*(\([0-9A-Z-]*\)).*/\1/")"

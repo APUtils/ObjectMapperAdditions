@@ -13,10 +13,6 @@ cache:
 
 before_install:
 - Example/Scripts/Cocoapods/podInstall.command
-- brew install carthage
-- Scripts/Carthage/carthageInstallTests.command
 
 script:
 - bash checkBuild.command
-- pod lib lint
-- pod spec lint
