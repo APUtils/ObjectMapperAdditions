@@ -39,8 +39,13 @@ echo "Building Pods project..."
 set -o pipefail && xcodebuild -workspace "Example/ObjectMapperAdditions.xcworkspace" -scheme "ObjectMapperAdditions-Example" -configuration "Release" -sdk iphonesimulator | xcpretty
 echo ""
 
+echo -e "Building Carthage dependencies..."
+bash "./Scripts/Carthage/carthageInstallTests.command"
+echo ""
+
 echo -e "Building Carthage project..."
-. "./Scripts/Carthage/carthageInstallTests.command"
+. "./Scripts/Carthage/utils.sh"
+applyXcode12Workaround
 set -o pipefail && xcodebuild -project "ObjectMapperAdditions.xcodeproj" -sdk iphonesimulator -target "ObjectMapperAdditions-iOS" | xcpretty
 set -o pipefail && xcodebuild -project "ObjectMapperAdditions.xcodeproj" -sdk macosx -target "ObjectMapperAdditions-macOS" | xcpretty
 set -o pipefail && xcodebuild -project "ObjectMapperAdditions.xcodeproj" -sdk appletvsimulator -target "ObjectMapperAdditions-tvOS" | xcpretty
