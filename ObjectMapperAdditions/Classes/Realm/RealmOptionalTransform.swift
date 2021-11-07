@@ -11,6 +11,7 @@ import ObjectMapper
 
 
 /// Transforms Swift numeric Optional to Realm numberic Optional. E.g. Int? to RealmOptional<Int>.
+@available(*, deprecated, renamed: "RealmPropertyTransform", message: "RealmOptionalTransform<T> and RealmOptional<T> has been deprecated, use RealmPropertyTransform<T> and RealmProperty<T?> instead.")
 public class RealmOptionalTransform<T: RealmOptionalType>: TransformType {
     public typealias Object = RealmOptional<T>
     public typealias JSON = Any

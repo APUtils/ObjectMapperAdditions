@@ -26,7 +26,7 @@ Please check [official guide](https://github.com/Carthage/Carthage#if-youre-buil
 Cartfile:
 
 ```
-github "APUtils/ObjectMapperAdditions" ~> 8.0
+github "APUtils/ObjectMapperAdditions" ~> 8.1
 ```
 
 If you do not need Realm part, add those frameworks: `ObjectMapperAdditions`, `ObjectMapper`.
@@ -40,13 +40,13 @@ ObjectMapperAdditions is available through [CocoaPods](http://cocoapods.org).
 To install Core features, simply add the following line to your Podfile:
 
 ```ruby
-pod 'ObjectMapperAdditions/Core', '~> 8.0'
+pod 'ObjectMapperAdditions/Core', '~> 8.1'
 ```
 
 To add Realm transform to your project add the following line to your Podfile:
 
 ```ruby
-pod 'ObjectMapperAdditions/Realm', '~> 8.0'
+pod 'ObjectMapperAdditions/Realm', '~> 8.1'
 ```
 
 #### Swift Package Manager
@@ -57,7 +57,7 @@ Once you have your Swift package set up, adding `ObjectMapperAdditions` as a dep
 
 ```swift
 dependencies: [
-    .package(url: "https://github.com/APUtils/ObjectMapperAdditions.git", .upToNextMajor(from: "8.0.0"))
+    .package(url: "https://github.com/APUtils/ObjectMapperAdditions.git", .upToNextMajor(from: "8.1.0"))
 ]
 ```
 
@@ -142,7 +142,7 @@ class MyRealmModel: Object, Mappable {
     
     // Please take a note it's `var` and is not optional
     // However new value should be assigned through `.value`
-    var optionalDouble = RealmOptional<Double>()
+    var optionalDouble = RealmProperty<Double?>()
     
     @objc dynamic var string: String?
     @objc dynamic var myOtherRealmModel: MyOtherRealmModel?
@@ -151,12 +151,12 @@ class MyRealmModel: Object, Mappable {
     // However, new value should be assigned through `.append(_:)`
     var myOtherRealmModels = List<MyOtherRealmModel>()
     
-    // Strings array will be casted to List<String>
+    // Strings array will be casted to List<RealmString>
     var strings: List<String> = List<String>()
 
-    required convenience init?(map: Map) { self.init() }
+    required convenience init?(map: ObjectMapper.Map) { self.init() }
 
-    func mapping(map: Map) {
+    func mapping(map: ObjectMapper.Map) {
         // .toJSON() requires Realm write transaction or it'll crash
         let isWriteRequired = realm != nil && realm?.isInWriteTransaction == false
         isWriteRequired ? realm?.beginWrite() : ()
@@ -164,11 +164,11 @@ class MyRealmModel: Object, Mappable {
         // Same as for ordinary model
         double <- (map["double"], DoubleTransform())
         
-        // Using ObjectMapperAdditions's RealmOptionalTypeCastTransform
-        optionalDouble <- (map["optionalDouble"], RealmOptionalTypeCastTransform())
-        // You could also use RealmTransform if you don't like type cast
-//        optionalDouble <- (map["optionalDouble"], RealmOptionalTransform())
-
+        // Using ObjectMapperAdditions's RealmPropertyTypeCastTransform
+        optionalDouble <- (map["optionalDouble"], RealmPropertyTypeCastTransform())
+        // You could also use RealmPropertyTransform if you don't like type cast
+//        optionalDouble <- (map["optionalDouble"], RealmPropertyTransform<Double>())
+        
         string <- (map["string"], StringTransform())
         myOtherRealmModel <- map["myOtherRealmModel"]
         
@@ -179,17 +179,17 @@ class MyRealmModel: Object, Mappable {
         strings <- (map["strings"], RealmTypeCastTransform())
         // You could also use RealmTransform if you don't like type cast
 //        strings <- (map["strings"], RealmTransform())
-
+        
         isWriteRequired ? try? realm?.commitWrite() : ()
     }
 }
 ```
 
-Swift optionals cast to realm optionals this way: `Int?` -> `RealmOptional<Int>`, `Double?` -> `RealmOptional<Double>`, `Bool?` -> `RealmOptional<Bool>`, etc.
+Swift optionals cast to realm optionals this way: `Int?` -> `RealmProperty<Int>>`, `Double?` -> `RealmProperty<Double?>`, `Bool?` -> `RealmProperty<Bool?>`, etc.
 
 Swift arrays cast to realm arrays this way: `[String]` -> `List<String>`, `[Int]` -> `List<String>`, `[Double]` -> `List<Double>`, `[Bool]` -> `List<Bool>`, etc.
 
-**Be sure to check that properties of type `RealmOptional` and `List` are not dynamic nor optional. Also despite of they defined as `var` they should be handled as constants if model is added to Realm. Use `.value` to change `RealmOptional` value or use `.removeAll()` and `append(objectsIn:)` methods to change `List` content**
+**Be sure to check that properties of type `RealmProperty` and `List` are not dynamic nor optional. Also despite of they defined as `var` they should be handled as constants if model is added to Realm. Use `.value` to change `RealmOptional` value or use `.removeAll()` and `append(objectsIn:)` methods to change `List` content**
 
 See example and tests projects for more details.
 

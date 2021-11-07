@@ -14,8 +14,8 @@ import RealmSwift
 
 class MyOtherRealmModel: Object, Mappable {
     @objc dynamic var string: String?
-    required convenience init?(map: Map) { self.init() }
-    func mapping(map: Map) {}
+    required convenience init?(map: ObjectMapper.Map) { self.init() }
+    func mapping(map: ObjectMapper.Map) {}
     
     override func isEqual(_ object: Any?) -> Bool {
         return true

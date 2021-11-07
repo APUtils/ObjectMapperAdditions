@@ -17,7 +17,7 @@ class MyRealmModel: Object, Mappable {
     
     // Please take a note it's `var` and is not optional
     // However new value should be assigned through `.value`
-    var optionalDouble = RealmOptional<Double>()
+    var optionalDouble = RealmProperty<Double?>()
     
     @objc dynamic var string: String?
     @objc dynamic var myOtherRealmModel: MyOtherRealmModel?
@@ -29,9 +29,9 @@ class MyRealmModel: Object, Mappable {
     // Strings array will be casted to List<RealmString>
     var strings: List<String> = List<String>()
 
-    required convenience init?(map: Map) { self.init() }
+    required convenience init?(map: ObjectMapper.Map) { self.init() }
 
-    func mapping(map: Map) {
+    func mapping(map: ObjectMapper.Map) {
         // .toJSON() requires Realm write transaction or it'll crash
         let isWriteRequired = realm != nil && realm?.isInWriteTransaction == false
         isWriteRequired ? realm?.beginWrite() : ()
@@ -39,10 +39,10 @@ class MyRealmModel: Object, Mappable {
         // Same as for ordinary model
         double <- (map["double"], DoubleTransform())
         
-        // Using ObjectMapperAdditions's RealmOptionalTypeCastTransform
-        optionalDouble <- (map["optionalDouble"], RealmOptionalTypeCastTransform())
-        // You could also use RealmTransform if you don't like type cast
-//        optionalDouble <- (map["optionalDouble"], RealmOptionalTransform())
+        // Using ObjectMapperAdditions's RealmPropertyTypeCastTransform
+        optionalDouble <- (map["optionalDouble"], RealmPropertyTypeCastTransform())
+        // You could also use RealmPropertyTransform if you don't like type cast
+//        optionalDouble <- (map["optionalDouble"], RealmPropertyTransform<Double>())
         
         string <- (map["string"], StringTransform())
         myOtherRealmModel <- map["myOtherRealmModel"]

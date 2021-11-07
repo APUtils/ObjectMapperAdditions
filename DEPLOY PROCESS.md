@@ -2,6 +2,7 @@
 - Run `podUpdate.command`
 - Assure all dependencies are also added to Carthage project
 - Run `carthageUpdate.command`
+- Run `swift package update`
 - Run `checkBuild.command`
 - Update CHANGELOG.md
 - Update README.md with new version if needed

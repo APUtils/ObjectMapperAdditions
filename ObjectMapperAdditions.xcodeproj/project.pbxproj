@@ -48,6 +48,8 @@
 		0D673FC22628665A005F308D /* IntTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A0735E1F3A43E9001B8CC6 /* IntTransform.swift */; };
 		0D673FC32628665A005F308D /* EnumTypeCastTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = E289273C2256160700CAA647 /* EnumTypeCastTransform.swift */; };
 		0D673FC42628665A005F308D /* DoubleTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A0735D1F3A43E9001B8CC6 /* DoubleTransform.swift */; };
+		0DC249C02737CBAE00623738 /* RealmPropertyTypeCastTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DC249BE2737CBAE00623738 /* RealmPropertyTypeCastTransform.swift */; };
+		0DC249C12737CBAE00623738 /* RealmPropertyTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DC249BF2737CBAE00623738 /* RealmPropertyTransform.swift */; };
 		B00F4EAB1F7A7608004F9676 /* TimestampTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00F4EA91F7A7608004F9676 /* TimestampTransform.swift */; };
 		B00F4EAC1F7A7608004F9676 /* ISO8601JustDateTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00F4EAA1F7A7608004F9676 /* ISO8601JustDateTransform.swift */; };
 		B0A073561F3A43D7001B8CC6 /* ObjectMapperAdditions_iOS.h in Headers */ = {isa = PBXBuildFile; fileRef = B0A073541F3A43D7001B8CC6 /* ObjectMapperAdditions_iOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -78,7 +80,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0D39B9972737A7C7003781F0 /* carthageUpdate.command */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; name = carthageUpdate.command; path = Scripts/Carthage/carthageUpdate.command; sourceTree = "<group>"; };
 		0D673F7E2628662C005F308D /* RealmListTransform.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmListTransform.swift; sourceTree = "<group>"; };
+		0DC249BE2737CBAE00623738 /* RealmPropertyTypeCastTransform.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmPropertyTypeCastTransform.swift; sourceTree = "<group>"; };
+		0DC249BF2737CBAE00623738 /* RealmPropertyTransform.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmPropertyTransform.swift; sourceTree = "<group>"; };
 		B00F4EA91F7A7608004F9676 /* TimestampTransform.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimestampTransform.swift; sourceTree = "<group>"; };
 		B00F4EAA1F7A7608004F9676 /* ISO8601JustDateTransform.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ISO8601JustDateTransform.swift; sourceTree = "<group>"; };
 		B0A073511F3A43D7001B8CC6 /* ObjectMapperAdditions.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ObjectMapperAdditions.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -222,6 +227,8 @@
 				0D673F7E2628662C005F308D /* RealmListTransform.swift */,
 				B0AF241B20699C200094C84F /* RealmOptionalTransform.swift */,
 				B0AF241A20699C200094C84F /* RealmOptionalTypeCastTransform.swift */,
+				0DC249BF2737CBAE00623738 /* RealmPropertyTransform.swift */,
+				0DC249BE2737CBAE00623738 /* RealmPropertyTypeCastTransform.swift */,
 				B0A073631F3A43E9001B8CC6 /* RealmTransform.swift */,
 				B0A073641F3A43E9001B8CC6 /* RealmTypeCastTransform.swift */,
 			);
@@ -241,6 +248,7 @@
 		B0A0737D1F3A482F001B8CC6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0D39B9972737A7C7003781F0 /* carthageUpdate.command */,
 				E2BD7CAB22E9B7E20020932D /* ObjectMapper.framework */,
 				E2BD7CA722E9B7A00020932D /* ObjectMapper.framework */,
 				B0A0737E1F3A482F001B8CC6 /* ObjectMapper.framework */,
@@ -551,8 +559,10 @@
 				0D673FBB2628665A005F308D /* BaseMappable+Additions.swift in Sources */,
 				0D673F802628662C005F308D /* RealmListTransform.swift in Sources */,
 				B0AF241D20699C200094C84F /* RealmOptionalTransform.swift in Sources */,
+				0DC249C12737CBAE00623738 /* RealmPropertyTransform.swift in Sources */,
 				0D673FBF2628665A005F308D /* ISO8601JustDateTransform.swift in Sources */,
 				0D673FBE2628665A005F308D /* TimestampTransform.swift in Sources */,
+				0DC249C02737CBAE00623738 /* RealmPropertyTypeCastTransform.swift in Sources */,
 				B0A0739C1F3A4F32001B8CC6 /* RealmTypeCastTransform.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

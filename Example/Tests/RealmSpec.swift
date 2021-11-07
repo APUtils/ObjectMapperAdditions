@@ -32,7 +32,6 @@ class RealmSpec: QuickSpec {
                 }
             }
             
-            
             context("filled with data") {
                 var realm: Realm!
                 var model: MyRealmModel!

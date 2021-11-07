@@ -7,25 +7,25 @@ PODS:
     - LogsManager/RoutableLogger (>= 9.1.5)
   - APExtensions/Storyboard (10.0.0)
   - APExtensions/ViewConfiguration (10.0.0)
-  - LogsManager/RoutableLogger (9.1.5)
-  - Nimble (9.0.0)
+  - LogsManager/RoutableLogger (9.1.8)
+  - Nimble (9.2.1)
   - ObjectMapper (4.2.0)
-  - ObjectMapperAdditions (8.0.0):
+  - ObjectMapperAdditions (8.1.0):
     - ObjectMapper
-    - ObjectMapperAdditions/Core (= 8.0.0)
-    - ObjectMapperAdditions/Realm (= 8.0.0)
-  - ObjectMapperAdditions/Core (8.0.0):
+    - ObjectMapperAdditions/Core (= 8.1.0)
+    - ObjectMapperAdditions/Realm (= 8.1.0)
+  - ObjectMapperAdditions/Core (8.1.0):
     - ObjectMapper
-  - ObjectMapperAdditions/Realm (8.0.0):
+  - ObjectMapperAdditions/Realm (8.1.0):
     - ObjectMapper
     - ObjectMapperAdditions/Core
     - RealmSwift
-  - Quick (3.1.2)
-  - Realm (10.7.2):
-    - Realm/Headers (= 10.7.2)
-  - Realm/Headers (10.7.2)
-  - RealmSwift (10.7.2):
-    - Realm (= 10.7.2)
+  - Quick (4.0.0)
+  - Realm (10.19.0):
+    - Realm/Headers (= 10.19.0)
+  - Realm/Headers (10.19.0)
+  - RealmSwift (10.19.0):
+    - Realm (= 10.19.0)
 
 DEPENDENCIES:
   - APExtensions (from `https://github.com/APUtils/APExtensions`)
@@ -34,7 +34,7 @@ DEPENDENCIES:
   - Quick
 
 SPEC REPOS:
-  https://github.com/CocoaPods/Specs.git:
+  trunk:
     - LogsManager
     - Nimble
     - ObjectMapper
@@ -50,19 +50,19 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   APExtensions:
-    :commit: ae784925e948a39dbc9d521e538a32bef9544936
+    :commit: 3c24ae011d7181f4fec18fd7c490e878a71ef202
     :git: https://github.com/APUtils/APExtensions
 
 SPEC CHECKSUMS:
   APExtensions: b46cab78fe5d291e1157838fd78962a886e627df
-  LogsManager: e821cea87e608e96cf39a68009d830579098a2cb
-  Nimble: 3b4ec3fd40f1dc178058e0981107721c615643d8
+  LogsManager: 1dfa84fa133ba22076e7a95fcc8276a0e57673c9
+  Nimble: e7e615c0335ee4bf5b0d786685451e62746117d5
   ObjectMapper: 1eb41f610210777375fa806bf161dc39fb832b81
-  ObjectMapperAdditions: a7f82e0143a8f099f786554e7907ac283e472cb1
-  Quick: 60f0ea3b8e0cfc0df3259a5c06a238ad8b3c46e0
-  Realm: e523da9ade306c5ae87e85dc09fdef148d3e1cc1
-  RealmSwift: 4f6758c3adbdcc87f7b7777107226532a077f61c
+  ObjectMapperAdditions: f42ad3370fc6c74b1a874b949ccf28b6a3672042
+  Quick: 6473349e43b9271a8d43839d9ba1c442ed1b7ac4
+  Realm: 869ab2a7e3bdfa6bf06d8723251539f504e6f602
+  RealmSwift: f1f51c4a02fe826e5cea623b5441992f06bdc942
 
-PODFILE CHECKSUM: 2345daafd9f51e324482c4a7703e71b80af7b7c3
+PODFILE CHECKSUM: 3c7a7cfa876ce67a9c43e14e6c525b80f09c0e77
 
-COCOAPODS: 1.10.1
+COCOAPODS: 1.11.2
