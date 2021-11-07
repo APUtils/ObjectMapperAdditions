@@ -6,8 +6,8 @@ All notable changes to this project will be documented in this file.
 Released on 11/07/2021.
 
 #### Added
-- RealmPropertyTransform
-- RealmPropertyTypeCastTransform
+- RealmPropertyTransform [[@Drusy](https://github.com/Drusy)]
+- RealmPropertyTypeCastTransform [[@Drusy](https://github.com/Drusy)]
 
 #### Changed 
 - Deprecated RealmOptionalTransform

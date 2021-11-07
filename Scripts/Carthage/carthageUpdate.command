@@ -44,7 +44,7 @@ fi
 
 # Update framework(s)
 echo "Synchronizing Carthage dependencies..."
-carthage update ${framework_name} --platform iOS,tvOS --cache-builds
+carthage update ${framework_name} --cache-builds
 echo ""
 
 # Update md5 check sum
