@@ -26,12 +26,12 @@ Please check [official guide](https://github.com/Carthage/Carthage#if-youre-buil
 Cartfile:
 
 ```
-github "APUtils/ObjectMapperAdditions" ~> 8.1
+github "APUtils/ObjectMapperAdditions" ~> 8.2
 ```
 
-If you do not need Realm part, add those frameworks: `ObjectMapperAdditions`, `ObjectMapper`.
+If you do not need Realm part, add those frameworks: `ObjectMapperAdditions`, `ObjectMapper`, `RoutableLogger`.
 
-If you are going to use Realm part, add those frameworks: `ObjectMapperAdditions`, `ObjectMapperAdditionsRealm`, `ObjectMapper`, `Realm`, `RealmSwift`.
+If you are going to use Realm part, add those frameworks: `ObjectMapperAdditions`, `ObjectMapperAdditionsRealm`, `ObjectMapper`, `Realm`, `RealmSwift`, `RoutableLogger`.
 
 #### CocoaPods
 
@@ -40,13 +40,13 @@ ObjectMapperAdditions is available through [CocoaPods](http://cocoapods.org).
 To install Core features, simply add the following line to your Podfile:
 
 ```ruby
-pod 'ObjectMapperAdditions/Core', '~> 8.1'
+pod 'ObjectMapperAdditions/Core', '~> 8.2'
 ```
 
 To add Realm transform to your project add the following line to your Podfile:
 
 ```ruby
-pod 'ObjectMapperAdditions/Realm', '~> 8.1'
+pod 'ObjectMapperAdditions/Realm', '~> 8.2'
 ```
 
 #### Swift Package Manager
@@ -57,7 +57,7 @@ Once you have your Swift package set up, adding `ObjectMapperAdditions` as a dep
 
 ```swift
 dependencies: [
-    .package(url: "https://github.com/APUtils/ObjectMapperAdditions.git", .upToNextMajor(from: "8.1.0"))
+    .package(url: "https://github.com/APUtils/ObjectMapperAdditions.git", .upToNextMajor(from: "8.2.0"))
 ]
 ```
 

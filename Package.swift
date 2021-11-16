@@ -19,13 +19,15 @@ let package = Package(
     dependencies: [
         .package(url: "https://github.com/realm/realm-cocoa.git", .upToNextMajor(from: "10.0.0")),
         .package(url: "https://github.com/tristanhimmelman/ObjectMapper.git", .upToNextMajor(from: "4.0.0")),
+        .package(url: "https://github.com/APUtils/LogsManager.git", .upToNextMajor(from: "9.1.14")),
     ],
     targets: [
         .target(
             name: "ObjectMapperAdditions",
             dependencies: [
                 "RealmSwift",
-                "ObjectMapper"
+                "ObjectMapper",
+                "RoutableLogger",
             ],
             path: "ObjectMapperAdditions/Classes/",
             swiftSettings: [

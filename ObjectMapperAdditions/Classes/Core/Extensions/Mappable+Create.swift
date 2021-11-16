@@ -6,6 +6,7 @@
 //  Copyright © 2021 Anton Plebanovich. All rights reserved.
 //
 
+import Foundation
 import ObjectMapper
 import RoutableLogger
 

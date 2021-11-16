@@ -82,6 +82,12 @@
 		0D938934274461A700529662 /* OptionalType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D93892F274461A700529662 /* OptionalType.swift */; };
 		0D9389362744621F00529662 /* Data+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D9389352744621F00529662 /* Data+Extension.swift */; };
 		0D9389372744621F00529662 /* Data+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D9389352744621F00529662 /* Data+Extension.swift */; };
+		0D9389862744737B00529662 /* RoutableLogger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D9389852744737B00529662 /* RoutableLogger.framework */; };
+		0D9389882744738700529662 /* RoutableLogger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D9389872744738700529662 /* RoutableLogger.framework */; };
+		0D93898A2744739300529662 /* RoutableLogger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D9389892744739300529662 /* RoutableLogger.framework */; };
+		0D93898B274475F900529662 /* Data+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D9389352744621F00529662 /* Data+Extension.swift */; };
+		0D93898C274475F900529662 /* Data+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D9389352744621F00529662 /* Data+Extension.swift */; };
+		0D93898D274475FA00529662 /* Data+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D9389352744621F00529662 /* Data+Extension.swift */; };
 		0DC249C02737CBAE00623738 /* RealmPropertyTypeCastTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DC249BE2737CBAE00623738 /* RealmPropertyTypeCastTransform.swift */; };
 		0DC249C12737CBAE00623738 /* RealmPropertyTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DC249BF2737CBAE00623738 /* RealmPropertyTransform.swift */; };
 		B00F4EAB1F7A7608004F9676 /* TimestampTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00F4EA91F7A7608004F9676 /* TimestampTransform.swift */; };
@@ -124,6 +130,9 @@
 		0D93891D27443A9000529662 /* RoutableLogger.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RoutableLogger.framework; path = Carthage/Build/iOS/RoutableLogger.framework; sourceTree = "<group>"; };
 		0D93892F274461A700529662 /* OptionalType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionalType.swift; sourceTree = "<group>"; };
 		0D9389352744621F00529662 /* Data+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+Extension.swift"; sourceTree = "<group>"; };
+		0D9389852744737B00529662 /* RoutableLogger.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RoutableLogger.framework; path = Carthage/Build/watchOS/RoutableLogger.framework; sourceTree = "<group>"; };
+		0D9389872744738700529662 /* RoutableLogger.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RoutableLogger.framework; path = Carthage/Build/tvOS/RoutableLogger.framework; sourceTree = "<group>"; };
+		0D9389892744739300529662 /* RoutableLogger.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RoutableLogger.framework; path = Carthage/Build/Mac/RoutableLogger.framework; sourceTree = "<group>"; };
 		0DC249BE2737CBAE00623738 /* RealmPropertyTypeCastTransform.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmPropertyTypeCastTransform.swift; sourceTree = "<group>"; };
 		0DC249BF2737CBAE00623738 /* RealmPropertyTransform.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmPropertyTransform.swift; sourceTree = "<group>"; };
 		B00F4EA91F7A7608004F9676 /* TimestampTransform.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimestampTransform.swift; sourceTree = "<group>"; };
@@ -189,6 +198,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0D9389862744737B00529662 /* RoutableLogger.framework in Frameworks */,
 				E2BD7CB022E9B8770020932D /* ObjectMapper.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -197,6 +207,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0D9389882744738700529662 /* RoutableLogger.framework in Frameworks */,
 				E2BD7CAC22E9B7E20020932D /* ObjectMapper.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -205,6 +216,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0D93898A2744739300529662 /* RoutableLogger.framework in Frameworks */,
 				E2BD7CA822E9B7A00020932D /* ObjectMapper.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -326,11 +338,14 @@
 				0D39B9972737A7C7003781F0 /* carthageUpdate.command */,
 				E2BD7CAB22E9B7E20020932D /* ObjectMapper.framework */,
 				E2BD7CA722E9B7A00020932D /* ObjectMapper.framework */,
-				B0A0737E1F3A482F001B8CC6 /* ObjectMapper.framework */,
 				E2BD7CAF22E9B8770020932D /* ObjectMapper.framework */,
-				0D93891D27443A9000529662 /* RoutableLogger.framework */,
+				B0A0737E1F3A482F001B8CC6 /* ObjectMapper.framework */,
 				B0A073811F3A4835001B8CC6 /* Realm.framework */,
 				B0A073831F3A4835001B8CC6 /* RealmSwift.framework */,
+				0D9389872744738700529662 /* RoutableLogger.framework */,
+				0D9389892744739300529662 /* RoutableLogger.framework */,
+				0D9389852744737B00529662 /* RoutableLogger.framework */,
+				0D93891D27443A9000529662 /* RoutableLogger.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -662,6 +677,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0D673FAE2628664F005F308D /* StringTransform.swift in Sources */,
+				0D93898B274475F900529662 /* Data+Extension.swift in Sources */,
 				0D93890E2744385300529662 /* ImmutableMappable+Create.swift in Sources */,
 				0D673FB12628664F005F308D /* ObjectMapper+Additions.swift in Sources */,
 				0D9389142744389900529662 /* Mappable+Create.swift in Sources */,
@@ -685,6 +701,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0D673F9F2628664E005F308D /* StringTransform.swift in Sources */,
+				0D93898C274475F900529662 /* Data+Extension.swift in Sources */,
 				0D93890F2744385300529662 /* ImmutableMappable+Create.swift in Sources */,
 				0D673FA22628664E005F308D /* ObjectMapper+Additions.swift in Sources */,
 				0D9389152744389900529662 /* Mappable+Create.swift in Sources */,
@@ -708,6 +725,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0D673F902628664E005F308D /* StringTransform.swift in Sources */,
+				0D93898D274475FA00529662 /* Data+Extension.swift in Sources */,
 				0D9389102744385300529662 /* ImmutableMappable+Create.swift in Sources */,
 				0D673F932628664E005F308D /* ObjectMapper+Additions.swift in Sources */,
 				0D9389162744389900529662 /* Mappable+Create.swift in Sources */,

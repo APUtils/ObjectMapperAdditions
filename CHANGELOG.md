@@ -2,6 +2,31 @@
 All notable changes to this project will be documented in this file.
 `ObjectMapperAdditions` adheres to [Semantic Versioning](http://semver.org/).
 
+## [8.2.0](https://github.com/APUtils/ObjectMapperAdditions/releases/tag/8.2.0)
+Released on 11/17/2021.
+
+#### Added
+- [BaseMappable?].create(jsonData:)
+- [BaseMappable?].safeCreate(jsonData:)
+- [BaseMappable].create(jsonData:)
+- [BaseMappable].create(jsonString:)
+- [BaseMappable].safeCreate(jsonData:)
+- [BaseMappable].safeCreate(jsonString:)
+- [BaseMappable].toJSONData()
+- [ImmutableMappable].create(jsonData:)
+- [ImmutableMappable].create(jsonString:)
+- [ImmutableMappable].safeCreate(jsonData:)
+- [ImmutableMappable].safeCreate(jsonString:)
+- [Mappable].create(jsonData:)
+- [Mappable].create(jsonString:)
+- [Mappable].safeCreate(jsonData:)
+- [Mappable].safeCreate(jsonString:)
+- [[BaseMappable]].create(jsonData:)
+- [[BaseMappable]].create(jsonString:)
+- [[BaseMappable]].safeCreate(jsonData:)
+- [[BaseMappable]].safeCreate(jsonString:)
+
+
 ## [8.1.0](https://github.com/APUtils/ObjectMapperAdditions/releases/tag/8.1.0)
 Released on 11/07/2021.
 

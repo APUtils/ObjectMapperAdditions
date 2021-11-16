@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'ObjectMapperAdditions'
-  s.version          = '8.1.0'
+  s.version          = '8.2.0'
   s.summary          = 'ObjectMapper Extensions and Transforms'
 
 # This description is used to generate tags and improve search results.

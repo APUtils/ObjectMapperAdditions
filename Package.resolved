@@ -2,6 +2,15 @@
   "object": {
     "pins": [
       {
+        "package": "RoutableLogger",
+        "repositoryURL": "https://github.com/APUtils/LogsManager.git",
+        "state": {
+          "branch": null,
+          "revision": "6eb704d4829825fa584dbe458adecc12a8925fad",
+          "version": "9.1.14"
+        }
+      },
+      {
         "package": "ObjectMapper",
         "repositoryURL": "https://github.com/tristanhimmelman/ObjectMapper.git",
         "state": {
