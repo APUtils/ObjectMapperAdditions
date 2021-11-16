@@ -8,7 +8,7 @@ use_frameworks!
 
 target 'ObjectMapperAdditions_Example' do
   pod 'APExtensions', :git => 'https://github.com/APUtils/APExtensions'
-  pod 'ObjectMapperAdditions', :path => '../'
+  pod 'ObjectMapperAdditions/Realm', :path => '../'
   
   target 'ObjectMapperAdditions_Tests' do
     inherit! :search_paths
