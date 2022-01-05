@@ -37,11 +37,11 @@ extension Data {
     }
     
     /// Try to serialize `self` to JSON object and report error if unable.
-    func safeSerializeToJSON() -> Any? {
+    func safeSerializeToJSON(file: String = #file, function: String = #function, line: UInt = #line) -> Any? {
         do {
             return try JSONSerialization.jsonObject(with: self, options: .allowFragments)
         } catch {
-            RoutableLogger.logError("Unable to parse date to JSON", error: error, data: ["self": asString])
+            RoutableLogger.logError("Unable to parse date to JSON", error: error, data: ["self": asString], file: file, function: function, line: line)
             return nil
         }
     }

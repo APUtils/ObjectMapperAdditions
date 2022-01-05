@@ -6,8 +6,8 @@
         "repositoryURL": "https://github.com/APUtils/LogsManager.git",
         "state": {
           "branch": null,
-          "revision": "6eb704d4829825fa584dbe458adecc12a8925fad",
-          "version": "9.1.14"
+          "revision": "d7d6b941df0fe68a50c37e2d34bad92bc07ac0ef",
+          "version": "9.1.19"
         }
       },
       {
@@ -24,8 +24,8 @@
         "repositoryURL": "https://github.com/realm/realm-cocoa.git",
         "state": {
           "branch": null,
-          "revision": "328425bfc372ce77ec1f4f2701f61ececbb97d84",
-          "version": "10.19.0"
+          "revision": "bdbbd57f411a0f4e72b359113dbc6d23fdf96680",
+          "version": "10.20.0"
         }
       },
       {
@@ -33,8 +33,8 @@
         "repositoryURL": "https://github.com/realm/realm-core",
         "state": {
           "branch": null,
-          "revision": "b170db6a47789ff5f2fbc3eeed0220b4b0a3f6b7",
-          "version": "11.6.0"
+          "revision": "c3c11a841642ac93c27bd1edd61f989fc0bfb809",
+          "version": "11.6.1"
         }
       }
     ]

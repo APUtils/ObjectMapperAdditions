@@ -19,7 +19,7 @@ public extension Array where Element: BaseMappable {
     /// - throws: `MappingError.emptyData` if response data is empty.
     /// - throws: `MappingError.invalidJSON` if response isn't a valid JSON.
     /// - throws: `MappingError.unknownType` if it wasn't possible to create model.
-    static func create(jsonData: Data?) throws -> Array {
+    static func create(jsonData: Data?, file: String = #file, function: String = #function, line: UInt = #line) throws -> Array {
         guard let jsonData = jsonData, !jsonData.isEmpty else {
             throw MappingError.emptyData
         }
@@ -28,7 +28,7 @@ public extension Array where Element: BaseMappable {
             throw MappingError.invalidJSON
         }
         
-        guard let jsonObject = jsonData.safeSerializeToJSON() else {
+        guard let jsonObject = jsonData.safeSerializeToJSON(file: file, function: function, line: line) else {
             throw MappingError.invalidJSON
         }
         
@@ -43,11 +43,11 @@ public extension Array where Element: BaseMappable {
     
     /// Create models array from JSON string. Report error and return nil if unable.
     /// - parameter jsonData: Data in JSON format to use for model creation.
-    static func safeCreate(jsonData: Data?) -> Array? {
+    static func safeCreate(jsonData: Data?, file: String = #file, function: String = #function, line: UInt = #line) -> Array? {
         do {
             return try create(jsonData: jsonData)
         } catch {
-            RoutableLogger.logError("Unable to create array of objects from JSON data", error: error, data: ["jsonData": jsonData?.asString])
+            RoutableLogger.logError("Unable to create array of objects from JSON data", error: error, data: ["jsonData": jsonData?.asString], file: file, function: function, line: line)
             return nil
         }
     }
@@ -62,7 +62,7 @@ public extension Array where Element: BaseMappable {
     /// - throws: `MappingError.emptyData` if response data is empty.
     /// - throws: `MappingError.invalidJSON` if response isn't a valid JSON.
     /// - throws: `MappingError.unknownType` if it wasn't possible to create model.
-    static func create(jsonString: String?) throws -> Array {
+    static func create(jsonString: String?, file: String = #file, function: String = #function, line: UInt = #line) throws -> Array {
         guard let jsonString = jsonString else {
             throw MappingError.emptyData
         }
@@ -84,11 +84,11 @@ public extension Array where Element: BaseMappable {
     
     /// Create models array from JSON string. Report error and return nil if unable.
     /// - parameter jsonString: String in JSON format to use for model creation.
-    static func safeCreate(jsonString: String?) -> Array? {
+    static func safeCreate(jsonString: String?, file: String = #file, function: String = #function, line: UInt = #line) -> Array? {
         do {
             return try create(jsonString: jsonString)
         } catch {
-            RoutableLogger.logError("Unable to create array of objects from JSON string", error: error, data: ["jsonString": jsonString, "self": self])
+            RoutableLogger.logError("Unable to create array of objects from JSON string", error: error, data: ["jsonString": jsonString, "self": self], file: file, function: function, line: line)
             return nil
         }
     }
@@ -108,7 +108,7 @@ public extension Array where Element: OptionalType, Element.Wrapped: BaseMappabl
     /// - throws: `MappingError.emptyData` if response data is empty.
     /// - throws: `MappingError.invalidJSON` if response isn't a valid JSON.
     /// - throws: `MappingError.unknownType` if it wasn't possible to create model.
-    static func create(jsonData: Data?) throws -> [Element] {
+    static func create(jsonData: Data?, file: String = #file, function: String = #function, line: UInt = #line) throws -> [Element] {
         guard let jsonData = jsonData, !jsonData.isEmpty else {
             throw MappingError.emptyData
         }
@@ -117,7 +117,7 @@ public extension Array where Element: OptionalType, Element.Wrapped: BaseMappabl
             throw MappingError.invalidJSON
         }
         
-        guard let jsonObject = jsonData.safeSerializeToJSON() else {
+        guard let jsonObject = jsonData.safeSerializeToJSON(file: file, function: function, line: line) else {
             throw MappingError.invalidJSON
         }
         
@@ -144,11 +144,11 @@ public extension Array where Element: OptionalType, Element.Wrapped: BaseMappabl
     
     /// Create models array from JSON string. Report error and return nil if unable.
     /// - parameter jsonData: Data in JSON format to use for model creation.
-    static func safeCreate(jsonData: Data?) -> Array? {
+    static func safeCreate(jsonData: Data?, file: String = #file, function: String = #function, line: UInt = #line) -> Array? {
         do {
             return try create(jsonData: jsonData)
         } catch {
-            RoutableLogger.logError("Unable to create array of optional objects from JSON data", error: error, data: ["jsonData": jsonData?.asString])
+            RoutableLogger.logError("Unable to create array of optional objects from JSON data", error: error, data: ["jsonData": jsonData?.asString], file: file, function: function, line: line)
             return nil
         }
     }
@@ -163,7 +163,7 @@ public extension RandomAccessCollection where Element: RandomAccessCollection, E
     /// - throws: `TurvoError.emptyData` if response data is empty.
     /// - throws: `TurvoError.invalidJSON` if response isn't a valid JSON.
     /// - throws: `TurvoError.unknownType` if it wasn't possible to create model.
-    static func create(jsonData: Data?) throws -> [[Element.Element]] {
+    static func create(jsonData: Data?, file: String = #file, function: String = #function, line: UInt = #line) throws -> [[Element.Element]] {
         guard let jsonData = jsonData else {
             throw MappingError.emptyData
         }
@@ -180,7 +180,7 @@ public extension RandomAccessCollection where Element: RandomAccessCollection, E
             throw MappingError.invalidJSON
         }
         
-        guard let json = jsonData.safeSerializeToJSON() else {
+        guard let json = jsonData.safeSerializeToJSON(file: file, function: function, line: line) else {
             throw MappingError.invalidJSON
         }
         
@@ -197,11 +197,11 @@ public extension RandomAccessCollection where Element: RandomAccessCollection, E
     
     /// Create models array from JSON string. Report error and return nil if unable.
     /// - parameter jsonString: String in JSON format to use for model creation.
-    static func safeCreate(jsonData: Data?) -> [[Element.Element]]? {
+    static func safeCreate(jsonData: Data?, file: String = #file, function: String = #function, line: UInt = #line) -> [[Element.Element]]? {
         do {
             return try create(jsonData: jsonData)
         } catch {
-            RoutableLogger.logError("Unable to create array of objects from JSON string", error: error, data: ["jsonData": jsonData, "self": self])
+            RoutableLogger.logError("Unable to create array of objects from JSON string", error: error, data: ["jsonData": jsonData, "self": self], file: file, function: function, line: line)
             return nil
         }
     }
@@ -211,7 +211,7 @@ public extension RandomAccessCollection where Element: RandomAccessCollection, E
     /// - throws: `TurvoError.emptyData` if response data is empty.
     /// - throws: `TurvoError.invalidJSON` if response isn't a valid JSON.
     /// - throws: `TurvoError.unknownType` if it wasn't possible to create model.
-    static func create(jsonString: String?) throws -> [[Element.Element]] {
+    static func create(jsonString: String?, file: String = #file, function: String = #function, line: UInt = #line) throws -> [[Element.Element]] {
         guard let jsonString = jsonString else {
             throw MappingError.emptyData
         }
@@ -241,11 +241,11 @@ public extension RandomAccessCollection where Element: RandomAccessCollection, E
     
     /// Create models array from JSON string. Report error and return nil if unable.
     /// - parameter jsonString: String in JSON format to use for model creation.
-    static func safeCreate(jsonString: String?) -> [[Element.Element]]? {
+    static func safeCreate(jsonString: String?, file: String = #file, function: String = #function, line: UInt = #line) -> [[Element.Element]]? {
         do {
             return try create(jsonString: jsonString)
         } catch {
-            RoutableLogger.logError("Unable to create array of objects from JSON string", error: error, data: ["jsonString": jsonString, "self": self])
+            RoutableLogger.logError("Unable to create array of objects from JSON string", error: error, data: ["jsonString": jsonString, "self": self], file: file, function: function, line: line)
             return nil
         }
     }
