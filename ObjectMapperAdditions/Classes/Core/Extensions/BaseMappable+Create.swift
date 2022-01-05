@@ -92,11 +92,6 @@ public extension Array where Element: BaseMappable {
             return nil
         }
     }
-    
-    /// Returns the JSON Data for the object
-    func toJSONData() -> Data? {
-        toJSONString(prettyPrint: false)?.data(using: .utf8)
-    }
 }
 
 // ******************************* MARK: - [BaseMappable?] with data
