@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0DC249BB2737CA0F00623738 /* RealmPropertyTransform_Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DC249BA2737CA0F00623738 /* RealmPropertyTransform_Spec.swift */; };
 		0DC249BD2737CAED00623738 /* RealmPropertyTypeCastTransform_Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DC249BC2737CAED00623738 /* RealmPropertyTypeCastTransform_Spec.swift */; };
+		0DDE964C278F046D00E346EA /* Create_Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DDE964B278F046D00E346EA /* Create_Spec.swift */; };
 		15228CB302B7F8FD56C0BE5D /* Pods_ObjectMapperAdditions_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDEDDCD09D65355F843EFBC5 /* Pods_ObjectMapperAdditions_Tests.framework */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
@@ -44,6 +45,7 @@
 		0D716B712628606E00B28330 /* carthageUpdate.command */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; name = carthageUpdate.command; path = ../Scripts/Carthage/carthageUpdate.command; sourceTree = "<group>"; };
 		0DC249BA2737CA0F00623738 /* RealmPropertyTransform_Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmPropertyTransform_Spec.swift; sourceTree = "<group>"; };
 		0DC249BC2737CAED00623738 /* RealmPropertyTypeCastTransform_Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmPropertyTypeCastTransform_Spec.swift; sourceTree = "<group>"; };
+		0DDE964B278F046D00E346EA /* Create_Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Create_Spec.swift; sourceTree = "<group>"; };
 		1E6A5436B00ACF85E4A03951 /* podCheck.command */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; name = podCheck.command; path = ../podCheck.command; sourceTree = "<group>"; };
 		3306BDD26A7024542AF11D3D /* ObjectMapperAdditions.podspec */ = {isa = PBXFileReference; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = ObjectMapperAdditions.podspec; path = ../ObjectMapperAdditions.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		43260D3A6963AE16EDA55BBC /* Pods-ObjectMapperAdditions_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ObjectMapperAdditions_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ObjectMapperAdditions_Example/Pods-ObjectMapperAdditions_Example.debug.xcconfig"; sourceTree = "<group>"; };
@@ -153,12 +155,13 @@
 			isa = PBXGroup;
 			children = (
 				607FACE91AFB9204008FA782 /* _Supporting Files */,
+				0DDE964B278F046D00E346EA /* Create_Spec.swift */,
 				B0D3A0381F7A5D710062AD2B /* ISO8601JustDateTransformSpec.swift */,
+				0DC249BA2737CA0F00623738 /* RealmPropertyTransform_Spec.swift */,
+				0DC249BC2737CAED00623738 /* RealmPropertyTypeCastTransform_Spec.swift */,
 				B02194961F2BAE7B00E228EB /* RealmSpec.swift */,
 				B0D3A0311F7A54BC0062AD2B /* TimestampTransformSpec.swift */,
 				607FACEB1AFB9204008FA782 /* TypeCastSpec.swift */,
-				0DC249BA2737CA0F00623738 /* RealmPropertyTransform_Spec.swift */,
-				0DC249BC2737CAED00623738 /* RealmPropertyTypeCastTransform_Spec.swift */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -433,6 +436,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0DDE964C278F046D00E346EA /* Create_Spec.swift in Sources */,
 				B02194981F2BAF3700E228EB /* RealmSpec.swift in Sources */,
 				B0D3A0331F7A54E90062AD2B /* TimestampTransformSpec.swift in Sources */,
 				B0D3A03A1F7A5D740062AD2B /* ISO8601JustDateTransformSpec.swift in Sources */,

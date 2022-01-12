@@ -28,6 +28,10 @@ public extension Array where Element: BaseMappable {
             throw MappingError.invalidJSON
         }
         
+        guard jsonData.last == ASCIICodes.closeSquareBracket else {
+            throw MappingError.invalidJSON
+        }
+        
         guard let jsonObject = jsonData.safeSerializeToJSON(file: file, function: function, line: line) else {
             throw MappingError.invalidJSON
         }
@@ -75,6 +79,10 @@ public extension Array where Element: BaseMappable {
             throw MappingError.invalidJSON
         }
         
+        guard jsonString.last == "]" else {
+            throw MappingError.invalidJSON
+        }
+        
         guard let array = Mapper<Element>().mapArray(JSONString: jsonString) else {
             throw MappingError.unknownType
         }
@@ -109,6 +117,10 @@ public extension Array where Element: OptionalType, Element.Wrapped: BaseMappabl
         }
         
         guard jsonData.first == ASCIICodes.openSquareBracket else {
+            throw MappingError.invalidJSON
+        }
+        
+        guard jsonData.last == ASCIICodes.closeSquareBracket else {
             throw MappingError.invalidJSON
         }
         
@@ -171,7 +183,15 @@ public extension RandomAccessCollection where Element: RandomAccessCollection, E
             throw MappingError.invalidJSON
         }
         
+        guard jsonData.last == ASCIICodes.closeSquareBracket else {
+            throw MappingError.invalidJSON
+        }
+        
         guard jsonData.count >= 2, jsonData[1] == ASCIICodes.openSquareBracket else {
+            throw MappingError.invalidJSON
+        }
+        
+        guard jsonData.count >= 4, jsonData[jsonData.count - 2] == ASCIICodes.closeSquareBracket else {
             throw MappingError.invalidJSON
         }
         
@@ -219,7 +239,15 @@ public extension RandomAccessCollection where Element: RandomAccessCollection, E
             throw MappingError.invalidJSON
         }
         
+        guard jsonString.last == "]" else {
+            throw MappingError.invalidJSON
+        }
+        
         guard jsonString.count >= 2, jsonString[jsonString.index(jsonString.startIndex, offsetBy: 1)] == "[" else {
+            throw MappingError.invalidJSON
+        }
+        
+        guard jsonString.count >= 4, jsonString[jsonString.index(jsonString.endIndex, offsetBy: -2)] == "]" else {
             throw MappingError.invalidJSON
         }
         

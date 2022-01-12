@@ -28,6 +28,10 @@ public extension ImmutableMappable {
             throw MappingError.invalidJSON
         }
         
+        guard jsonData.last == ASCIICodes.closeCurlyBracket else {
+            throw MappingError.invalidJSON
+        }
+        
         guard let jsonObject = jsonData.safeSerializeToJSON(file: file, function: function, line: line) else {
             throw MappingError.invalidJSON
         }
@@ -72,6 +76,10 @@ public extension ImmutableMappable {
         }
         
         guard jsonString.first == "{" else {
+            throw MappingError.invalidJSON
+        }
+        
+        guard jsonString.last == "}" else {
             throw MappingError.invalidJSON
         }
         

@@ -10,6 +10,7 @@ import Foundation
 
 enum ASCIICodes {
     static let openCurlyBracket: UInt8 = "{".data(using: .ascii)!.first!
+    static let closeCurlyBracket: UInt8 = "}".data(using: .ascii)!.first!
     static let openSquareBracket: UInt8 = "[".data(using: .ascii)!.first!
-    static let openAngleBracket: UInt8 = "<".data(using: .ascii)!.first!
+    static let closeSquareBracket: UInt8 = "]".data(using: .ascii)!.first!
 }
