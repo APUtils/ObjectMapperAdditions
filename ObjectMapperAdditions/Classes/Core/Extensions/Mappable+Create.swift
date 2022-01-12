@@ -25,15 +25,15 @@ public extension Mappable {
         }
         
         guard jsonData.first == ASCIICodes.openCurlyBracket else {
-            throw MappingError.invalidJSON
+            throw MappingError.invalidJSON(message: "JSON object should start with the {")
         }
         
         guard jsonData.last == ASCIICodes.closeCurlyBracket else {
-            throw MappingError.invalidJSON
+            throw MappingError.invalidJSON(message: "JSON object should end with the }")
         }
         
         guard let jsonObject = jsonData.safeSerializeToJSON(file: file, function: function, line: line) else {
-            throw MappingError.invalidJSON
+            throw MappingError.invalidJSON(message: "Unable to serialize JSON array from the data")
         }
         
         guard let jsonDictionary = jsonObject as? [String: Any] else {
@@ -78,11 +78,11 @@ public extension Mappable {
         }
         
         guard jsonString.first == "{" else {
-            throw MappingError.invalidJSON
+            throw MappingError.invalidJSON(message: "JSON object should start with the {")
         }
         
         guard jsonString.last == "}" else {
-            throw MappingError.invalidJSON
+            throw MappingError.invalidJSON(message: "JSON object should end with the }")
         }
         
         guard let model = Self(JSONString: jsonString) else {

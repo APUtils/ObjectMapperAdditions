@@ -10,6 +10,6 @@ import Foundation
 
 public enum MappingError: Error {
     case emptyData
-    case invalidJSON
+    case invalidJSON(message: String)
     case unknownType
 }

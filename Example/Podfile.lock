@@ -9,10 +9,10 @@ PODS:
   - APExtensions/ViewModel (10.1.8)
   - Nimble (9.2.1)
   - ObjectMapper (4.2.0)
-  - ObjectMapperAdditions/Core (8.2.0):
+  - ObjectMapperAdditions/Core (9.0.0):
     - ObjectMapper
     - RoutableLogger (>= 9.1.11)
-  - ObjectMapperAdditions/Realm (8.2.0):
+  - ObjectMapperAdditions/Realm (9.0.0):
     - ObjectMapper
     - ObjectMapperAdditions/Core
     - RealmSwift
@@ -55,7 +55,7 @@ SPEC CHECKSUMS:
   APExtensions: c67bbacc1e39e07d0ed63f24905ba1013bf13988
   Nimble: e7e615c0335ee4bf5b0d786685451e62746117d5
   ObjectMapper: 1eb41f610210777375fa806bf161dc39fb832b81
-  ObjectMapperAdditions: e3c758a38e68cab7ee1b52c61829a360da2a4c21
+  ObjectMapperAdditions: 3482dad51c1b37a3877742861f51d6dfa87611b3
   Quick: 6473349e43b9271a8d43839d9ba1c442ed1b7ac4
   Realm: 55220cda83aabd773740d18518e05fdbe00b87cc
   RealmSwift: 129dce1dd6b5d9194a37f568aaf32a6c10d1a803

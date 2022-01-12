@@ -25,15 +25,15 @@ public extension Array where Element: BaseMappable {
         }
         
         guard jsonData.first == ASCIICodes.openSquareBracket else {
-            throw MappingError.invalidJSON
+            throw MappingError.invalidJSON(message: "JSON array should start with the [")
         }
         
         guard jsonData.last == ASCIICodes.closeSquareBracket else {
-            throw MappingError.invalidJSON
+            throw MappingError.invalidJSON(message: "JSON array should end with the ]")
         }
         
         guard let jsonObject = jsonData.safeSerializeToJSON(file: file, function: function, line: line) else {
-            throw MappingError.invalidJSON
+            throw MappingError.invalidJSON(message: "Unable to serialize JSON array from the data")
         }
         
         guard let jsonArrayOfDictionaries = jsonObject as? [[String: Any]] else {
@@ -76,11 +76,11 @@ public extension Array where Element: BaseMappable {
         }
         
         guard jsonString.first == "[" else {
-            throw MappingError.invalidJSON
+            throw MappingError.invalidJSON(message: "JSON array should start with the [")
         }
         
         guard jsonString.last == "]" else {
-            throw MappingError.invalidJSON
+            throw MappingError.invalidJSON(message: "JSON array should end with the ]")
         }
         
         guard let array = Mapper<Element>().mapArray(JSONString: jsonString) else {
@@ -117,15 +117,15 @@ public extension Array where Element: OptionalType, Element.Wrapped: BaseMappabl
         }
         
         guard jsonData.first == ASCIICodes.openSquareBracket else {
-            throw MappingError.invalidJSON
+            throw MappingError.invalidJSON(message: "JSON array should start with the [")
         }
         
         guard jsonData.last == ASCIICodes.closeSquareBracket else {
-            throw MappingError.invalidJSON
+            throw MappingError.invalidJSON(message: "JSON array should end with the ]")
         }
         
         guard let jsonObject = jsonData.safeSerializeToJSON(file: file, function: function, line: line) else {
-            throw MappingError.invalidJSON
+            throw MappingError.invalidJSON(message: "Unable to serialize JSON array from the data")
         }
         
         guard let jsonArrayOfObjects = jsonObject as? [Any] else {
@@ -180,23 +180,23 @@ public extension RandomAccessCollection where Element: RandomAccessCollection, E
         }
         
         guard jsonData.first == ASCIICodes.openSquareBracket else {
-            throw MappingError.invalidJSON
+            throw MappingError.invalidJSON(message: "JSON array of arrays should start with the [")
         }
         
         guard jsonData.last == ASCIICodes.closeSquareBracket else {
-            throw MappingError.invalidJSON
+            throw MappingError.invalidJSON(message: "JSON array of arrays should end with the ]")
         }
         
         guard jsonData.count >= 2, jsonData[1] == ASCIICodes.openSquareBracket else {
-            throw MappingError.invalidJSON
+            throw MappingError.invalidJSON(message: "JSON array should start with the [")
         }
         
         guard jsonData.count >= 4, jsonData[jsonData.count - 2] == ASCIICodes.closeSquareBracket else {
-            throw MappingError.invalidJSON
+            throw MappingError.invalidJSON(message: "JSON array should end with the ]")
         }
         
         guard let json = jsonData.safeSerializeToJSON(file: file, function: function, line: line) else {
-            throw MappingError.invalidJSON
+            throw MappingError.invalidJSON(message: "Unable to serialize JSON array from the data")
         }
         
         guard let arrayOfArraysOfDictionaries = json as? [[[String: Any]]] else {
@@ -236,19 +236,19 @@ public extension RandomAccessCollection where Element: RandomAccessCollection, E
         }
         
         guard jsonString.first == "[" else {
-            throw MappingError.invalidJSON
+            throw MappingError.invalidJSON(message: "JSON array should start with the [")
         }
         
         guard jsonString.last == "]" else {
-            throw MappingError.invalidJSON
+            throw MappingError.invalidJSON(message: "JSON array of arrays should end with the ]")
         }
         
         guard jsonString.count >= 2, jsonString[jsonString.index(jsonString.startIndex, offsetBy: 1)] == "[" else {
-            throw MappingError.invalidJSON
+            throw MappingError.invalidJSON(message: "JSON array should start with the [")
         }
         
         guard jsonString.count >= 4, jsonString[jsonString.index(jsonString.endIndex, offsetBy: -2)] == "]" else {
-            throw MappingError.invalidJSON
+            throw MappingError.invalidJSON(message: "JSON array should end with the ]")
         }
         
         guard let arrayOfArraysOfDictionaries = Mapper<Element.Element>.parseJSONString(JSONString: jsonString) as? [[[String: Any]]] else {
