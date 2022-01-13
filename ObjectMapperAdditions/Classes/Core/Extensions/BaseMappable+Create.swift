@@ -24,12 +24,24 @@ public extension Array where Element: BaseMappable {
             throw MappingError.emptyData
         }
         
-        guard jsonData.first == ASCIICodes.openSquareBracket else {
-            throw MappingError.invalidJSON(message: "JSON array should start with the [")
+        // Start check
+        if jsonData.first == ASCIICodes.space || jsonData.first == ASCIICodes.newLine {
+            RoutableLogger.logWarning("JSON data starts with a white space. That's weird.")
+            
+        } else {
+            guard jsonData.first == ASCIICodes.openSquareBracket else {
+                throw MappingError.invalidJSON(message: "JSON array should start with the '[' character")
+            }
         }
         
-        guard jsonData.last == ASCIICodes.closeSquareBracket else {
-            throw MappingError.invalidJSON(message: "JSON array should end with the ]")
+        // End check
+        if jsonData.last == ASCIICodes.space || jsonData.last == ASCIICodes.newLine {
+            RoutableLogger.logWarning("JSON data ends with a white space. That's weird.")
+            
+        } else {
+            guard jsonData.last == ASCIICodes.closeSquareBracket else {
+                throw MappingError.invalidJSON(message: "JSON array should end with the ']' character")
+            }
         }
         
         guard let jsonObject = jsonData.safeSerializeToJSON(file: file, function: function, line: line) else {
@@ -75,12 +87,24 @@ public extension Array where Element: BaseMappable {
             throw MappingError.emptyData
         }
         
-        guard jsonString.first == "[" else {
-            throw MappingError.invalidJSON(message: "JSON array should start with the [")
+        // Start check
+        if jsonString.first == " " || jsonString.first == "\n" {
+            RoutableLogger.logWarning("JSON string starts with a white space. That's weird.")
+            
+        } else {
+            guard jsonString.first == "[" else {
+                throw MappingError.invalidJSON(message: "JSON array should start with the '[' character")
+            }
         }
         
-        guard jsonString.last == "]" else {
-            throw MappingError.invalidJSON(message: "JSON array should end with the ]")
+        // End check
+        if jsonString.last == " " || jsonString.last == "\n" {
+            RoutableLogger.logWarning("JSON string ends with a white space. That's weird.")
+            
+        } else {
+            guard jsonString.last == "]" else {
+                throw MappingError.invalidJSON(message: "JSON array should end with the ']' character")
+            }
         }
         
         guard let array = Mapper<Element>().mapArray(JSONString: jsonString) else {
@@ -116,12 +140,24 @@ public extension Array where Element: OptionalType, Element.Wrapped: BaseMappabl
             throw MappingError.emptyData
         }
         
-        guard jsonData.first == ASCIICodes.openSquareBracket else {
-            throw MappingError.invalidJSON(message: "JSON array should start with the [")
+        // Start check
+        if jsonData.first == ASCIICodes.space || jsonData.first == ASCIICodes.newLine {
+            RoutableLogger.logWarning("JSON data starts with a white space. That's weird.")
+            
+        } else {
+            guard jsonData.first == ASCIICodes.openSquareBracket else {
+                throw MappingError.invalidJSON(message: "JSON array should start with the '[' character")
+            }
         }
         
-        guard jsonData.last == ASCIICodes.closeSquareBracket else {
-            throw MappingError.invalidJSON(message: "JSON array should end with the ]")
+        // End check
+        if jsonData.last == ASCIICodes.space || jsonData.last == ASCIICodes.newLine {
+            RoutableLogger.logWarning("JSON data ends with a white space. That's weird.")
+            
+        } else {
+            guard jsonData.last == ASCIICodes.closeSquareBracket else {
+                throw MappingError.invalidJSON(message: "JSON array should end with the ']' character")
+            }
         }
         
         guard let jsonObject = jsonData.safeSerializeToJSON(file: file, function: function, line: line) else {
@@ -179,20 +215,32 @@ public extension RandomAccessCollection where Element: RandomAccessCollection, E
             throw MappingError.emptyData
         }
         
-        guard jsonData.first == ASCIICodes.openSquareBracket else {
-            throw MappingError.invalidJSON(message: "JSON array of arrays should start with the [")
+        // Start check
+        if jsonData.first == ASCIICodes.space || jsonData.first == ASCIICodes.newLine {
+            RoutableLogger.logWarning("JSON data starts with a white space. That's weird.")
+            
+        } else {
+            guard  jsonData.first == ASCIICodes.openSquareBracket else {
+                throw MappingError.invalidJSON(message: "JSON array of arrays should start with the '[' character")
+            }
+            
+            guard jsonData.count >= 2, jsonData[1] == ASCIICodes.openSquareBracket else {
+                throw MappingError.invalidJSON(message: "JSON array should start with the '[' character")
+            }
         }
         
-        guard jsonData.last == ASCIICodes.closeSquareBracket else {
-            throw MappingError.invalidJSON(message: "JSON array of arrays should end with the ]")
-        }
-        
-        guard jsonData.count >= 2, jsonData[1] == ASCIICodes.openSquareBracket else {
-            throw MappingError.invalidJSON(message: "JSON array should start with the [")
-        }
-        
-        guard jsonData.count >= 4, jsonData[jsonData.count - 2] == ASCIICodes.closeSquareBracket else {
-            throw MappingError.invalidJSON(message: "JSON array should end with the ]")
+        // End check
+        if jsonData.last == ASCIICodes.space || jsonData.last == ASCIICodes.newLine {
+            RoutableLogger.logWarning("JSON data ends with a white space. That's weird.")
+            
+        } else {
+            guard jsonData.last == ASCIICodes.closeSquareBracket else {
+                throw MappingError.invalidJSON(message: "JSON array of arrays should end with the ']' character")
+            }
+            
+            guard jsonData.count >= 4, jsonData[jsonData.count - 2] == ASCIICodes.closeSquareBracket else {
+                throw MappingError.invalidJSON(message: "JSON array should end with the ']' character")
+            }
         }
         
         guard let json = jsonData.safeSerializeToJSON(file: file, function: function, line: line) else {
@@ -235,20 +283,32 @@ public extension RandomAccessCollection where Element: RandomAccessCollection, E
             throw MappingError.emptyData
         }
         
-        guard jsonString.first == "[" else {
-            throw MappingError.invalidJSON(message: "JSON array should start with the [")
+        // Start check
+        if jsonString.first == " " || jsonString.first == "\n" {
+            RoutableLogger.logWarning("JSON string starts with a white space. That's weird.")
+            
+        } else {
+            guard jsonString.first == "[" else {
+                throw MappingError.invalidJSON(message: "JSON array should start with the '[' character")
+            }
+            
+            guard jsonString.count >= 2, jsonString[jsonString.index(jsonString.startIndex, offsetBy: 1)] == "[" else {
+                throw MappingError.invalidJSON(message: "JSON array should start with the '[' character")
+            }
         }
         
-        guard jsonString.last == "]" else {
-            throw MappingError.invalidJSON(message: "JSON array of arrays should end with the ]")
-        }
+        // End check
+        if jsonString.last == " " || jsonString.last == "\n" {
+            RoutableLogger.logWarning("JSON string ends with a white space. That's weird.")
         
-        guard jsonString.count >= 2, jsonString[jsonString.index(jsonString.startIndex, offsetBy: 1)] == "[" else {
-            throw MappingError.invalidJSON(message: "JSON array should start with the [")
-        }
-        
-        guard jsonString.count >= 4, jsonString[jsonString.index(jsonString.endIndex, offsetBy: -2)] == "]" else {
-            throw MappingError.invalidJSON(message: "JSON array should end with the ]")
+        } else {
+            guard jsonString.last == "]" else {
+                throw MappingError.invalidJSON(message: "JSON array of arrays should end with the ']' character")
+            }
+            
+            guard jsonString.count >= 4, jsonString[jsonString.index(jsonString.endIndex, offsetBy: -2)] == "]" else {
+                throw MappingError.invalidJSON(message: "JSON array should end with the ']' character")
+            }
         }
         
         guard let arrayOfArraysOfDictionaries = Mapper<Element.Element>.parseJSONString(JSONString: jsonString) as? [[[String: Any]]] else {
