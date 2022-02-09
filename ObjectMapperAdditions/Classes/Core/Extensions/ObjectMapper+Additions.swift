@@ -21,3 +21,35 @@ public extension Map {
         return true
     }
 }
+
+// ******************************* MARK: - To JSON String
+
+public extension BaseMappable {
+    
+    /// Returns the JSON String for the object
+    func toJSONString(options: JSONSerialization.WritingOptions) -> String? {
+        let dictionary = Mapper<Self>().toJSON(self)
+        return Mapper<Self>.toJSONData(dictionary, options: options)?.utf8String
+    }
+}
+
+public extension Array where Element: BaseMappable {
+    
+    /// Returns the JSON String for the object
+    func toJSONString(options: JSONSerialization.WritingOptions) -> String? {
+        let dictionary = Mapper<Element>().toJSONArray(self)
+        return Mapper<Element>.toJSONData(dictionary, options: options)?.utf8String
+    }
+}
+
+public extension JSONSerialization.WritingOptions {
+    
+    /// `[.sortedKeys]` on `iOS <13.0` and `[.sortedKeys, .withoutEscapingSlashes]` on `iOS >=13.0`
+    static let sortedKeysWithoutEscapingSlashesIfPossible: JSONSerialization.WritingOptions = {
+        if #available(iOS 13.0, *) {
+            return [.sortedKeys, .withoutEscapingSlashes]
+        } else {
+            return [.sortedKeys]
+        }
+    }()
+}
