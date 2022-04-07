@@ -11,7 +11,7 @@ import RoutableLogger
 
 extension Data {
     
-    // ******************************* MARK: - Hex
+    // ******************************* MARK: - As
     
     /// Get HEX string from data. Can be used for sending APNS token to backend.
     var hexString: String {
@@ -44,5 +44,30 @@ extension Data {
             RoutableLogger.logError("Unable to parse date to JSON", error: error, data: ["self": asString], file: file, function: function, line: line)
             return nil
         }
+    }
+    
+    // ******************************* MARK: - Checks
+    
+    var firstNonWhitespaceByte: UInt8? {
+        guard let index = firstIndex(where: { $0 != ASCIICodes.space && $0 != ASCIICodes.newLine }) else { return nil }
+        return self[index]
+    }
+    var secondNonWhitespaceByte: UInt8? {
+        guard let index = firstIndex(where: { $0 != ASCIICodes.space && $0 != ASCIICodes.newLine }),
+              index + 1 < count else { return nil }
+        
+        return self[index + 1]
+    }
+    
+    var lastNonWhitespaceByte: UInt8? {
+        guard let index = lastIndex(where: { $0 != ASCIICodes.space && $0 != ASCIICodes.newLine }) else { return nil }
+        return self[index]
+    }
+    
+    var beforeLastNonWhitespaceByte: UInt8? {
+        guard let index = lastIndex(where: { $0 != ASCIICodes.space && $0 != ASCIICodes.newLine }),
+              index - 1 >= 0 else { return nil }
+        
+        return self[index - 1]
     }
 }

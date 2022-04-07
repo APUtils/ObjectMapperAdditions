@@ -21,6 +21,19 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let spaces = String(repeating: " ", count: 10_000_000)
+        let string = " {\(spaces)\(spaces)} "
+        
+        let data = string.data(using: .utf8)!
+        
+        let date1 = Date()
+        _ = try! MyModel.create(jsonString: string)
+        print("From string: ******** %f", Date().timeIntervalSince(date1))
+        
+        let date2 = Date()
+        _ = try! MyModel.create(jsonData: data)
+        print("From data: ******** %f", Date().timeIntervalSince(date2))
+        
         //-----------------------------------------------------------------------------
         // MARK: - ISO8601Formatter
         //-----------------------------------------------------------------------------

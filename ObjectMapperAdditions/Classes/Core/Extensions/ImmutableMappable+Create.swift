@@ -26,23 +26,13 @@ public extension ImmutableMappable {
         
         
         // Start check
-        if jsonData.first == ASCIICodes.space || jsonData.first == ASCIICodes.newLine {
-            RoutableLogger.logWarning("JSON data starts with a white space. That's weird.")
-            
-        } else {
-            guard jsonData.first == ASCIICodes.openCurlyBracket else {
-                throw MappingError.invalidJSON(message: "JSON object should start with the '{' character")
-            }
+        guard jsonData.firstNonWhitespaceByte == ASCIICodes.openCurlyBracket else {
+            throw MappingError.invalidJSON(message: "JSON object should start with the '{' character")
         }
         
         // End check
-        if jsonData.last == ASCIICodes.space || jsonData.last == ASCIICodes.newLine {
-            RoutableLogger.logWarning("JSON data ends with a white space. That's weird.")
-        
-        } else {
-            guard jsonData.last == ASCIICodes.closeCurlyBracket else {
-                throw MappingError.invalidJSON(message: "JSON object should end with the '}' character")
-            }
+        guard jsonData.lastNonWhitespaceByte == ASCIICodes.closeCurlyBracket else {
+            throw MappingError.invalidJSON(message: "JSON object should end with the '}' character")
         }
         
         guard let jsonObject = jsonData.safeSerializeToJSON(file: file, function: function, line: line) else {
@@ -89,23 +79,13 @@ public extension ImmutableMappable {
         }
         
         // Start check
-        if jsonString.first == " " || jsonString.first == "\n" {
-            RoutableLogger.logWarning("JSON string starts with a white space. That's weird.")
-            
-        } else {
-            guard jsonString.first == "{" else {
-                throw MappingError.invalidJSON(message: "JSON object should start with the '{' character")
-            }
+        guard jsonString.firstNonWhitespaceCharacter == "{" else {
+            throw MappingError.invalidJSON(message: "JSON object should start with the '{' character")
         }
         
         // End check
-        if jsonString.last == " " || jsonString.last == "\n" {
-            RoutableLogger.logWarning("JSON string ends with a white space. That's weird.")
-            
-        } else {
-            guard jsonString.last == "}" else {
-                throw MappingError.invalidJSON(message: "JSON object should end with the '}' character")
-            }
+        guard jsonString.lastNonWhitespaceCharacter == "}" else {
+            throw MappingError.invalidJSON(message: "JSON object should end with the '}' character")
         }
         
         let model = try Self(JSONString: jsonString)
