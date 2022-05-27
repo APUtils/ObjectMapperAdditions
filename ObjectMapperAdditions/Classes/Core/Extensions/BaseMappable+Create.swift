@@ -173,9 +173,9 @@ public extension RandomAccessCollection where Element: RandomAccessCollection, E
     
     /// Creates models array from JSON string.
     /// - parameter jsonString: String in JSON format to use for model creation.
-    /// - throws: `TurvoError.emptyData` if response data is empty.
-    /// - throws: `TurvoError.invalidJSON` if response isn't a valid JSON.
-    /// - throws: `TurvoError.unknownType` if it wasn't possible to create model.
+    /// - throws: `MappingError.emptyData` if response data is empty.
+    /// - throws: `MappingError.invalidJSON` if response isn't a valid JSON.
+    /// - throws: `MappingError.unknownType` if it wasn't possible to create model.
     static func create(jsonData: Data?, file: String = #file, function: String = #function, line: UInt = #line) throws -> [[Element.Element]] {
         guard let jsonData = jsonData else {
             throw MappingError.emptyData
@@ -231,9 +231,9 @@ public extension RandomAccessCollection where Element: RandomAccessCollection, E
     
     /// Creates models array from JSON string.
     /// - parameter jsonString: String in JSON format to use for model creation.
-    /// - throws: `TurvoError.emptyData` if response data is empty.
-    /// - throws: `TurvoError.invalidJSON` if response isn't a valid JSON.
-    /// - throws: `TurvoError.unknownType` if it wasn't possible to create model.
+    /// - throws: `MappingError.emptyData` if response data is empty.
+    /// - throws: `MappingError.invalidJSON` if response isn't a valid JSON.
+    /// - throws: `MappingError.unknownType` if it wasn't possible to create model.
     static func create(jsonString: String?, file: String = #file, function: String = #function, line: UInt = #line) throws -> [[Element.Element]] {
         guard let jsonString = jsonString else {
             throw MappingError.emptyData
