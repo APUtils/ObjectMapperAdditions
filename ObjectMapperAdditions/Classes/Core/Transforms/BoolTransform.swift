@@ -8,7 +8,7 @@
 
 import Foundation
 import ObjectMapper
-
+import RoutableLogger
 
 /// Transforms value of type Any to Bool. Tries to typecast if possible.
 public class BoolTransform: TransformType {
@@ -31,10 +31,7 @@ public class BoolTransform: TransformType {
         } else if let number = value as? NSNumber {
             return number.boolValue
         } else {
-            #if DEBUG
-                print("Can not cast value \(value!) of type \(type(of: value!)) to type \(Object.self)")
-            #endif
-            
+            RoutableLogger.logError("Can not cast value of type \(type(of: value!)) to type \(Object.self)", data: ["value": value])
             return nil
         }
     }

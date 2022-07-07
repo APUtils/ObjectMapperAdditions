@@ -7,7 +7,7 @@
 //
 
 import ObjectMapper
-
+import RoutableLogger
 
 /// Transforms value of type Any to RawRepresentable enum. Tries to typecast if possible.
 public class EnumTypeCastTransform<T: RawRepresentable>: TransformType {
@@ -34,7 +34,7 @@ public class EnumTypeCastTransform<T: RawRepresentable>: TransformType {
             let rawValue = StringTransform().transformFromJSON(value) as? T.RawValue
             return rawValue.flatMap(T.init(rawValue:))
         } else {
-            print("ObjectMapperAdditions. Can not cast value \(value!) of type \(type(of: value!)) to type \(T.RawValue.self)")
+            RoutableLogger.logError("Can not cast value of type \(type(of: value!)) to type \(T.RawValue.self)", data: ["value": value])
             return nil
         }
     }
