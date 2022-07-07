@@ -26,7 +26,7 @@ Please check [official guide](https://github.com/Carthage/Carthage#if-youre-buil
 Cartfile:
 
 ```
-github "APUtils/ObjectMapperAdditions" ~> 9.0
+github "APUtils/ObjectMapperAdditions" ~> 10.0
 ```
 
 If you do not need Realm part, add those frameworks: `ObjectMapperAdditions`, `ObjectMapper`, `RoutableLogger`.
@@ -40,13 +40,13 @@ ObjectMapperAdditions is available through [CocoaPods](http://cocoapods.org).
 To install Core features, simply add the following line to your Podfile:
 
 ```ruby
-pod 'ObjectMapperAdditions/Core', '~> 9.0'
+pod 'ObjectMapperAdditions/Core', '~> 10.0'
 ```
 
 To add Realm transform to your project add the following line to your Podfile:
 
 ```ruby
-pod 'ObjectMapperAdditions/Realm', '~> 9.0'
+pod 'ObjectMapperAdditions/Realm', '~> 10.0'
 ```
 
 #### Swift Package Manager
@@ -88,7 +88,7 @@ struct MyModel: Mappable {
     
     mutating func mapping(map: Map) {
         // You could specify proper type transform directly
-        string <- (map["string"], StringTransform())
+        string <- (map["string"], StringTransform.shared)
         
         // Or you could just use TypeCastTransform
         string <- (map["string"], TypeCastTransform())
@@ -100,7 +100,7 @@ struct MyModel: Mappable {
         stringsArray <- (map["stringsArray"], TypeCastTransform<String>())
         
         // Or just use StringTransform directly
-        stringsArray <- (map["stringsArray"], StringTransform())
+        stringsArray <- (map["stringsArray"], StringTransform.shared)
         
         // No need to transform your types. They should specify transforms by themselfs.
         myOtherModel <- map["myOtherModel"]
@@ -118,10 +118,10 @@ Moreover this pod has extension to simplify creation of JSON with NULL values in
 Date transformers example usage:
 ```swift
 // If date in timestamp format (1506423767)
-date <- (map["date"], TimestampTransform())
+date <- (map["date"], TimestampTransform.shared)
 
 // If date in ISO8601 full-date format (yyyy-MM-dd)
-date <- (map["date"], ISO8601JustDateTransform())
+date <- (map["date"], ISO8601JustDateTransform.shared)
 ```
 
 See example and tests projects for more details.
@@ -162,14 +162,14 @@ class MyRealmModel: Object, Mappable {
         isWriteRequired ? realm?.beginWrite() : ()
 
         // Same as for ordinary model
-        double <- (map["double"], DoubleTransform())
+        double <- (map["double"], DoubleTransform.shared)
         
         // Using ObjectMapperAdditions's RealmPropertyTypeCastTransform
         optionalDouble <- (map["optionalDouble"], RealmPropertyTypeCastTransform())
         // You could also use RealmPropertyTransform if you don't like type cast
 //        optionalDouble <- (map["optionalDouble"], RealmPropertyTransform<Double>())
         
-        string <- (map["string"], StringTransform())
+        string <- (map["string"], StringTransform.shared)
         myOtherRealmModel <- map["myOtherRealmModel"]
         
         // Using ObjectMapper+Realm's RealmListTransform to transform custom types

@@ -3,6 +3,13 @@ All notable changes to this project will be documented in this file.
 `ObjectMapperAdditions` adheres to [Semantic Versioning](http://semver.org/).
 
 
+## [10.0.0](https://github.com/APUtils/ObjectMapperAdditions/releases/tag/10.0.0)
+Released on `2022-07-07`
+
+#### Changed
+- Some transformers are now singletones
+
+
 ## [9.0.0](https://github.com/APUtils/ObjectMapperAdditions/releases/tag/9.0.0)
 Released on `2022-07-07`
 
