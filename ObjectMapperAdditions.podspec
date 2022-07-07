@@ -38,7 +38,7 @@ Pod::Spec.new do |s|
   s.default_subspec = 'Core'
   s.frameworks = 'Foundation'
   s.dependency 'ObjectMapper'
-  s.dependency 'RoutableLogger', '>= 9.1.11'
+  s.dependency 'RoutableLogger', '~> 11.0'
 
   s.subspec 'Core' do |core|
     core.source_files = 'ObjectMapperAdditions/Classes/Core/**/*'

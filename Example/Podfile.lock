@@ -7,23 +7,23 @@ PODS:
     - RoutableLogger
   - APExtensions/Storyboard (10.1.8)
   - APExtensions/ViewModel (10.1.8)
-  - Nimble (9.2.1)
+  - Nimble (10.0.0)
   - ObjectMapper (4.2.0)
   - ObjectMapperAdditions/Core (9.0.0):
     - ObjectMapper
-    - RoutableLogger (>= 9.1.11)
+    - RoutableLogger (~> 11.0)
   - ObjectMapperAdditions/Realm (9.0.0):
     - ObjectMapper
     - ObjectMapperAdditions/Core
     - RealmSwift
-    - RoutableLogger (>= 9.1.11)
-  - Quick (4.0.0)
-  - Realm (10.25.0):
-    - Realm/Headers (= 10.25.0)
-  - Realm/Headers (10.25.0)
-  - RealmSwift (10.25.0):
-    - Realm (= 10.25.0)
-  - RoutableLogger (9.1.12)
+    - RoutableLogger (~> 11.0)
+  - Quick (5.0.1)
+  - Realm (10.28.2):
+    - Realm/Headers (= 10.28.2)
+  - Realm/Headers (10.28.2)
+  - RealmSwift (10.28.2):
+    - Realm (= 10.28.2)
+  - RoutableLogger (11.0.0)
 
 DEPENDENCIES:
   - APExtensions (from `https://github.com/APUtils/APExtensions`)
@@ -48,18 +48,18 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   APExtensions:
-    :commit: bd0afb4998ba373decd6be44edb5973218b6a395
+    :commit: 852b62abd1515c8ec11dec7b2d7213dec1ec7d61
     :git: https://github.com/APUtils/APExtensions
 
 SPEC CHECKSUMS:
   APExtensions: c67bbacc1e39e07d0ed63f24905ba1013bf13988
-  Nimble: e7e615c0335ee4bf5b0d786685451e62746117d5
+  Nimble: 5316ef81a170ce87baf72dd961f22f89a602ff84
   ObjectMapper: 1eb41f610210777375fa806bf161dc39fb832b81
-  ObjectMapperAdditions: 3482dad51c1b37a3877742861f51d6dfa87611b3
-  Quick: 6473349e43b9271a8d43839d9ba1c442ed1b7ac4
-  Realm: 22a82aaa0e73f3483e3a6df32549c4c5cd34aa63
-  RealmSwift: c2a635212400923edd3f828b8a37d55d3eb31863
-  RoutableLogger: 9ad367e9a79df59c3cf5a1707ba9598ffbae8784
+  ObjectMapperAdditions: 8384a7597ecc7f5db92d949727b75be6ffe08184
+  Quick: 749aa754fd1e7d984f2000fe051e18a3a9809179
+  Realm: e617c54ad0f566b3d0f6a2abae7010de05f252ac
+  RealmSwift: 8a516a8759d80d52ebcec1ff1076f5f5159f98b2
+  RoutableLogger: 70188daca734d067967e4f464450582ca189b4d5
 
 PODFILE CHECKSUM: 4111a9263bd2e1848d990e8b2da55ce91595c2cd
 

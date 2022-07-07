@@ -6,8 +6,8 @@
 //  Copyright © 2017 Anton Plebanovich. All rights reserved.
 //
 
+import Foundation
 import ObjectMapper
-
 
 public extension BaseMappable {
     func toJSON(shouldIncludeNilValues: Bool) -> [String: Any] {

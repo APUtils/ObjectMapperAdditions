@@ -2,6 +2,29 @@
 All notable changes to this project will be documented in this file.
 `ObjectMapperAdditions` adheres to [Semantic Versioning](http://semver.org/).
 
+
+## [9.0.0](https://github.com/APUtils/ObjectMapperAdditions/releases/tag/9.0.0)
+Released on `2022-07-07`
+
+#### Added
+- Array<BaseMappable> toJSONData()
+- BaseMappable toJSONString(options:)
+- Set<BaseMappable> toJSONData()
+- [BaseMappable] toJSONString(options:)
+
+#### Changed
+- Check for closing brackets before creation
+- Do not fail on whitespaces
+- Search for non-whitespace characters instead of warning
+- `RoutableLogger.logError` instead of `print` for type cast errors
+
+#### Improved
+- Better error report
+- Better invalid JSON messages
+
+#### Tests
+- Create specs
+
 ## [8.2.0](https://github.com/APUtils/ObjectMapperAdditions/releases/tag/8.2.0)
 Released on 11/17/2021.
 

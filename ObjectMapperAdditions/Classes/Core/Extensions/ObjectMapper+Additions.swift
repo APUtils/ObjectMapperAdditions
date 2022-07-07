@@ -6,8 +6,8 @@
 //  Copyright © 2017 Anton Plebanovich. All rights reserved.
 //
 
+import Foundation
 import ObjectMapper
-
 
 public extension Map {
     /// It asserts that value is presents in JSON. Optional values must be included as <null>.
@@ -46,10 +46,12 @@ public extension JSONSerialization.WritingOptions {
     
     /// `[.sortedKeys]` on `iOS <13.0` and `[.sortedKeys, .withoutEscapingSlashes]` on `iOS >=13.0`
     static let sortedKeysWithoutEscapingSlashesIfPossible: JSONSerialization.WritingOptions = {
-        if #available(iOS 13.0, *) {
+        if #available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *) {
             return [.sortedKeys, .withoutEscapingSlashes]
-        } else {
+        } else if #available(macOS 10.13, tvOS 11.0, watchOS 4.0, *) {
             return [.sortedKeys]
+        } else {
+            return []
         }
     }()
 }

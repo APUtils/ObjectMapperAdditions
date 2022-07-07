@@ -18,13 +18,13 @@ class Create_Spec: QuickSpec {
         describe("Create") {
             
             let jsonObjectData = try! JSONSerialization.data(withJSONObject: ["string":"string"])
-            let jsonObjectString = jsonObjectData.utf8String
+            let jsonObjectString = jsonObjectData.safeUTF8String()
             
             let jsonArrayData = try! JSONSerialization.data(withJSONObject: [["string":"string"]])
-            let jsonArrayString = jsonArrayData.utf8String
+            let jsonArrayString = jsonArrayData.safeUTF8String()
             
             let jsonArrayOfArraysData = try! JSONSerialization.data(withJSONObject: [[["string":"string"]]])
-            let jsonArrayOfArraysString = jsonArrayOfArraysData.utf8String
+            let jsonArrayOfArraysString = jsonArrayOfArraysData.safeUTF8String()
             
             describe("[BaseMappable]") {
                 it("should map from JSON") {

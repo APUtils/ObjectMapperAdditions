@@ -53,6 +53,11 @@
 		0D673FC22628665A005F308D /* IntTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A0735E1F3A43E9001B8CC6 /* IntTransform.swift */; };
 		0D673FC32628665A005F308D /* EnumTypeCastTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = E289273C2256160700CAA647 /* EnumTypeCastTransform.swift */; };
 		0D673FC42628665A005F308D /* DoubleTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A0735D1F3A43E9001B8CC6 /* DoubleTransform.swift */; };
+		0D6B1AE4287746BC001A4575 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D6B1AE3287746BB001A4575 /* String+Extension.swift */; };
+		0D6B1AE5287746BC001A4575 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D6B1AE3287746BB001A4575 /* String+Extension.swift */; };
+		0D6B1AE6287746BC001A4575 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D6B1AE3287746BB001A4575 /* String+Extension.swift */; };
+		0D6B1AE7287746BC001A4575 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D6B1AE3287746BB001A4575 /* String+Extension.swift */; };
+		0D6B1AE8287746BC001A4575 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D6B1AE3287746BB001A4575 /* String+Extension.swift */; };
 		0D938906274437E500529662 /* MappingError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D938905274437E500529662 /* MappingError.swift */; };
 		0D938907274437E500529662 /* MappingError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D938905274437E500529662 /* MappingError.swift */; };
 		0D938908274437E500529662 /* MappingError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D938905274437E500529662 /* MappingError.swift */; };
@@ -123,6 +128,7 @@
 		0D39B9972737A7C7003781F0 /* carthageUpdate.command */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; name = carthageUpdate.command; path = Scripts/Carthage/carthageUpdate.command; sourceTree = "<group>"; };
 		0D5B2591274437110038004E /* BaseMappable+Create.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BaseMappable+Create.swift"; sourceTree = "<group>"; };
 		0D673F7E2628662C005F308D /* RealmListTransform.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmListTransform.swift; sourceTree = "<group>"; };
+		0D6B1AE3287746BB001A4575 /* String+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		0D938905274437E500529662 /* MappingError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MappingError.swift; sourceTree = "<group>"; };
 		0D93890B2744385300529662 /* ImmutableMappable+Create.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ImmutableMappable+Create.swift"; sourceTree = "<group>"; };
 		0D9389112744389900529662 /* Mappable+Create.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Mappable+Create.swift"; sourceTree = "<group>"; };
@@ -233,6 +239,7 @@
 				0D93890B2744385300529662 /* ImmutableMappable+Create.swift */,
 				0D9389112744389900529662 /* Mappable+Create.swift */,
 				0D9389352744621F00529662 /* Data+Extension.swift */,
+				0D6B1AE3287746BB001A4575 /* String+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -631,6 +638,7 @@
 				B00F4EAC1F7A7608004F9676 /* ISO8601JustDateTransform.swift in Sources */,
 				B0A073671F3A43E9001B8CC6 /* DoubleTransform.swift in Sources */,
 				0D9389182744396400529662 /* ASCIICodes.swift in Sources */,
+				0D6B1AE4287746BC001A4575 /* String+Extension.swift in Sources */,
 				B00F4EAB1F7A7608004F9676 /* TimestampTransform.swift in Sources */,
 				B0A0736B1F3A43E9001B8CC6 /* TypeCastTransform.swift in Sources */,
 				0D938906274437E500529662 /* MappingError.swift in Sources */,
@@ -653,6 +661,7 @@
 				0D673FC12628665A005F308D /* TypeCastTransform.swift in Sources */,
 				0D938907274437E500529662 /* MappingError.swift in Sources */,
 				0D673FC32628665A005F308D /* EnumTypeCastTransform.swift in Sources */,
+				0D6B1AE5287746BC001A4575 /* String+Extension.swift in Sources */,
 				B0A0737B1F3A4525001B8CC6 /* RealmTransform.swift in Sources */,
 				0D938931274461A700529662 /* OptionalType.swift in Sources */,
 				0D673FC22628665A005F308D /* IntTransform.swift in Sources */,
@@ -686,6 +695,7 @@
 				0D673FB22628664F005F308D /* TimestampTransform.swift in Sources */,
 				0D673FB32628664F005F308D /* TypeCastTransform.swift in Sources */,
 				0D93891A2744396400529662 /* ASCIICodes.swift in Sources */,
+				0D6B1AE6287746BC001A4575 /* String+Extension.swift in Sources */,
 				0D673FAD2628664F005F308D /* BoolTransform.swift in Sources */,
 				0D673FAC2628664F005F308D /* BaseMappable+Additions.swift in Sources */,
 				0D938908274437E500529662 /* MappingError.swift in Sources */,
@@ -710,6 +720,7 @@
 				0D673FA32628664E005F308D /* TimestampTransform.swift in Sources */,
 				0D673FA42628664E005F308D /* TypeCastTransform.swift in Sources */,
 				0D93891B2744396400529662 /* ASCIICodes.swift in Sources */,
+				0D6B1AE7287746BC001A4575 /* String+Extension.swift in Sources */,
 				0D673F9E2628664E005F308D /* BoolTransform.swift in Sources */,
 				0D673F9D2628664E005F308D /* BaseMappable+Additions.swift in Sources */,
 				0D938909274437E500529662 /* MappingError.swift in Sources */,
@@ -734,6 +745,7 @@
 				0D673F942628664E005F308D /* TimestampTransform.swift in Sources */,
 				0D673F952628664E005F308D /* TypeCastTransform.swift in Sources */,
 				0D93891C2744396400529662 /* ASCIICodes.swift in Sources */,
+				0D6B1AE8287746BC001A4575 /* String+Extension.swift in Sources */,
 				0D673F8F2628664E005F308D /* BoolTransform.swift in Sources */,
 				0D673F8E2628664E005F308D /* BaseMappable+Additions.swift in Sources */,
 				0D93890A274437E500529662 /* MappingError.swift in Sources */,
