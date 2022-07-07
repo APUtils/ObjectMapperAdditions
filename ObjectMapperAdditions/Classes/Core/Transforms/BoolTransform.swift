@@ -15,7 +15,7 @@ public class BoolTransform: TransformType {
     public typealias Object = Bool
     public typealias JSON = Bool
     
-    public init() {}
+    private init() {}
     
     public func transformFromJSON(_ value: Any?) -> Object? {
         if value == nil {
@@ -39,4 +39,10 @@ public class BoolTransform: TransformType {
     public func transformToJSON(_ value: Object?) -> JSON? {
         return value
     }
+}
+
+// ******************************* MARK: - Singletone
+
+public extension BoolTransform {
+    static let shared = BoolTransform()
 }

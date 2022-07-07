@@ -37,14 +37,14 @@ class MyRealmModel: Object, Mappable {
         isWriteRequired ? realm?.beginWrite() : ()
 
         // Same as for ordinary model
-        double <- (map["double"], DoubleTransform())
+        double <- (map["double"], DoubleTransform.shared)
         
         // Using ObjectMapperAdditions's RealmPropertyTypeCastTransform
         optionalDouble <- (map["optionalDouble"], RealmPropertyTypeCastTransform())
         // You could also use RealmPropertyTransform if you don't like type cast
 //        optionalDouble <- (map["optionalDouble"], RealmPropertyTransform<Double>())
         
-        string <- (map["string"], StringTransform())
+        string <- (map["string"], StringTransform.shared)
         myOtherRealmModel <- map["myOtherRealmModel"]
         
         // Using ObjectMapper+Realm's RealmListTransform to transform custom types

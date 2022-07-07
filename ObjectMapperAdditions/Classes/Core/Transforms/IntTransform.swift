@@ -15,7 +15,7 @@ public class IntTransform: TransformType {
     public typealias Object = Int
     public typealias JSON = Int
     
-    public init() {}
+    private init() {}
     
     public func transformFromJSON(_ value: Any?) -> Object? {
         if value == nil {
@@ -39,4 +39,10 @@ public class IntTransform: TransformType {
     public func transformToJSON(_ value: Object?) -> JSON? {
         return value
     }
+}
+
+// ******************************* MARK: - Singletone
+
+public extension IntTransform {
+    static let shared = IntTransform()
 }

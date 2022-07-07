@@ -24,7 +24,7 @@ struct MyModel: Mappable {
     
     mutating func mapping(map: Map) {
         // You could specify proper type transform directly
-        string <- (map["string"], StringTransform())
+        string <- (map["string"], StringTransform.shared)
         
         // Or you could just use TypeCastTransform
         string <- (map["string"], TypeCastTransform())
@@ -36,7 +36,7 @@ struct MyModel: Mappable {
         stringsArray <- (map["stringsArray"], TypeCastTransform<String>())
         
         // Or just use StringTransform directly
-        stringsArray <- (map["stringsArray"], StringTransform())
+        stringsArray <- (map["stringsArray"], StringTransform.shared)
         
         // No need to transform your types. They should specify transforms by themselfs.
         myOtherModel <- map["myOtherModel"]

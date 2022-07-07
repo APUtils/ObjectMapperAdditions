@@ -21,7 +21,7 @@ class ISO8601JustDateTransformSpec: QuickSpec {
             let dateString = "1970-01-01"
             
             beforeEach {
-                transform = ISO8601JustDateTransform()
+                transform = ISO8601JustDateTransform.shared
             }
             
             it("should convert date string to Date") {

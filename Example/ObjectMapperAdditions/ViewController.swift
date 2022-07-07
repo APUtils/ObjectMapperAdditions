@@ -39,8 +39,8 @@ class ViewController: UIViewController {
         //-----------------------------------------------------------------------------
         
         let date = Date()
-        let dateToDateString = ISO8601JustDateTransform().transformToJSON(date)!
-        let dateStringToDate = ISO8601JustDateTransform().transformFromJSON(dateToDateString)!
+        let dateToDateString = ISO8601JustDateTransform.shared.transformToJSON(date)!
+        let dateStringToDate = ISO8601JustDateTransform.shared.transformFromJSON(dateToDateString)!
         print("Date - \(date) to ISO8601 date string transform - \(dateToDateString)")
         print("ISO8601 date string - \(dateToDateString) to date transform - \(dateStringToDate)")
         
@@ -48,8 +48,8 @@ class ViewController: UIViewController {
         // MARK: - TimestampTransform
         //-----------------------------------------------------------------------------
         
-        let dateToTimestamp = TimestampTransform().transformToJSON(date)!
-        let timestampToDate = TimestampTransform().transformFromJSON(dateToTimestamp)!
+        let dateToTimestamp = TimestampTransform.shared.transformToJSON(date)!
+        let timestampToDate = TimestampTransform.shared.transformFromJSON(dateToTimestamp)!
         print("Date - \(date) to timestamp transform - \(dateToTimestamp)")
         print("Timestamp - \(dateToTimestamp) to date transform - \(timestampToDate)")
         

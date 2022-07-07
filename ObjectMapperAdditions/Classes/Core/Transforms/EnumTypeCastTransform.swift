@@ -22,16 +22,16 @@ public class EnumTypeCastTransform<T: RawRepresentable>: TransformType {
         } else if let value = value as? T.RawValue {
             return T(rawValue: value)
         } else if T.RawValue.self == Int.self {
-            let rawValue = IntTransform().transformFromJSON(value) as? T.RawValue
+            let rawValue = IntTransform.shared.transformFromJSON(value) as? T.RawValue
             return rawValue.flatMap(T.init(rawValue:))
         } else if T.RawValue.self == Double.self {
-            let rawValue = DoubleTransform().transformFromJSON(value) as? T.RawValue
+            let rawValue = DoubleTransform.shared.transformFromJSON(value) as? T.RawValue
             return rawValue.flatMap(T.init(rawValue:))
         } else if T.RawValue.self == Bool.self {
-            let rawValue = BoolTransform().transformFromJSON(value) as? T.RawValue
+            let rawValue = BoolTransform.shared.transformFromJSON(value) as? T.RawValue
             return rawValue.flatMap(T.init(rawValue:))
         } else if T.RawValue.self == String.self {
-            let rawValue = StringTransform().transformFromJSON(value) as? T.RawValue
+            let rawValue = StringTransform.shared.transformFromJSON(value) as? T.RawValue
             return rawValue.flatMap(T.init(rawValue:))
         } else {
             RoutableLogger.logError("Can not cast value of type \(type(of: value!)) to type \(T.RawValue.self)", data: ["value": value])

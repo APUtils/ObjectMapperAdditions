@@ -15,7 +15,7 @@ public class DoubleTransform: TransformType {
     public typealias Object = Double
     public typealias JSON = Double
     
-    public init() {}
+    private init() {}
     
     public func transformFromJSON(_ value: Any?) -> Object? {
         if value == nil {
@@ -39,4 +39,10 @@ public class DoubleTransform: TransformType {
     public func transformToJSON(_ value: Object?) -> JSON? {
         return value
     }
+}
+
+// ******************************* MARK: - Singletone
+
+public extension DoubleTransform {
+    static let shared = DoubleTransform()
 }

@@ -19,7 +19,7 @@ class TimestampTransformSpec: QuickSpec {
             var transform: TimestampTransform!
             
             beforeEach {
-                transform = TimestampTransform()
+                transform = TimestampTransform.shared
             }
             
             it("should convert int timestamp to Date") {

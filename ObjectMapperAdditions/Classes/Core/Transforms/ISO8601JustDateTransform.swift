@@ -24,7 +24,13 @@ fileprivate extension DateFormatter {
 open class ISO8601JustDateTransform: DateFormatterTransform {
     static let reusableISODateFormatter = DateFormatter(withFormat: "yyyy-MM-dd", timeZone: TimeZone(secondsFromGMT: 0)!)
     
-    public init() {
+    private init() {
         super.init(dateFormatter: ISO8601JustDateTransform.reusableISODateFormatter)
     }
+}
+
+// ******************************* MARK: - Singletone
+
+public extension ISO8601JustDateTransform {
+    static let shared = ISO8601JustDateTransform()
 }

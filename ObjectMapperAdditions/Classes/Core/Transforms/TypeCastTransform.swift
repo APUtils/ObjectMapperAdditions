@@ -22,13 +22,13 @@ public class TypeCastTransform<T>: TransformType {
         } else if let value = value as? T {
             return value
         } else if T.self == Int.self {
-            return IntTransform().transformFromJSON(value) as? T
+            return IntTransform.shared.transformFromJSON(value) as? T
         } else if T.self == Double.self {
-            return DoubleTransform().transformFromJSON(value) as? T
+            return DoubleTransform.shared.transformFromJSON(value) as? T
         } else if T.self == Bool.self {
-            return BoolTransform().transformFromJSON(value) as? T
+            return BoolTransform.shared.transformFromJSON(value) as? T
         } else if T.self == String.self {
-            return StringTransform().transformFromJSON(value) as? T
+            return StringTransform.shared.transformFromJSON(value) as? T
         } else {
             RoutableLogger.logError("Can not cast value of type \(type(of: value!)) to type \(Object.self)", data: ["value": value])
             return nil

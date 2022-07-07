@@ -15,10 +15,10 @@ public class TimestampTransform: TransformType {
     public typealias Object = Date
     public typealias JSON = Int
     
-    public init() {}
+    private init() {}
     
     public func transformFromJSON(_ value: Any?) -> Object? {
-        guard let timestamp = DoubleTransform().transformFromJSON(value) else { return nil }
+        guard let timestamp = DoubleTransform.shared.transformFromJSON(value) else { return nil }
         
         let date = Date(timeIntervalSince1970: timestamp)
         
@@ -30,4 +30,10 @@ public class TimestampTransform: TransformType {
         
         return Int(timestamp)
     }
+}
+
+// ******************************* MARK: - Singletone
+
+public extension TimestampTransform {
+    static let shared = TimestampTransform()
 }

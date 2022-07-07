@@ -15,7 +15,7 @@ public class StringTransform: TransformType {
     public typealias Object = String
     public typealias JSON = String
     
-    public init() {}
+    private init() {}
     
     public func transformFromJSON(_ value: Any?) -> Object? {
         if value == nil {
@@ -39,4 +39,10 @@ public class StringTransform: TransformType {
     public func transformToJSON(_ value: Object?) -> JSON? {
         return value
     }
+}
+
+// ******************************* MARK: - Singletone
+
+public extension StringTransform {
+    static let shared = StringTransform()
 }
