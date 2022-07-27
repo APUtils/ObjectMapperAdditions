@@ -3,6 +3,13 @@ All notable changes to this project will be documented in this file.
 `ObjectMapperAdditions` adheres to [Semantic Versioning](http://semver.org/).
 
 
+## [10.0.1](https://github.com/APUtils/ObjectMapperAdditions/releases/tag/10.0.1)
+Released on `2022-07-28`
+
+#### Added
+- More error reports on failure casts
+
+
 ## [10.0.0](https://github.com/APUtils/ObjectMapperAdditions/releases/tag/10.0.0)
 Released on `2022-07-07`
 

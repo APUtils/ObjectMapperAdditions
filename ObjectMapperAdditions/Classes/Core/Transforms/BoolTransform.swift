@@ -27,7 +27,7 @@ public class BoolTransform: TransformType {
         } else if let double = value as? Double {
             return (double != 0)
         } else if let string = value as? String {
-            return Bool(string)
+            return Bool.safeFrom(string)
         } else if let number = value as? NSNumber {
             return number.boolValue
         } else {

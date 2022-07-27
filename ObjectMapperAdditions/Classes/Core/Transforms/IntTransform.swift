@@ -23,11 +23,11 @@ public class IntTransform: TransformType {
         } else if let int = value as? Int {
             return int
         } else if let double = value as? Double {
-            return Int(double)
+            return Int.safeFrom(double)
         } else if let bool = value as? Bool {
             return (bool ? 1 : 0)
         } else if let string = value as? String {
-            return Int(string)
+            return Int.safeFrom(string)
         } else if let number = value as? NSNumber {
             return number.intValue
         } else {

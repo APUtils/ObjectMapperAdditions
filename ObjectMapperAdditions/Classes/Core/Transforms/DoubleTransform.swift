@@ -27,7 +27,7 @@ public class DoubleTransform: TransformType {
         } else if let bool = value as? Bool {
             return (bool ? 1.0 : 0.0)
         } else if let string = value as? String {
-            return Double(string)
+            return Double.safeFrom(string)
         } else if let number = value as? NSNumber {
             return number.doubleValue
         } else {
