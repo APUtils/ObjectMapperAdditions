@@ -3,6 +3,13 @@ All notable changes to this project will be documented in this file.
 `ObjectMapperAdditions` adheres to [Semantic Versioning](http://semver.org/).
 
 
+## [10.0.2](https://github.com/APUtils/ObjectMapperAdditions/releases/tag/10.0.2)
+Released on `2022-07-28`
+
+#### Added
+- Int to Double rounding warning
+
+
 ## [10.0.1](https://github.com/APUtils/ObjectMapperAdditions/releases/tag/10.0.1)
 Released on `2022-07-28`
 
