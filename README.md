@@ -142,14 +142,14 @@ class MyRealmModel: Object, Mappable {
     
     // Please take a note it's `var` and is not optional
     // However new value should be assigned through `.value`
-    var optionalDouble = RealmProperty<Double?>()
+    private(set) var optionalDouble = RealmProperty<Double?>()
     
     @objc dynamic var string: String?
     @objc dynamic var myOtherRealmModel: MyOtherRealmModel?
     
     // Please take a note it's `var` and is not optional
     // However, new value should be assigned through `.append(_:)`
-    var myOtherRealmModels = List<MyOtherRealmModel>()
+    private(set) var myOtherRealmModels = List<MyOtherRealmModel>()
     
     // Strings array will be casted to List<RealmString>
     var strings: List<String> = List<String>()
