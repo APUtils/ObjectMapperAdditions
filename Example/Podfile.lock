@@ -18,11 +18,11 @@ PODS:
     - RealmSwift
     - RoutableLogger (~> 11.0)
   - Quick (5.0.1)
-  - Realm (10.28.3):
-    - Realm/Headers (= 10.28.3)
-  - Realm/Headers (10.28.3)
-  - RealmSwift (10.28.3):
-    - Realm (= 10.28.3)
+  - Realm (10.30.0):
+    - Realm/Headers (= 10.30.0)
+  - Realm/Headers (10.30.0)
+  - RealmSwift (10.30.0):
+    - Realm (= 10.30.0)
   - RoutableLogger (11.0.0)
 
 DEPENDENCIES:
@@ -48,7 +48,7 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   APExtensions:
-    :commit: 852b62abd1515c8ec11dec7b2d7213dec1ec7d61
+    :commit: acead08d2ff2128a0021e7dc3d59a689a575f5f1
     :git: https://github.com/APUtils/APExtensions
 
 SPEC CHECKSUMS:
@@ -57,10 +57,10 @@ SPEC CHECKSUMS:
   ObjectMapper: 1eb41f610210777375fa806bf161dc39fb832b81
   ObjectMapperAdditions: 5840f2fa31ccdcbdbf3f14fbdf8e3f8070e53709
   Quick: 749aa754fd1e7d984f2000fe051e18a3a9809179
-  Realm: 64e66568d981de2496f81ecab2e1372b27dc7d58
-  RealmSwift: 29bcda3a1fa5613b358bd7ec638f5e12afc89c3a
+  Realm: 247ccacf72e656c6ee09b242f7d24d5cf99cc058
+  RealmSwift: b3f5c52afa6ac480bd9c3e791c2576f55b3ecb44
   RoutableLogger: 70188daca734d067967e4f464450582ca189b4d5
 
-PODFILE CHECKSUM: 4111a9263bd2e1848d990e8b2da55ce91595c2cd
+PODFILE CHECKSUM: f56bdd5801d16ff3d720b9f01d1d3e6060a18418
 
 COCOAPODS: 1.11.3
