@@ -12,6 +12,11 @@ import RoutableLogger
 extension Bool {
     
     static func safeFrom(_ string: String, file: String = #file, function: String = #function, line: UInt = #line) -> Bool? {
+        if string.isEmpty {
+            logDebug("Received empty string instead of a Bool. Considering it as `nil`.")
+            return nil
+        }
+        
         if let bool = string.asBool {
             return bool
         } else {
