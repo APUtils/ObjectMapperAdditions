@@ -41,7 +41,7 @@ extension Data {
         do {
             return try JSONSerialization.jsonObject(with: self, options: .allowFragments)
         } catch {
-            RoutableLogger.logError("Unable to parse date to JSON", error: error, data: ["self": asString], file: file, function: function, line: line)
+            RoutableLogger.logError("Unable to parse data to JSON", error: error, data: ["data": asString], file: file, function: function, line: line)
             return nil
         }
     }
