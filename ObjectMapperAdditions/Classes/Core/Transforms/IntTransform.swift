@@ -41,7 +41,7 @@ public class IntTransform: TransformType {
     }
 }
 
-// ******************************* MARK: - Singletone
+// ******************************* MARK: - Singleton
 
 public extension IntTransform {
     static let shared = IntTransform()

@@ -21,7 +21,7 @@ Released on `2022-07-28`
 Released on `2022-07-07`
 
 #### Changed
-- Some transformers are now singletones
+- Some transformers are now singletons
 
 
 ## [9.0.0](https://github.com/APUtils/ObjectMapperAdditions/releases/tag/9.0.0)

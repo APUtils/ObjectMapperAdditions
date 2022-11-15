@@ -32,7 +32,7 @@ public class TimestampTransform: TransformType {
     }
 }
 
-// ******************************* MARK: - Singletone
+// ******************************* MARK: - Singleton
 
 public extension TimestampTransform {
     static let shared = TimestampTransform()

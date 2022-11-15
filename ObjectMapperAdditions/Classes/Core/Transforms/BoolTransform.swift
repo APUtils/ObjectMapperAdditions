@@ -41,7 +41,7 @@ public class BoolTransform: TransformType {
     }
 }
 
-// ******************************* MARK: - Singletone
+// ******************************* MARK: - Singleton
 
 public extension BoolTransform {
     static let shared = BoolTransform()

@@ -41,7 +41,7 @@ public class DoubleTransform: TransformType {
     }
 }
 
-// ******************************* MARK: - Singletone
+// ******************************* MARK: - Singleton
 
 public extension DoubleTransform {
     static let shared = DoubleTransform()

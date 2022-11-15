@@ -29,7 +29,7 @@ open class ISO8601JustDateTransform: DateFormatterTransform {
     }
 }
 
-// ******************************* MARK: - Singletone
+// ******************************* MARK: - Singleton
 
 public extension ISO8601JustDateTransform {
     static let shared = ISO8601JustDateTransform()

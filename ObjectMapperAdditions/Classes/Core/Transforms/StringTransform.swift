@@ -41,7 +41,7 @@ public class StringTransform: TransformType {
     }
 }
 
-// ******************************* MARK: - Singletone
+// ******************************* MARK: - Singleton
 
 public extension StringTransform {
     static let shared = StringTransform()
