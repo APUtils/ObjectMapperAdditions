@@ -28,7 +28,7 @@ extension Int {
     
     static func safeFrom(_ string: String, file: String = #file, function: String = #function, line: UInt = #line) -> Int? {
         if string.isNil {
-            RoutableLogger.logDebug("Received '\(string)' string instead of a Int. Considering it as `nil`.")
+            RoutableLogger.logDebug("Received '\(string)' string instead of an Int. Considering it as `nil`.")
             return nil
         }
         
