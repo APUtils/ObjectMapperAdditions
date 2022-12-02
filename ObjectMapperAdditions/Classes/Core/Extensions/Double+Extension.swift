@@ -13,7 +13,7 @@ extension Double {
     
     static func safeFrom(_ string: String, file: String = #file, function: String = #function, line: UInt = #line) -> Double? {
         if string.isNil {
-            RoutableLogger.logDebug("Received '\(string)' string instead of a Double. Considering it as `nil`.")
+            RoutableLogger.logDebug("[\(file.fileName):\(line)] Received '\(string)' string instead of a Double. Considering it as `nil`.")
             return nil
         }
         

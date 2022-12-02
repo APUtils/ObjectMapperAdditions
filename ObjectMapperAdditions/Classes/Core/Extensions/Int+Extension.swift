@@ -15,7 +15,7 @@ extension Int {
         let roundedDouble = double.rounded()
         if let int = Int(exactly: roundedDouble) {
             if roundedDouble != double {
-                RoutableLogger.logWarning("Double casted to Int with rounding: \(double) -> \(int)")
+                RoutableLogger.logWarning("[\(file.fileName):\(line)] Double casted to Int with rounding: \(double) -> \(int)")
             }
             
             return int
@@ -28,15 +28,15 @@ extension Int {
     
     static func safeFrom(_ string: String, file: String = #file, function: String = #function, line: UInt = #line) -> Int? {
         if string.isNil {
-            RoutableLogger.logDebug("Received '\(string)' string instead of an Int. Considering it as `nil`.")
+            RoutableLogger.logDebug("[\(file.fileName):\(line)] Received '\(string)' string instead of an Int. Considering it as `nil`.")
             return nil
         }
         
         if let int = Int(string) {
             return int
             
-        } else if let double = Double.safeFrom(string) {
-            return safeFrom(double)
+        } else if let double = Double.safeFrom(string, file: file, function: function, line: line) {
+            return safeFrom(double, file: file, function: function, line: line)
             
         } else {
             RoutableLogger.logError("Unable to cast String to Int", data: ["string": string], file: file, function: function, line: line)
