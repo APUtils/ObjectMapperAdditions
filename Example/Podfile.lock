@@ -18,11 +18,11 @@ PODS:
     - RealmSwift
     - RoutableLogger (~> 11.0)
   - Quick (5.0.1)
-  - Realm (10.30.0):
-    - Realm/Headers (= 10.30.0)
-  - Realm/Headers (10.30.0)
-  - RealmSwift (10.30.0):
-    - Realm (= 10.30.0)
+  - Realm (10.33.0):
+    - Realm/Headers (= 10.33.0)
+  - Realm/Headers (10.33.0)
+  - RealmSwift (10.33.0):
+    - Realm (= 10.33.0)
   - RoutableLogger (11.0.0)
 
 DEPENDENCIES:
@@ -57,8 +57,8 @@ SPEC CHECKSUMS:
   ObjectMapper: 1eb41f610210777375fa806bf161dc39fb832b81
   ObjectMapperAdditions: 5840f2fa31ccdcbdbf3f14fbdf8e3f8070e53709
   Quick: 749aa754fd1e7d984f2000fe051e18a3a9809179
-  Realm: 247ccacf72e656c6ee09b242f7d24d5cf99cc058
-  RealmSwift: b3f5c52afa6ac480bd9c3e791c2576f55b3ecb44
+  Realm: d4f810e161fa2c2c589b9860b6eb09238deacd73
+  RealmSwift: cef9946f09f2333a8f2ac8bac4f8de52fb9f5ac3
   RoutableLogger: 70188daca734d067967e4f464450582ca189b4d5
 
 PODFILE CHECKSUM: f56bdd5801d16ff3d720b9f01d1d3e6060a18418
