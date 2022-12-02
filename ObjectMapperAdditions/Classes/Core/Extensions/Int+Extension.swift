@@ -32,6 +32,11 @@ extension Int {
             return nil
         }
         
+        if string == "-" {
+            RoutableLogger.logDebug("Received '-' string instead of an Int. Considering it as `nil`.")
+            return nil
+        }
+        
         if let int = Int(string) {
             return int
             

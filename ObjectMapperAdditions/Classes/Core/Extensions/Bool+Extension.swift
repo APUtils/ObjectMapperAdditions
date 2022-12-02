@@ -17,6 +17,11 @@ extension Bool {
             return nil
         }
         
+        if string.isEmpty {
+            RoutableLogger.logDebug("Received '-' string instead of a Bool. Considering it as `nil`.")
+            return nil
+        }
+        
         if let bool = string.asBool {
             return bool
         } else {

@@ -17,6 +17,11 @@ extension Double {
             return nil
         }
         
+        if string == "-" {
+            RoutableLogger.logDebug("Received '-' string instead of a Double. Considering it as `nil`.")
+            return nil
+        }
+        
         if let double = Double(string) {
             return double
         } else {
