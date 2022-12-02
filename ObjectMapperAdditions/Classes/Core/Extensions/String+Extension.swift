@@ -13,10 +13,15 @@ private let kNewLineCharacter = Character("\n")
 
 extension String {
     
+    var isNil: Bool {
+        isEmpty || self == "-"
+    }
+    
     var firstNonWhitespaceCharacter: Character? {
         guard let index = firstIndex(where: { $0 != kSpaceCharacter && $0 != kNewLineCharacter }) else { return nil }
         return self[index]
     }
+    
     var secondNonWhitespaceCharacter: Character? {
         guard let firstIndex = firstIndex(where: { $0 != kSpaceCharacter && $0 != kNewLineCharacter }) else { return nil }
                 

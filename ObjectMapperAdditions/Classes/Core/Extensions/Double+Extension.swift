@@ -12,13 +12,8 @@ import RoutableLogger
 extension Double {
     
     static func safeFrom(_ string: String, file: String = #file, function: String = #function, line: UInt = #line) -> Double? {
-        if string.isEmpty {
-            RoutableLogger.logDebug("Received empty string instead of a Double. Considering it as `nil`.")
-            return nil
-        }
-        
-        if string == "-" {
-            RoutableLogger.logDebug("Received '-' string instead of a Double. Considering it as `nil`.")
+        if string.isNil {
+            RoutableLogger.logDebug("Received '\(string)' string instead of a Double. Considering it as `nil`.")
             return nil
         }
         
