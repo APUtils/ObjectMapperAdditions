@@ -6,9 +6,9 @@ let package = Package(
     name: "ObjectMapperAdditions",
     platforms: [
         .iOS(.v11),
-        .tvOS(.v9),
-        .macOS(.v10_10),
-        .watchOS(.v2),
+        .macOS(.v10_13),
+        .tvOS(.v11),
+        .watchOS(.v4),
     ],
     products: [
         .library(
@@ -19,7 +19,7 @@ let package = Package(
     dependencies: [
         .package(url: "https://github.com/realm/realm-cocoa.git", .upToNextMajor(from: "10.0.0")),
         .package(url: "https://github.com/tristanhimmelman/ObjectMapper.git", .upToNextMajor(from: "4.0.0")),
-        .package(url: "https://github.com/APUtils/LogsManager.git", .upToNextMajor(from: "9.1.14")),
+        .package(url: "https://github.com/APUtils/LogsManager.git", .upToNextMajor(from: "12.0.0")),
     ],
     targets: [
         .target(

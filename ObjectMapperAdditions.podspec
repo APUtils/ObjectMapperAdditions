@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'ObjectMapperAdditions'
-  s.version          = '10.0.2'
+  s.version          = '11.0.0'
   s.summary          = 'ObjectMapper Extensions and Transforms'
 
 # This description is used to generate tags and improve search results.
@@ -30,15 +30,15 @@ Pod::Spec.new do |s|
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '11.0'
-  s.osx.deployment_target = '10.10'
-  s.tvos.deployment_target = '9.0'
-  s.watchos.deployment_target = '2.0'
-  s.swift_versions = ['5.0']
+  s.osx.deployment_target = '10.13'
+  s.tvos.deployment_target = '11.0'
+  s.watchos.deployment_target = '4.0'
+  s.swift_versions = ['5.5', '5.5.1', '5.5.2', '5.6', '5.6.1', '5.7']
   
   s.default_subspec = 'Core'
   s.frameworks = 'Foundation'
   s.dependency 'ObjectMapper'
-  s.dependency 'RoutableLogger', '~> 11.0'
+  s.dependency 'RoutableLogger', '>= 12.0'
 
   s.subspec 'Core' do |core|
     core.source_files = 'ObjectMapperAdditions/Classes/Core/**/*'

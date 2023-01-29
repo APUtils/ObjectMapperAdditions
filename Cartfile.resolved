@@ -1,4 +1,4 @@
 github "APUtils/LogsManager" "9.1.19"
 github "CocoaLumberjack/CocoaLumberjack" "3.7.4"
 github "Hearst-DD/ObjectMapper" "4.2.0"
-github "realm/realm-cocoa" "v10.28.3"
+github "realm/realm-cocoa" "v10.34.1"

@@ -48,10 +48,8 @@ public extension JSONSerialization.WritingOptions {
     static let sortedKeysWithoutEscapingSlashesIfPossible: JSONSerialization.WritingOptions = {
         if #available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *) {
             return [.sortedKeys, .withoutEscapingSlashes]
-        } else if #available(macOS 10.13, tvOS 11.0, watchOS 4.0, *) {
-            return [.sortedKeys]
         } else {
-            return []
+            return [.sortedKeys]
         }
     }()
 }

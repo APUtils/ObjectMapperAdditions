@@ -1,5 +1,5 @@
 # Deployment Target
-platform :ios, '12.0'
+platform :ios, '11.0'
 install! 'cocoapods', :warn_for_unused_master_specs_repo => false
 
 # Add pods as frameworks so we could add obj-c and swift 3.0 pods
@@ -24,15 +24,21 @@ post_install do |installer|
   pods_project.new_file "../Scripts/Cocoapods/podInstall.command"
   pods_project.new_file "../Scripts/Cocoapods/podUpdate.command"
   
+  # Silence Pods project warning
+  installer.pods_project.build_configurations.each do |config|
+    config.build_settings['CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED'] = 'YES'
+  end
+  
   installer.pods_project.targets.each do |target|
     target.build_configurations.each do |config|
       # Silence deployment target warnings
       config.build_settings.delete 'IPHONEOS_DEPLOYMENT_TARGET'
     end
-  end
-      
-  # Silence Pods project warning
-  installer.pods_project.build_configurations.each do |config|
-    config.build_settings['CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED'] = 'YES'
+    
+    # Warning fix https://github.com/realm/realm-swift/issues/7957#issuecomment-1248556797
+    if target.name == 'Realm'
+      create_symlink_phase = target.shell_script_build_phases.find { |x| x.name == 'Create Symlinks to Header Folders' }
+      create_symlink_phase.always_out_of_date = "1"
+    end
   end
 end

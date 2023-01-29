@@ -1,29 +1,30 @@
 PODS:
-  - APExtensions (10.1.8):
-    - APExtensions/Core (= 10.1.8)
-    - APExtensions/Storyboard (= 10.1.8)
-    - APExtensions/ViewModel (= 10.1.8)
-  - APExtensions/Core (10.1.8):
+  - APExtensions (11.0.1):
+    - APExtensions/Core (= 11.0.1)
+    - APExtensions/Storyboard (= 11.0.1)
+    - APExtensions/ViewModel (= 11.0.1)
+  - APExtensions/Core (11.0.1):
     - RoutableLogger
-  - APExtensions/Storyboard (10.1.8)
-  - APExtensions/ViewModel (10.1.8)
+  - APExtensions/Storyboard (11.0.1):
+    - RoutableLogger
+  - APExtensions/ViewModel (11.0.1)
   - Nimble (10.0.0)
   - ObjectMapper (4.2.0)
-  - ObjectMapperAdditions/Core (10.0.2):
+  - ObjectMapperAdditions/Core (11.0.0):
     - ObjectMapper
-    - RoutableLogger (~> 11.0)
-  - ObjectMapperAdditions/Realm (10.0.2):
+    - RoutableLogger (>= 12.0)
+  - ObjectMapperAdditions/Realm (11.0.0):
     - ObjectMapper
     - ObjectMapperAdditions/Core
     - RealmSwift
-    - RoutableLogger (~> 11.0)
+    - RoutableLogger (>= 12.0)
   - Quick (5.0.1)
-  - Realm (10.33.0):
-    - Realm/Headers (= 10.33.0)
-  - Realm/Headers (10.33.0)
-  - RealmSwift (10.33.0):
-    - Realm (= 10.33.0)
-  - RoutableLogger (11.0.0)
+  - Realm (10.34.1):
+    - Realm/Headers (= 10.34.1)
+  - Realm/Headers (10.34.1)
+  - RealmSwift (10.34.1):
+    - Realm (= 10.34.1)
+  - RoutableLogger (12.0.2)
 
 DEPENDENCIES:
   - APExtensions (from `https://github.com/APUtils/APExtensions`)
@@ -48,19 +49,19 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   APExtensions:
-    :commit: acead08d2ff2128a0021e7dc3d59a689a575f5f1
+    :commit: aa433d531d127128987216945c16b0a8f865f1b3
     :git: https://github.com/APUtils/APExtensions
 
 SPEC CHECKSUMS:
-  APExtensions: c67bbacc1e39e07d0ed63f24905ba1013bf13988
+  APExtensions: 292b0b2bec52042c18c6c523e606ae27477093c0
   Nimble: 5316ef81a170ce87baf72dd961f22f89a602ff84
   ObjectMapper: 1eb41f610210777375fa806bf161dc39fb832b81
-  ObjectMapperAdditions: 5840f2fa31ccdcbdbf3f14fbdf8e3f8070e53709
+  ObjectMapperAdditions: f81b5b8f9648c6cb4c20b2e0dd2ae0b9f41ec753
   Quick: 749aa754fd1e7d984f2000fe051e18a3a9809179
-  Realm: d4f810e161fa2c2c589b9860b6eb09238deacd73
-  RealmSwift: cef9946f09f2333a8f2ac8bac4f8de52fb9f5ac3
-  RoutableLogger: 70188daca734d067967e4f464450582ca189b4d5
+  Realm: fe824cd5b183cd55a50a6bcb4bce3ac1650e60b6
+  RealmSwift: c7f668f82982fc8b62366b78b8dc761f15141df6
+  RoutableLogger: 5437307106ecb12ede54836f575348694d1a7f19
 
-PODFILE CHECKSUM: f56bdd5801d16ff3d720b9f01d1d3e6060a18418
+PODFILE CHECKSUM: f7d9a8dead1ec305fae358a381309831258264c1
 
 COCOAPODS: 1.11.3
