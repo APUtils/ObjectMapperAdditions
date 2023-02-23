@@ -21,9 +21,13 @@ class MyRealmModel: Object, Mappable {
     var strings: List<String> = List<String>()
     
     override class func primaryKey() -> String? { "id" }
+    
+    override init() {
+        super.init()
+    }
 
-    required convenience init?(map: ObjectMapper.Map) {
-        self.init()
+    required init?(map: ObjectMapper.Map) {
+        super.init()
         
         // Primary kay should not be reassigned after object is added to the Realm so we make sure it is assigned during init only
         id <- (map["id"], IntTransform.shared)
