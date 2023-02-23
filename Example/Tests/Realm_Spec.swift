@@ -12,8 +12,17 @@ import APExtensions
 class RealmSpec: QuickSpec {
     override func spec() {
         describe("Realm object") {
+            beforeEach {
+                let realm = try! Realm(configuration: .init(deleteRealmIfMigrationNeeded: true))
+                try! realm.write {
+                    realm.deleteAll()
+                }
+            }
+            
             context("when JSON contains proper type params") {
+                let id = Int.random(in: ClosedRange(uncheckedBounds: (Int.min, Int.max)))
                 let realmJSON: [String: Any] = [
+                    "id": id,
                     "double": 1.1,
                     "optionalDouble": "2.2",
                     "string": "123",
@@ -24,6 +33,7 @@ class RealmSpec: QuickSpec {
                 
                 it("should map properly from JSON") {
                     let model = MyRealmModel(JSON: realmJSON)
+                    expect(model?.id).to(equal(id))
                     expect(model?.double).to(equal(1.1))
                     expect(model?.optionalDouble.value).to(equal(2.2))
                     expect(model?.string).to(equal("123"))
@@ -33,10 +43,25 @@ class RealmSpec: QuickSpec {
                     expect(model?.myOtherRealmModels[1].string).to(equal("string"))
                     expect(Array(model!.strings)).to(equal(["123.0", "321.0"]))
                 }
+                
+                context("and added to Realm") {
+                    it("should be able to transform to JSON") {
+                        var model = MyRealmModel(JSON: realmJSON)!
+                        let realm = try! Realm()
+                        try! realm.write({
+                            realm.add(model)
+                        })
+                        
+                        model = realm.object(ofType: MyRealmModel.self, forPrimaryKey: model.id)!
+                        let json = model.toJSON()
+                        expect(json.count).to(equal(7))
+                    }
+                }
             }
             
             context("when JSON contains wrong type params") {
                 let realmJSON: [String: Any] = [
+                    "id": "1",
                     "double": "1.1",
                     "optionalDouble": 2.2,
                     "string": 123,
@@ -47,6 +72,7 @@ class RealmSpec: QuickSpec {
                 
                 it("should map properly from JSON") {
                     let model = MyRealmModel(JSON: realmJSON)
+                    expect(model?.id).to(equal(1))
                     expect(model?.double).to(equal(1.1))
                     expect(model?.optionalDouble.value).to(equal(2.2))
                     expect(model?.string).to(equal("123"))

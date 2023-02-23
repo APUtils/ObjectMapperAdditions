@@ -12,17 +12,28 @@ import ObjectMapperAdditions
 import RealmSwift
 
 class MyRealmModel: Object, Mappable {
+    @objc dynamic var id: Int = 0
     @objc dynamic var double: Double = 0
     let optionalDouble = RealmProperty<Double?>()
     @objc dynamic var string: String?
     @objc dynamic var myOtherRealmModel: MyOtherRealmModel?
     let myOtherRealmModels = List<MyOtherRealmModel>()
     var strings: List<String> = List<String>()
+    
+    override class func primaryKey() -> String? { "id" }
 
-    required convenience init?(map: ObjectMapper.Map) { self.init() }
+    required convenience init?(map: ObjectMapper.Map) {
+        self.init()
+        
+        // Primary kay should not be reassigned after object is added to the Realm so we make sure it is assigned during init only
+        id <- (map["id"], IntTransform.shared)
+    }
 
     func mapping(map: ObjectMapper.Map) {
         performMapping {
+            // Read-only primary key
+            id >>> map["id"]
+            
             // Same as for ordinary model
             double <- (map["double"], DoubleTransform.shared)
             
