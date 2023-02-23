@@ -15,9 +15,14 @@ import RealmSwift
 class MyOtherRealmModel: Object, Mappable {
     @objc dynamic var string: String?
     required convenience init?(map: ObjectMapper.Map) { self.init() }
-    func mapping(map: ObjectMapper.Map) {}
+    func mapping(map: ObjectMapper.Map) {
+        performMapping {
+            string <- (map["string"], StringTransform.shared)
+        }
+    }
     
     override func isEqual(_ object: Any?) -> Bool {
-        return true
+        guard let other = object as? MyOtherRealmModel else { return false }
+        return string == other.string
     }
 }

@@ -1,5 +1,5 @@
 //
-//  ISO8601TransformSpec.swift
+//  ISO8601JustDateTransform_Spec.swift
 //  ObjectMapperAdditions
 //
 //  Created by Anton Plebanovich on 9/26/17.

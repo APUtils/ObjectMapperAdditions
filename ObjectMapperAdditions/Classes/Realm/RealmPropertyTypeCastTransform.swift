@@ -15,6 +15,7 @@ import ObjectMapperAdditions
 /// Transforms Swift numeric to `RealmProperty<T>`.
 /// E.g. Int? to RealmOptional<Int?>.
 /// Additionally, it will type cast value if type mismatches. E.g. "123" String to 123 Int.
+@available(*, deprecated, message: "RealmPropertyTypeCastTransform<T> has been deprecated. Please use <- mapping operator instead.")
 public class RealmPropertyTypeCastTransform<T: RealmOptionalType & _RealmSchemaDiscoverable>: TransformType {
     public typealias Object = RealmProperty<T?>
     public typealias JSON = Any

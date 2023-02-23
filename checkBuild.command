@@ -26,24 +26,22 @@ if [ "${swift_files_count}" -ne "${swift_files_in_project_count}" ]; then
     echo " "
 	exit 1
 fi
-echo ""
 
-echo -e "Building Swift Package for iOS..."
-swift build -Xswiftc "-sdk" -Xswiftc "`xcrun --sdk iphonesimulator --show-sdk-path`" -Xswiftc "-target" -Xswiftc "x86_64-apple-ios14.4-simulator"
-
-echo -e "Building Swift Package for tvOS..."
-swift build -Xswiftc "-sdk" -Xswiftc "`xcrun --sdk appletvsimulator --show-sdk-path`" -Xswiftc "-target" -Xswiftc "x86_64-apple-tvos14.3-simulator"
-
-echo -e "Building Swift Package for watchOS..."
-swift build -Xswiftc "-sdk" -Xswiftc "`xcrun --sdk watchsimulator --show-sdk-path`" -Xswiftc "-target" -Xswiftc "x86_64-apple-watchos7.2-simulator"
-
-echo -e "Building Swift Package for macOS..."
-swift build -Xswiftc "-sdk" -Xswiftc "`xcrun --sdk macosx --show-sdk-path`" -Xswiftc "-target" -Xswiftc "x86_64-apple-macosx11.1"
-echo ""
-
-echo "Building Pods project..."
-set -o pipefail && xcodebuild -workspace "Example/ObjectMapperAdditions.xcworkspace" -scheme "ObjectMapperAdditions-Example" -configuration "Release" -sdk iphonesimulator | xcpretty
-echo ""
+#echo -e "\nBuilding Swift Package for iOS..."
+#swift build -Xswiftc "-sdk" -Xswiftc "`xcrun --sdk iphonesimulator --show-sdk-path`" -Xswiftc "-target" -Xswiftc "x86_64-apple-ios14.4-simulator"
+#
+#echo -e "\nBuilding Swift Package for tvOS..."
+#swift build -Xswiftc "-sdk" -Xswiftc "`xcrun --sdk appletvsimulator --show-sdk-path`" -Xswiftc "-target" -Xswiftc "x86_64-apple-tvos14.3-simulator"
+#
+#echo -e "\nBuilding Swift Package for watchOS..."
+#swift build -Xswiftc "-sdk" -Xswiftc "`xcrun --sdk watchsimulator --show-sdk-path`" -Xswiftc "-target" -Xswiftc "x86_64-apple-watchos7.2-simulator"
+#
+#echo -e "\nBuilding Swift Package for macOS..."
+#swift build -Xswiftc "-sdk" -Xswiftc "`xcrun --sdk macosx --show-sdk-path`" -Xswiftc "-target" -Xswiftc "x86_64-apple-macosx11.1"
+#
+#echo -e "\nBuilding Pods project..."
+#set -o pipefail && xcodebuild -workspace "Example/ObjectMapperAdditions.xcworkspace" -scheme "ObjectMapperAdditions-Example" -configuration "Release" -sdk iphonesimulator | xcpretty
+#echo ""
 
 . "./Scripts/Carthage/utils.sh"
 applyXcode12Workaround

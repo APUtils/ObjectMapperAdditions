@@ -1,5 +1,5 @@
 //
-//  TimestampTransformSpec.swift
+//  TimestampTransform_Spec.swift
 //  ObjectMapperAdditions
 //
 //  Created by Anton Plebanovich on 9/26/17.

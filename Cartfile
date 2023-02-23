@@ -1,4 +1,4 @@
 github "Hearst-DD/ObjectMapper"
 github "realm/realm-cocoa"
-github "APUtils/LogsManager" == 9.1.19
+github "APUtils/LogsManager" "9.1.19"
 github "CocoaLumberjack/CocoaLumberjack" "3.7.4"

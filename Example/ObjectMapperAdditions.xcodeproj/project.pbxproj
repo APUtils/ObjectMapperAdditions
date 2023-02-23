@@ -16,15 +16,15 @@
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
-		607FACEC1AFB9204008FA782 /* TypeCastSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* TypeCastSpec.swift */; };
+		607FACEC1AFB9204008FA782 /* TypeCast_Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* TypeCast_Spec.swift */; };
 		679BB5C7D1BC010448F5314B /* Pods_ObjectMapperAdditions_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7232033871E2CE8DA1F1FBD7 /* Pods_ObjectMapperAdditions_Example.framework */; };
 		B02194911F2BAB3200E228EB /* MyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0B644791F2A07A100C3739E /* MyModel.swift */; };
-		B02194981F2BAF3700E228EB /* RealmSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = B02194961F2BAE7B00E228EB /* RealmSpec.swift */; };
+		B02194981F2BAF3700E228EB /* Realm_Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = B02194961F2BAE7B00E228EB /* Realm_Spec.swift */; };
 		B0B6447C1F2A07EC00C3739E /* MyOtherModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0B6447B1F2A07EC00C3739E /* MyOtherModel.swift */; };
 		B0B644811F2A11FC00C3739E /* MyOtherRealmModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0B6447F1F2A11FC00C3739E /* MyOtherRealmModel.swift */; };
 		B0B644821F2A11FC00C3739E /* MyRealmModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0B644801F2A11FC00C3739E /* MyRealmModel.swift */; };
-		B0D3A0331F7A54E90062AD2B /* TimestampTransformSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D3A0311F7A54BC0062AD2B /* TimestampTransformSpec.swift */; };
-		B0D3A03A1F7A5D740062AD2B /* ISO8601JustDateTransformSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D3A0381F7A5D710062AD2B /* ISO8601JustDateTransformSpec.swift */; };
+		B0D3A0331F7A54E90062AD2B /* TimestampTransform_Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D3A0311F7A54BC0062AD2B /* TimestampTransform_Spec.swift */; };
+		B0D3A03A1F7A5D740062AD2B /* ISO8601JustDateTransform_Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D3A0381F7A5D710062AD2B /* ISO8601JustDateTransform_Spec.swift */; };
 		E28C98D72255F4AA00C5DA49 /* ExampleEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = E28C98D62255F4AA00C5DA49 /* ExampleEnums.swift */; };
 /* End PBXBuildFile section */
 
@@ -59,19 +59,19 @@
 		607FACDF1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		607FACE51AFB9204008FA782 /* ObjectMapperAdditions_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ObjectMapperAdditions_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		607FACEB1AFB9204008FA782 /* TypeCastSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeCastSpec.swift; sourceTree = "<group>"; };
+		607FACEB1AFB9204008FA782 /* TypeCast_Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeCast_Spec.swift; sourceTree = "<group>"; };
 		6B6D68D9A0872088F633DCDF /* Pods-ObjectMapperAdditions_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ObjectMapperAdditions_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ObjectMapperAdditions_Tests/Pods-ObjectMapperAdditions_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		7232033871E2CE8DA1F1FBD7 /* Pods_ObjectMapperAdditions_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ObjectMapperAdditions_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7780827ABC350B91C5BFF6F0 /* Pods-ObjectMapperAdditions_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ObjectMapperAdditions_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ObjectMapperAdditions_Tests/Pods-ObjectMapperAdditions_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		9DFE7F9B21F6E89955E35AA5 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		A7D8958764C84B431CB2CCEE /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
-		B02194961F2BAE7B00E228EB /* RealmSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmSpec.swift; sourceTree = "<group>"; };
+		B02194961F2BAE7B00E228EB /* Realm_Spec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Realm_Spec.swift; sourceTree = "<group>"; };
 		B0B644791F2A07A100C3739E /* MyModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyModel.swift; sourceTree = "<group>"; };
 		B0B6447B1F2A07EC00C3739E /* MyOtherModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyOtherModel.swift; sourceTree = "<group>"; };
 		B0B6447F1F2A11FC00C3739E /* MyOtherRealmModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyOtherRealmModel.swift; sourceTree = "<group>"; };
 		B0B644801F2A11FC00C3739E /* MyRealmModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyRealmModel.swift; sourceTree = "<group>"; };
-		B0D3A0311F7A54BC0062AD2B /* TimestampTransformSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimestampTransformSpec.swift; sourceTree = "<group>"; };
-		B0D3A0381F7A5D710062AD2B /* ISO8601JustDateTransformSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ISO8601JustDateTransformSpec.swift; sourceTree = "<group>"; };
+		B0D3A0311F7A54BC0062AD2B /* TimestampTransform_Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimestampTransform_Spec.swift; sourceTree = "<group>"; };
+		B0D3A0381F7A5D710062AD2B /* ISO8601JustDateTransform_Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ISO8601JustDateTransform_Spec.swift; sourceTree = "<group>"; };
 		C4D05D631BC1A7024D3C6249 /* .travis.yml */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = .travis.yml; path = ../.travis.yml; sourceTree = "<group>"; };
 		CC7012B6B5FC05C395C0B729 /* Pods-ObjectMapperAdditions_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ObjectMapperAdditions_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-ObjectMapperAdditions_Example/Pods-ObjectMapperAdditions_Example.release.xcconfig"; sourceTree = "<group>"; };
 		D46646B272B8B5A8181F666B /* .cocoadocs.yml */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = .cocoadocs.yml; path = ../.cocoadocs.yml; sourceTree = "<group>"; };
@@ -156,12 +156,12 @@
 			children = (
 				607FACE91AFB9204008FA782 /* _Supporting Files */,
 				0DDE964B278F046D00E346EA /* Create_Spec.swift */,
-				B0D3A0381F7A5D710062AD2B /* ISO8601JustDateTransformSpec.swift */,
+				B0D3A0381F7A5D710062AD2B /* ISO8601JustDateTransform_Spec.swift */,
 				0DC249BA2737CA0F00623738 /* RealmPropertyTransform_Spec.swift */,
 				0DC249BC2737CAED00623738 /* RealmPropertyTypeCastTransform_Spec.swift */,
-				B02194961F2BAE7B00E228EB /* RealmSpec.swift */,
-				B0D3A0311F7A54BC0062AD2B /* TimestampTransformSpec.swift */,
-				607FACEB1AFB9204008FA782 /* TypeCastSpec.swift */,
+				B02194961F2BAE7B00E228EB /* Realm_Spec.swift */,
+				B0D3A0311F7A54BC0062AD2B /* TimestampTransform_Spec.swift */,
+				607FACEB1AFB9204008FA782 /* TypeCast_Spec.swift */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -437,10 +437,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				0DDE964C278F046D00E346EA /* Create_Spec.swift in Sources */,
-				B02194981F2BAF3700E228EB /* RealmSpec.swift in Sources */,
-				B0D3A0331F7A54E90062AD2B /* TimestampTransformSpec.swift in Sources */,
-				B0D3A03A1F7A5D740062AD2B /* ISO8601JustDateTransformSpec.swift in Sources */,
-				607FACEC1AFB9204008FA782 /* TypeCastSpec.swift in Sources */,
+				B02194981F2BAF3700E228EB /* Realm_Spec.swift in Sources */,
+				B0D3A0331F7A54E90062AD2B /* TimestampTransform_Spec.swift in Sources */,
+				B0D3A03A1F7A5D740062AD2B /* ISO8601JustDateTransform_Spec.swift in Sources */,
+				607FACEC1AFB9204008FA782 /* TypeCast_Spec.swift in Sources */,
 				0DC249BB2737CA0F00623738 /* RealmPropertyTransform_Spec.swift in Sources */,
 				0DC249BD2737CAED00623738 /* RealmPropertyTypeCastTransform_Spec.swift in Sources */,
 			);

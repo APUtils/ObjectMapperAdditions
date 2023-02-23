@@ -10,6 +10,7 @@ import Foundation
 import ObjectMapper
 import RealmSwift
 
+@available(*, deprecated, message: "RealmListTransform<T> has been deprecated. Please use <- mapping operator instead.")
 public struct RealmListTransform<T: RealmSwift.Object>: TransformType where T: BaseMappable {
     
     public init() { }

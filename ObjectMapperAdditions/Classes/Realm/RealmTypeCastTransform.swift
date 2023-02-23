@@ -15,6 +15,7 @@ import ObjectMapper
 
 /// Transforms Swift Arrays to Realm Arrays. E.g. [String] to List<String>.
 /// Additionally, it will type cast value if type mismatches. E.g. "123" String to 123 Int.
+@available(*, deprecated, message: "RealmTypeCastTransform<T> has been deprecated. Please use <- mapping operator instead.")
 public class RealmTypeCastTransform<T: RealmCollectionValue>: TransformType {
     public typealias Object = List<T>
     public typealias JSON = [Any]

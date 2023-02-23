@@ -3,6 +3,25 @@ All notable changes to this project will be documented in this file.
 `ObjectMapperAdditions` adheres to [Semantic Versioning](http://semver.org/).
 
 
+## [12.0.0](https://github.com/APUtils/LogsManager/releases/tag/12.0.0)
+Released on `2023-02-23`
+
+#### Added
+- `<-` operator to map and typecast `List` and `RealmProperty`
+- [Object] `performMapping(_:)` method to simplify safe mappings
+
+#### Deprecated
+- `RealmListTransform` in favor of `<-` operator
+- `RealmPropertyTransform`
+- `RealmPropertyTypeCastTransform` in favor of `<-` operator
+- `RealmTransform`
+- `RealmTypeCastTransform` in favor of `<-` operator
+
+#### Removed
+- Deprecated `RealmOptionalTransform`
+- Deprecated `RealmOptionalTypeCastTransform`
+
+
 ## [11.0.0](https://github.com/APUtils/LogsManager/releases/tag/11.0.0)
 Released on `2023-01-29`
 

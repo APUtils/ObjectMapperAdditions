@@ -17,8 +17,8 @@ class RealmSpec: QuickSpec {
                     "double": 1.1,
                     "optionalDouble": "2.2",
                     "string": "123",
-                    "myOtherRealmModel": [:],
-                    "myOtherRealmModels": [[:], [:]],
+                    "myOtherRealmModel": ["string":"string"],
+                    "myOtherRealmModels": [["string":"string"], ["string":"string"]],
                     "strings": ["123.0", "321.0"]
                 ]
                 
@@ -27,8 +27,34 @@ class RealmSpec: QuickSpec {
                     expect(model?.double).to(equal(1.1))
                     expect(model?.optionalDouble.value).to(equal(2.2))
                     expect(model?.string).to(equal("123"))
-                    expect(Array(model!.strings)).to(equal(["123.0", "321.0"]))
+                    expect(model?.myOtherRealmModel?.string).to(equal("string"))
                     expect(model?.myOtherRealmModels.count).to(equal(2))
+                    expect(model?.myOtherRealmModels[0].string).to(equal("string"))
+                    expect(model?.myOtherRealmModels[1].string).to(equal("string"))
+                    expect(Array(model!.strings)).to(equal(["123.0", "321.0"]))
+                }
+            }
+            
+            context("when JSON contains wrong type params") {
+                let realmJSON: [String: Any] = [
+                    "double": "1.1",
+                    "optionalDouble": 2.2,
+                    "string": 123,
+                    "myOtherRealmModel": ["string":123],
+                    "myOtherRealmModels": [["string":123], ["string":123]],
+                    "strings": [123.0, 321.0]
+                ]
+                
+                it("should map properly from JSON") {
+                    let model = MyRealmModel(JSON: realmJSON)
+                    expect(model?.double).to(equal(1.1))
+                    expect(model?.optionalDouble.value).to(equal(2.2))
+                    expect(model?.string).to(equal("123"))
+                    expect(model?.myOtherRealmModel?.string).to(equal("123"))
+                    expect(model?.myOtherRealmModels.count).to(equal(2))
+                    expect(model?.myOtherRealmModels[0].string).to(equal("123"))
+                    expect(model?.myOtherRealmModels[1].string).to(equal("123"))
+                    expect(Array(model!.strings)).to(equal(["123.0", "321.0"]))
                 }
             }
             
