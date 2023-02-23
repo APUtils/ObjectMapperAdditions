@@ -10,6 +10,9 @@ Released on `2023-02-23`
 - `<-` operator to map and typecast `List` and `RealmProperty`
 - [Object] `performMapping(_:)` method to simplify safe mappings
 
+#### Changed
+- Using `cancelWrite` instead of `commitWrite` for Realm models mapping
+
 #### Deprecated
 - `RealmListTransform` in favor of `<-` operator
 - `RealmPropertyTransform`
