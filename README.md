@@ -180,7 +180,7 @@ class MyRealmModel: Object, Mappable {
         // You could also use RealmTransform if you don't like type cast
 //        strings <- (map["strings"], RealmTransform())
         
-        isWriteRequired ? try? realm?.commitWrite() : ()
+        isWriteRequired ? realm?.cancelWrite() : ()
     }
 }
 ```
