@@ -9,6 +9,9 @@
 import Foundation
 import ObjectMapper
 import RealmSwift
+#if !COCOAPODS
+import ObjectMapperAdditions
+#endif
 
 public func <- <T: RealmCollectionValue & Mappable>(left: List<T>, right: ObjectMapper.Map) {
     if right.mappingType == .toJSON {

@@ -62,7 +62,7 @@ if [ "$prevSum" != "$cartSum" ] || [ ! -d "Carthage/Build/iOS" ]; then
 
     # Install main app frameworks. Ignore tests frameworks.
     disableTestsFramework
-    carthage bootstrap --cache-builds
+    carthage bootstrap --cache-builds --platform iOS
     enableTestsFramework
     echo ""
 

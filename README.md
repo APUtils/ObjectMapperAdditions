@@ -19,19 +19,15 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 
 ## Installation
 
-#### Carthage
+#### Swift Package Manager
 
-Please check [official guide](https://github.com/Carthage/Carthage#if-youre-building-for-ios-tvos-or-watchos)
-
-Cartfile:
-
-```
-github "APUtils/ObjectMapperAdditions" ~> 12.0
-```
-
-If you do not need Realm part, add those frameworks: `ObjectMapperAdditions`, `ObjectMapper`, `RoutableLogger`.
-
-If you are going to use Realm part, add those frameworks: `ObjectMapperAdditions`, `ObjectMapperAdditionsRealm`, `ObjectMapper`, `Realm`, `RealmSwift`, `RoutableLogger`.
+- In Xcode select `File` > `Add Packages...`
+- Copy and paste the following into the search: `https://github.com/APUtils/ObjectMapperAdditions`
+- **‼️Make sure `Up to Next Major Version` is selected and put `12.0.1` into the lower bound if needed. There is a bug in 14.2 Xcode, it does not select versions higher than 9.0.0 by default‼️**
+- Tap `Add Package`
+- Select `ObjectMapperAdditions` to add core functionality
+- Optionally, select `ObjectMapperAdditionsRealm` to add `Realm` related functionality
+- Tap `Add Package`
 
 #### CocoaPods
 
@@ -49,17 +45,19 @@ To add Realm transform to your project add the following line to your Podfile:
 pod 'ObjectMapperAdditions/Realm', '~> 12.0'
 ```
 
-#### Swift Package Manager
+#### Carthage **DEPRECATED**
 
-The Swift Package Manager is a tool for automating the distribution of Swift code and is integrated into the swift compiler.
+Please check [official guide](https://github.com/Carthage/Carthage#if-youre-building-for-ios-tvos-or-watchos)
 
-Once you have your Swift package set up, adding `ObjectMapperAdditions` as a dependency is as easy as adding it to the dependencies value of your `Package.swift`.
+Cartfile:
 
-```swift
-dependencies: [
-    .package(url: "https://github.com/APUtils/ObjectMapperAdditions.git", .upToNextMajor(from: "12.0.0"))
-]
 ```
+github "APUtils/ObjectMapperAdditions" ~> 12.0
+```
+
+If you do not need Realm part, add those frameworks: `ObjectMapperAdditions`, `ObjectMapper`, `RoutableLogger`.
+
+If you are going to use Realm part, add those frameworks: `ObjectMapperAdditions`, `ObjectMapperAdditionsRealm`, `ObjectMapper`, `Realm`, `RealmSwift`, `RoutableLogger`.
 
 ## Usage
 

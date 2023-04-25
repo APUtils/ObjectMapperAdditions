@@ -27,21 +27,8 @@ if [ "${swift_files_count}" -ne "${swift_files_in_project_count}" ]; then
 	exit 1
 fi
 
-#echo -e "\nBuilding Swift Package for iOS..."
-#swift build -Xswiftc "-sdk" -Xswiftc "`xcrun --sdk iphonesimulator --show-sdk-path`" -Xswiftc "-target" -Xswiftc "x86_64-apple-ios14.4-simulator"
-#
-#echo -e "\nBuilding Swift Package for tvOS..."
-#swift build -Xswiftc "-sdk" -Xswiftc "`xcrun --sdk appletvsimulator --show-sdk-path`" -Xswiftc "-target" -Xswiftc "x86_64-apple-tvos14.3-simulator"
-#
-#echo -e "\nBuilding Swift Package for watchOS..."
-#swift build -Xswiftc "-sdk" -Xswiftc "`xcrun --sdk watchsimulator --show-sdk-path`" -Xswiftc "-target" -Xswiftc "x86_64-apple-watchos7.2-simulator"
-#
-#echo -e "\nBuilding Swift Package for macOS..."
-#swift build -Xswiftc "-sdk" -Xswiftc "`xcrun --sdk macosx --show-sdk-path`" -Xswiftc "-target" -Xswiftc "x86_64-apple-macosx11.1"
-#
-#echo -e "\nBuilding Pods project..."
-#set -o pipefail && xcodebuild -workspace "Example/ObjectMapperAdditions.xcworkspace" -scheme "ObjectMapperAdditions-Example" -configuration "Release" -sdk iphonesimulator | xcpretty
-#echo ""
+echo -e "\nBuilding Swift Package..."
+swift build
 
 . "./Scripts/Carthage/utils.sh"
 applyXcode12Workaround
@@ -57,13 +44,6 @@ else
 
     echo -e "Building Carthage project..."
     set -o pipefail && xcodebuild -project "ObjectMapperAdditions.xcodeproj" -sdk iphonesimulator -target "ObjectMapperAdditions-iOS" | xcpretty
-    set -o pipefail && xcodebuild -project "ObjectMapperAdditions.xcodeproj" -sdk macosx -target "ObjectMapperAdditions-macOS" | xcpretty
-    set -o pipefail && xcodebuild -project "ObjectMapperAdditions.xcodeproj" -sdk appletvsimulator -target "ObjectMapperAdditions-tvOS" | xcpretty
-    set -o pipefail && xcodebuild -project "ObjectMapperAdditions.xcodeproj" -sdk watchsimulator -target "ObjectMapperAdditions-watchOS" | xcpretty
-    echo ""
-
-    echo -e "Building with Carthage..."
-    carthage build --no-skip-current --cache-builds
     echo ""
 fi
 

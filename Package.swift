@@ -14,6 +14,10 @@ let package = Package(
         .library(
             name: "ObjectMapperAdditions",
             targets: ["ObjectMapperAdditions"]
+        ),
+        .library(
+            name: "ObjectMapperAdditionsRealm",
+            targets: ["ObjectMapperAdditionsRealm"]
         )
     ],
     dependencies: [
@@ -25,11 +29,21 @@ let package = Package(
         .target(
             name: "ObjectMapperAdditions",
             dependencies: [
-                "RealmSwift",
-                "ObjectMapper",
-                "RoutableLogger",
+                .product(name: "ObjectMapper", package: "ObjectMapper"),
+                .product(name: "RoutableLogger", package: "RoutableLogger"),
             ],
-            path: "ObjectMapperAdditions/Classes/",
+            path: "ObjectMapperAdditions/Classes/Core",
+            swiftSettings: [
+                .define("SPM"),
+            ]
+        ),
+        .target(
+            name: "ObjectMapperAdditionsRealm",
+            dependencies: [
+                "ObjectMapperAdditions",
+                .product(name: "RealmSwift", package: "realm-cocoa"),
+            ],
+            path: "ObjectMapperAdditions/Classes/Realm",
             swiftSettings: [
                 .define("SPM"),
             ]

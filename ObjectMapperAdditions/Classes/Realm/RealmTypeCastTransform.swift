@@ -8,9 +8,8 @@
 
 import RealmSwift
 import ObjectMapper
-
-#if !COCOAPODS && !SPM
-    import ObjectMapperAdditions
+#if !COCOAPODS
+import ObjectMapperAdditions
 #endif
 
 /// Transforms Swift Arrays to Realm Arrays. E.g. [String] to List<String>.
