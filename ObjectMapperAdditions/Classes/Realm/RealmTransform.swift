@@ -11,7 +11,6 @@ import ObjectMapper
 
 
 /// Transforms Swift Arrays to Realm Arrays. E.g. [String] to List<String>.
-@available(*, deprecated, message: "RealmTransform<T> has been deprecated. Please use <- mapping operator instead.")
 public class RealmTransform<T: RealmCollectionValue>: TransformType {
     public typealias Object = List<T>
     public typealias JSON = [Any]

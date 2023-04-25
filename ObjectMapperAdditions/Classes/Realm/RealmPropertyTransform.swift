@@ -11,7 +11,6 @@ import ObjectMapper
 
 /// Transforms Swift numeric to `RealmProperty<T>`.
 /// E.g. Int? to RealmOptional<Int?> or Double to RealmOptional<Int>.
-@available(*, deprecated, message: "RealmPropertyTransform<T> has been deprecated. Please use <- mapping operator instead.")
 public class RealmPropertyTransform<T: RealmOptionalType & _RealmSchemaDiscoverable>: TransformType {
     public typealias Object = RealmProperty<T?>
     public typealias JSON = Any
