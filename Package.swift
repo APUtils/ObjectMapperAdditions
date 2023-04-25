@@ -41,6 +41,7 @@ let package = Package(
             name: "ObjectMapperAdditionsRealm",
             dependencies: [
                 "ObjectMapperAdditions",
+                .product(name: "Realm", package: "realm-cocoa"),
                 .product(name: "RealmSwift", package: "realm-cocoa"),
             ],
             path: "ObjectMapperAdditions/Classes/Realm",
