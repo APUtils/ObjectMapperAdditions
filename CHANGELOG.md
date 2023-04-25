@@ -3,6 +3,21 @@ All notable changes to this project will be documented in this file.
 `ObjectMapperAdditions` adheres to [Semantic Versioning](http://semver.org/).
 
 
+## [13.0.0](https://github.com/APUtils/LogsManager/releases/tag/13.0.0)
+Released on `2023-04-25`
+
+#### Changed
+- Examples
+- Reverted `12.0.0` version deprecations
+- `ObjectMapperAdditions` and `ObjectMapperAdditionsCore` SPM frameworks separation
+
+#### Deprecated
+- Carthage
+
+#### Fixed
+- SPM and Carthage builds
+
+
 ## [12.0.0](https://github.com/APUtils/LogsManager/releases/tag/12.0.0)
 Released on `2023-02-23`
 
