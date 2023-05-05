@@ -10,20 +10,20 @@ PODS:
   - APExtensions/ViewModel (12.0.1)
   - Nimble (10.0.0)
   - ObjectMapper (4.2.0)
-  - ObjectMapperAdditions/Core (12.0.1):
+  - ObjectMapperAdditions/Core (13.0.1):
     - ObjectMapper
     - RoutableLogger (>= 12.0)
-  - ObjectMapperAdditions/Realm (12.0.1):
+  - ObjectMapperAdditions/Realm (13.0.1):
     - ObjectMapper
     - ObjectMapperAdditions/Core
     - RealmSwift
     - RoutableLogger (>= 12.0)
   - Quick (5.0.1)
-  - Realm (10.38.0):
-    - Realm/Headers (= 10.38.0)
-  - Realm/Headers (10.38.0)
-  - RealmSwift (10.38.0):
-    - Realm (= 10.38.0)
+  - Realm (10.39.0):
+    - Realm/Headers (= 10.39.0)
+  - Realm/Headers (10.39.0)
+  - RealmSwift (10.39.0):
+    - Realm (= 10.39.0)
   - RoutableLogger (12.0.2)
 
 DEPENDENCIES:
@@ -56,10 +56,10 @@ SPEC CHECKSUMS:
   APExtensions: d71f05f2b48e6a564c9c07b4cd65c2b616ac9295
   Nimble: 5316ef81a170ce87baf72dd961f22f89a602ff84
   ObjectMapper: 1eb41f610210777375fa806bf161dc39fb832b81
-  ObjectMapperAdditions: 2398b76d498bef4faaa1cc1d18b30a4188b8ca1b
+  ObjectMapperAdditions: afc506c0aff10700d42642e73182481849498df8
   Quick: 749aa754fd1e7d984f2000fe051e18a3a9809179
-  Realm: 5902885dd1d5e71b0b020830caab937ecdf5bf07
-  RealmSwift: 0fc037d6c32c7c4fc9362892380f380114ecdcf0
+  Realm: c1334b2243da676ce77c28d4f21a67c8d561a9f9
+  RealmSwift: 618cb32040ce8de250ae6c509218ee0ead17dcf6
   RoutableLogger: 5437307106ecb12ede54836f575348694d1a7f19
 
 PODFILE CHECKSUM: f7d9a8dead1ec305fae358a381309831258264c1

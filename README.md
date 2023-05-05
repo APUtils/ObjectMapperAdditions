@@ -23,7 +23,7 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 
 - In Xcode select `File` > `Add Packages...`
 - Copy and paste the following into the search: `https://github.com/APUtils/ObjectMapperAdditions`
-- **‼️Make sure `Up to Next Major Version` is selected and put `12.0.1` into the lower bound if needed. There is a bug in 14.2 Xcode, it does not select versions higher than 9.0.0 by default‼️**
+- **‼️Make sure `Up to Next Major Version` is selected and put `13.0.0` into the lower bound if needed. There is a bug in 14.2 Xcode, it does not select versions higher than 9.0.0 by default‼️**
 - Tap `Add Package`
 - Select `ObjectMapperAdditions` to add core functionality
 - Optionally, select `ObjectMapperAdditionsRealm` to add `Realm` related functionality
@@ -36,13 +36,13 @@ ObjectMapperAdditions is available through [CocoaPods](http://cocoapods.org).
 To install Core features, simply add the following line to your Podfile:
 
 ```ruby
-pod 'ObjectMapperAdditions/Core', '~> 12.0'
+pod 'ObjectMapperAdditions/Core', '~> 13.0'
 ```
 
 To add Realm transform to your project add the following line to your Podfile:
 
 ```ruby
-pod 'ObjectMapperAdditions/Realm', '~> 12.0'
+pod 'ObjectMapperAdditions/Realm', '~> 13.0'
 ```
 
 #### Carthage **DEPRECATED**
@@ -52,7 +52,7 @@ Please check [official guide](https://github.com/Carthage/Carthage#if-youre-buil
 Cartfile:
 
 ```
-github "APUtils/ObjectMapperAdditions" ~> 12.0
+github "APUtils/ObjectMapperAdditions" ~> 13.0
 ```
 
 If you do not need Realm part, add those frameworks: `ObjectMapperAdditions`, `ObjectMapper`, `RoutableLogger`.

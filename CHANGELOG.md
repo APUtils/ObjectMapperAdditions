@@ -3,6 +3,13 @@ All notable changes to this project will be documented in this file.
 `ObjectMapperAdditions` adheres to [Semantic Versioning](http://semver.org/).
 
 
+## [13.0.3](https://github.com/APUtils/LogsManager/releases/tag/13.0.3)
+Released on `2023-04-25`
+
+#### Added
+- [EmbeddedObject] `performMapping(_:)`
+
+
 ## [13.0.0](https://github.com/APUtils/LogsManager/releases/tag/13.0.0)
 Released on `2023-04-25`
 
