@@ -43,7 +43,11 @@ class MyRealmModel: Object, Mappable {
             
             // Using ObjectMapperAdditions's RealmPropertyTypeCastTransform
             optionalDouble <- map["optionalDouble"]
-            // You could also use RealmPropertyTransform if you don't like type cast
+            
+            // Custom transform support
+//            optionalDouble <- (map["optionalDouble"], DoubleTransform.shared)
+            
+            // You could also use RealmPropertyTransform if you don't like type cast but you need to declare `optionalDouble` as a `var` then
 //            optionalDouble <- (map["optionalDouble"], RealmPropertyTransform<Double>())
             
             string <- (map["string"], StringTransform.shared)
@@ -54,7 +58,11 @@ class MyRealmModel: Object, Mappable {
             
             // Using ObjectMapperAdditions's RealmTypeCastTransform
             strings <- map["strings"]
-            // You could also use RealmTransform if you don't like type cast
+            
+            // // Custom transform support
+//            strings <- (map["strings"], StringTransform.shared)
+            
+            // You could also use RealmTransform if you don't like type cast but you need to declare `optionalDouble` as a `var` then
 //            strings <- (map["strings"], RealmTransform())
         }
     }

@@ -10,7 +10,7 @@ import RealmSwift
 import ObjectMapper
 
 /// Transforms Swift numeric to `RealmProperty<T>`.
-/// E.g. Int? to RealmOptional<Int?> or Double to RealmOptional<Int>.
+/// E.g. `Int?` to `RealmProperty<Int>` or `Double` to `RealmProperty<Int>`.
 public class RealmPropertyTransform<T: RealmOptionalType & _RealmSchemaDiscoverable>: TransformType {
     public typealias Object = RealmProperty<T?>
     public typealias JSON = Any

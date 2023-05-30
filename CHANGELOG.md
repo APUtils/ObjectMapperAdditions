@@ -3,6 +3,17 @@ All notable changes to this project will be documented in this file.
 `ObjectMapperAdditions` adheres to [Semantic Versioning](http://semver.org/).
 
 
+## [13.1.0](https://github.com/APUtils/LogsManager/releases/tag/13.1.0)
+Released on `2023-04-25`
+
+#### Added
+- `<-` operator for `List` and `RealmProperty` with custom transform
+
+#### Changed
+- `<-` operator for `List` and `RealmProperty` now does nothing on key absense to mimic the same behavior of `ObjectMapper`
+- `<-` operator for `List` now replace existing entries on subsequent mapping
+
+
 ## [13.0.3](https://github.com/APUtils/LogsManager/releases/tag/13.0.3)
 Released on `2023-04-25`
 

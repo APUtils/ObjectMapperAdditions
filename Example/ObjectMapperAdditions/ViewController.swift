@@ -79,8 +79,8 @@ class ViewController: UIViewController {
         let realmJSON: [String: Any] = [
             "double": 1.1,
             "string": "123",
-            "myOtherRealmModel": [:],
-            "myOtherRealmModels": [[:], [:]],
+            "myOtherRealmModel": [String: Any](),
+            "myOtherRealmModels": [[String: Any](), [String: Any]()],
             "strings": ["123.0", "321.0"]
         ]
         
