@@ -9,12 +9,23 @@
 import Foundation
 import ObjectMapper
 import RealmSwift
+import RoutableLogger
 
 public extension Object {
     
     /// `.toJSON()` requires Realm write transaction or it'll crash
     /// https://github.com/APUtils/ObjectMapperAdditions#realm-features
-    func performMapping(_ action: () -> Void) {
+    func performMapping(file: String = #file, function: String = #function, line: UInt = #line, _ action: () -> Void) {
+        guard !isInvalidated else {
+            RoutableLogger.logError("Unable to perform mapping on the invalidated object", file: file, function: function, line: line)
+            return
+        }
+        
+        guard !isFrozen else {
+            RoutableLogger.logError("Unable to perform mapping on the frozen object", file: file, function: function, line: line)
+            return
+        }
+        
         let isWriteRequired = realm != nil && realm?.isInWriteTransaction == false
         if isWriteRequired { realm?.beginWrite() }
         action()
@@ -26,7 +37,17 @@ public extension EmbeddedObject {
     
     /// `.toJSON()` requires Realm write transaction or it'll crash
     /// https://github.com/APUtils/ObjectMapperAdditions#realm-features
-    func performMapping(_ action: () -> Void) {
+    func performMapping(file: String = #file, function: String = #function, line: UInt = #line, _ action: () -> Void) {
+        guard !isInvalidated else {
+            RoutableLogger.logError("Unable to perform mapping on the invalidated object", file: file, function: function, line: line)
+            return
+        }
+        
+        guard !isFrozen else {
+            RoutableLogger.logError("Unable to perform mapping on the frozen object", file: file, function: function, line: line)
+            return
+        }
+        
         let isWriteRequired = realm != nil && realm?.isInWriteTransaction == false
         if isWriteRequired { realm?.beginWrite() }
         action()
