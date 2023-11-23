@@ -8,8 +8,7 @@
 
 // ******************************* MARK: - Checks
 
-private let kSpaceCharacter = Character(" ")
-private let kNewLineCharacter = Character("\n")
+private let kWhitespaceCharactersSet = CharacterSet(charactersIn: " \n\r")
 
 extension String {
     
@@ -18,12 +17,12 @@ extension String {
     }
     
     var firstNonWhitespaceCharacter: Character? {
-        guard let index = firstIndex(where: { $0 != kSpaceCharacter && $0 != kNewLineCharacter }) else { return nil }
+        guard let index = firstIndex(where: { !kWhitespaceCharactersSet._containsUnicodeScalars(of: $0) }) else { return nil }
         return self[index]
     }
     
     var secondNonWhitespaceCharacter: Character? {
-        guard let firstIndex = firstIndex(where: { $0 != kSpaceCharacter && $0 != kNewLineCharacter }) else { return nil }
+        guard let firstIndex = firstIndex(where: { !kWhitespaceCharactersSet._containsUnicodeScalars(of: $0) }) else { return nil }
                 
         let secondIndex = index(after: firstIndex)
         guard secondIndex < endIndex else { return nil }
@@ -32,12 +31,12 @@ extension String {
     }
     
     var lastNonWhitespaceCharacter: Character? {
-        guard let index = lastIndex(where: { $0 != kSpaceCharacter && $0 != kNewLineCharacter }) else { return nil }
+        guard let index = lastIndex(where: { !kWhitespaceCharactersSet._containsUnicodeScalars(of: $0) }) else { return nil }
         return self[index]
     }
     
     var beforeLastNonWhitespaceCharacter: Character? {
-        guard let lastIndex = lastIndex(where: { $0 != kSpaceCharacter && $0 != kNewLineCharacter }) else { return nil }
+        guard let lastIndex = lastIndex(where: { !kWhitespaceCharactersSet._containsUnicodeScalars(of: $0) }) else { return nil }
         
         let beforeLastIndex = index(before: lastIndex)
         guard startIndex <= beforeLastIndex else { return nil }
@@ -52,7 +51,7 @@ extension String {
 extension String {
     
     /// Returns fileName without extension
-    var fileName: String {
+    var _fileName: String {
         guard let lastPathComponent = components(separatedBy: "/").last else { return "" }
         
         var components = lastPathComponent.components(separatedBy: ".")
@@ -62,5 +61,11 @@ extension String {
             components.removeLast()
             return components.joined(separator: ".")
         }
+    }
+}
+
+extension CharacterSet {
+    func _containsUnicodeScalars(of character: Character) -> Bool {
+        return character.unicodeScalars.allSatisfy(contains(_:))
     }
 }

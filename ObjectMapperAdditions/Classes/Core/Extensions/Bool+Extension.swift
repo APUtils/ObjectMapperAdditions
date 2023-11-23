@@ -13,7 +13,7 @@ extension Bool {
     
     static func safeFrom(_ string: String, file: String = #file, function: String = #function, line: UInt = #line) -> Bool? {
         if string.isNil {
-            RoutableLogger.logDebug("[\(file.fileName):\(line)] Received '\(string)' string instead of a Bool. Considering it as `nil`.")
+            RoutableLogger.logDebug("[\(file._fileName):\(line)] Received '\(string)' string instead of a Bool. Considering it as `nil`.")
             return nil
         }
         
