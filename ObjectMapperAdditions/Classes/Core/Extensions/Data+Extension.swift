@@ -49,23 +49,23 @@ extension Data {
     // ******************************* MARK: - Checks
     
     var firstNonWhitespaceByte: UInt8? {
-        guard let index = firstIndex(where: { $0 != ASCIICodes.space && $0 != ASCIICodes.newLine }) else { return nil }
+        guard let index = firstIndex(where: { !ASCIICodes.whitespaceSet.contains($0) }) else { return nil }
         return self[index]
     }
     var secondNonWhitespaceByte: UInt8? {
-        guard let index = firstIndex(where: { $0 != ASCIICodes.space && $0 != ASCIICodes.newLine }),
+        guard let index = firstIndex(where: { !ASCIICodes.whitespaceSet.contains($0) }),
               index + 1 < count else { return nil }
         
         return self[index + 1]
     }
     
     var lastNonWhitespaceByte: UInt8? {
-        guard let index = lastIndex(where: { $0 != ASCIICodes.space && $0 != ASCIICodes.newLine }) else { return nil }
+        guard let index = lastIndex(where: { !ASCIICodes.whitespaceSet.contains($0) }) else { return nil }
         return self[index]
     }
     
     var beforeLastNonWhitespaceByte: UInt8? {
-        guard let index = lastIndex(where: { $0 != ASCIICodes.space && $0 != ASCIICodes.newLine }),
+        guard let index = lastIndex(where: { !ASCIICodes.whitespaceSet.contains($0) }),
               index - 1 >= 0 else { return nil }
         
         return self[index - 1]
