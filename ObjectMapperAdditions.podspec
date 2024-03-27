@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'ObjectMapperAdditions'
-  s.version          = '13.1.0'
+  s.version          = '13.2.0'
   s.summary          = 'ObjectMapper Extensions and Transforms'
 
 # This description is used to generate tags and improve search results.
@@ -33,7 +33,12 @@ Pod::Spec.new do |s|
   s.osx.deployment_target = '10.13'
   s.tvos.deployment_target = '11.0'
   s.watchos.deployment_target = '4.0'
-  s.swift_versions = ['5.5', '5.5.1', '5.5.2', '5.6', '5.6.1', '5.7']
+  s.swift_versions = ['5']
+  
+  # 1.12.0: Ensure developers won't hit CocoaPods/CocoaPods#11402 with the resource
+  # bundle for the privacy manifest.
+  # 1.13.0: visionOS is recognized as a platform.
+  s.cocoapods_version = '>= 1.13.0'
   
   s.default_subspec = 'Core'
   s.frameworks = 'Foundation'
@@ -42,10 +47,12 @@ Pod::Spec.new do |s|
 
   s.subspec 'Core' do |core|
     core.source_files = 'ObjectMapperAdditions/Classes/Core/**/*'
+    core.resource_bundle = {"ObjectMapperAdditions.Core.privacy"=>"ObjectMapperAdditions/Privacy/ObjectMapperAdditions.Core/PrivacyInfo.xcprivacy"}
   end
 
   s.subspec 'Realm' do |realm|
     realm.source_files = 'ObjectMapperAdditions/Classes/Realm/**/*'
+    realm.resource_bundle = {"ObjectMapperAdditions.Realm.privacy"=>"ObjectMapperAdditions/Privacy/ObjectMapperAdditions.Realm/PrivacyInfo.xcprivacy"}
     realm.dependency 'ObjectMapperAdditions/Core'
     realm.dependency 'RealmSwift'
   end

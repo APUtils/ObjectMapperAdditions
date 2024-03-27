@@ -3,6 +3,20 @@ All notable changes to this project will be documented in this file.
 `ObjectMapperAdditions` adheres to [Semantic Versioning](http://semver.org/).
 
 
+## [13.2.0](https://github.com/APUtils/LogsManager/releases/tag/13.2.0)
+Released on `2024-03-27`
+
+#### Added
+- `performMapping` safety for frozen and invalidated objects
+- Carriage return support as a whitespace character
+- [EnumTypeCastTransform] Report unknown cases
+- [Map] additions
+
+#### Changed
+- `<-` operator for `List` and `RealmProperty` now does nothing on key absense to mimic the same behavior of `ObjectMapper`
+- `<-` operator for `List` now replace existing entries on subsequent mapping
+
+
 ## [13.1.0](https://github.com/APUtils/LogsManager/releases/tag/13.1.0)
 Released on `2023-04-25`
 

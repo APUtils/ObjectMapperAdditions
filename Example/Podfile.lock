@@ -1,32 +1,36 @@
 PODS:
-  - APExtensions (14.1.1):
-    - APExtensions/Core (= 14.1.1)
-    - APExtensions/Dispatch (= 14.1.1)
-    - APExtensions/Storyboard (= 14.1.1)
-    - APExtensions/ViewModel (= 14.1.1)
-  - APExtensions/Core (14.1.1):
+  - APExtensions (14.2.0):
+    - APExtensions/Core (= 14.2.0)
+    - APExtensions/Dispatch (= 14.2.0)
+    - APExtensions/Occupiable (= 14.2.0)
+    - APExtensions/OptionalType (= 14.2.0)
+    - APExtensions/Storyboard (= 14.2.0)
+    - APExtensions/ViewModel (= 14.2.0)
+  - APExtensions/Core (14.2.0):
     - RoutableLogger
-  - APExtensions/Dispatch (14.1.1):
+  - APExtensions/Dispatch (14.2.0):
     - RoutableLogger
-  - APExtensions/Storyboard (14.1.1):
+  - APExtensions/Occupiable (14.2.0)
+  - APExtensions/OptionalType (14.2.0)
+  - APExtensions/Storyboard (14.2.0):
     - RoutableLogger
-  - APExtensions/ViewModel (14.1.1)
+  - APExtensions/ViewModel (14.2.0)
   - Nimble (10.0.0)
   - ObjectMapper (4.2.0)
-  - ObjectMapperAdditions/Core (13.1.0):
+  - ObjectMapperAdditions/Core (13.2.0):
     - ObjectMapper
     - RoutableLogger (>= 12.0)
-  - ObjectMapperAdditions/Realm (13.1.0):
+  - ObjectMapperAdditions/Realm (13.2.0):
     - ObjectMapper
     - ObjectMapperAdditions/Core
     - RealmSwift
     - RoutableLogger (>= 12.0)
   - Quick (5.0.1)
-  - Realm (10.44.0):
-    - Realm/Headers (= 10.44.0)
-  - Realm/Headers (10.44.0)
-  - RealmSwift (10.44.0):
-    - Realm (= 10.44.0)
+  - Realm (10.49.1):
+    - Realm/Headers (= 10.49.1)
+  - Realm/Headers (10.49.1)
+  - RealmSwift (10.49.1):
+    - Realm (= 10.49.1)
   - RoutableLogger (12.3.3)
 
 DEPENDENCIES:
@@ -52,19 +56,19 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   APExtensions:
-    :commit: 31396decfab1fd95f7e02b6c92ac111bc25d5e01
+    :commit: 7cead7483a09dcf0de15264361f809014166d995
     :git: https://github.com/APUtils/APExtensions
 
 SPEC CHECKSUMS:
-  APExtensions: 82c75dcd17db568a21a21f801101a8913cc8604f
+  APExtensions: 06c059d069034fb32db789432ee889274b453435
   Nimble: 5316ef81a170ce87baf72dd961f22f89a602ff84
   ObjectMapper: 1eb41f610210777375fa806bf161dc39fb832b81
-  ObjectMapperAdditions: c8945119ecd970f6ea450aedf4db7a0b6953d916
+  ObjectMapperAdditions: 51f4488d701326652df173f849a957d363cb353c
   Quick: 749aa754fd1e7d984f2000fe051e18a3a9809179
-  Realm: 0419a32457873acb720df25bf1d658df36967cf2
-  RealmSwift: 352f85c018b4d0efe961974bfa95bf7a30e079f6
+  Realm: 1fab4a224fd7a294eca142a0efe8b54546290fbf
+  RealmSwift: 7c3a9c001161eb01b96b171ad965a9c498b962b0
   RoutableLogger: ff5425f9ec26ec79241a591a1ed16a7a69d70b2f
 
 PODFILE CHECKSUM: b7cadc42f11c288c6d3988183e9f301f4fe15655
 
-COCOAPODS: 1.14.3
+COCOAPODS: 1.15.2

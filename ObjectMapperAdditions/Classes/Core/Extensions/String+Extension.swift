@@ -6,6 +6,8 @@
 //  Copyright © 2022 Anton Plebanovich. All rights reserved.
 //
 
+import Foundation
+
 // ******************************* MARK: - Checks
 
 private let kWhitespaceCharactersSet = CharacterSet(charactersIn: " \n\r")
