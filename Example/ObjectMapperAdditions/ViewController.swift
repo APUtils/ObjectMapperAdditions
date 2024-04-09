@@ -81,6 +81,7 @@ class ViewController: UIViewController {
             "string": "123",
             "myOtherRealmModel": [String: Any](),
             "myOtherRealmModels": [[String: Any](), [String: Any]()],
+            "myRealmMap": ["key":"value"],
             "strings": ["123.0", "321.0"]
         ]
         
@@ -101,6 +102,7 @@ class ViewController: UIViewController {
             success = success && realmModel.string == storedModel?.string && realmModel.string == realmJSON.string(forKey: "string")
             success = success && realmModel.myOtherRealmModel == storedModel?.myOtherRealmModel
             success = success && Array(realmModel.myOtherRealmModels) == Array(storedModel!.myOtherRealmModels)
+            success = success && realmModel.myRealmMap["key"] == realmJSON.dictionary(forKey: "myRealmMap")?.string(forKey: "key")
             success = success && Array(realmModel.strings) == Array(storedModel!.strings) && Array(realmModel.strings) == (realmJSON["strings"] as! [String])
             
             print(success ? "Data is not lost" : "Some data is lost")

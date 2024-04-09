@@ -18,6 +18,7 @@ class MyRealmModel: Object, Mappable {
     @objc dynamic var string: String?
     @objc dynamic var myOtherRealmModel: MyOtherRealmModel?
     let myOtherRealmModels = List<MyOtherRealmModel>()
+    let myRealmMap = RealmSwift.Map<String, String>()
     var strings: List<String> = List<String>()
     
     override class func primaryKey() -> String? { "id" }
@@ -55,6 +56,8 @@ class MyRealmModel: Object, Mappable {
             
             // Using ObjectMapper+Realm's RealmListTransform to transform custom types
             myOtherRealmModels <- map["myOtherRealmModels"]
+            
+            myRealmMap <- map["myRealmMap"]
             
             // Using ObjectMapperAdditions's RealmTypeCastTransform
             strings <- map["strings"]

@@ -77,6 +77,7 @@
 		D99D6198B7EB09C279219FB2 /* podPush.command */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; name = podPush.command; path = ../podPush.command; sourceTree = "<group>"; };
 		DDEDDCD09D65355F843EFBC5 /* Pods_ObjectMapperAdditions_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ObjectMapperAdditions_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E28C98D62255F4AA00C5DA49 /* ExampleEnums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleEnums.swift; sourceTree = "<group>"; };
+		E2D5E3922BC5760B00E746C8 /* packageUpdate.command */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; name = packageUpdate.command; path = ../packageUpdate.command; sourceTree = "<group>"; };
 		F253760DFAA3796C1818AA2F /* CHANGELOG.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = CHANGELOG.md; path = ../CHANGELOG.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -180,11 +181,12 @@
 				5CAD258AE7CB612216344F76 /* .gitignore */,
 				C4D05D631BC1A7024D3C6249 /* .travis.yml */,
 				F253760DFAA3796C1818AA2F /* CHANGELOG.md */,
+				0D2D24CF21716F8F006817DE /* checkBuild.command */,
 				0D2D24CD2171632B006817DE /* DEPLOY PROCESS.md */,
 				9DFE7F9B21F6E89955E35AA5 /* LICENSE */,
 				3306BDD26A7024542AF11D3D /* ObjectMapperAdditions.podspec */,
 				0D716B7026285E2200B28330 /* Package.swift */,
-				0D2D24CF21716F8F006817DE /* checkBuild.command */,
+				E2D5E3922BC5760B00E746C8 /* packageUpdate.command */,
 				1E6A5436B00ACF85E4A03951 /* podCheck.command */,
 				D99D6198B7EB09C279219FB2 /* podPush.command */,
 				A7D8958764C84B431CB2CCEE /* README.md */,

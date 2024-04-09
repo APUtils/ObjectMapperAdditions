@@ -3,6 +3,13 @@ All notable changes to this project will be documented in this file.
 `ObjectMapperAdditions` adheres to [Semantic Versioning](http://semver.org/).
 
 
+## [13.2.1](https://github.com/APUtils/LogsManager/releases/tag/13.2.1)
+Released on `2024-04-09`
+
+#### Added
+- `RealmSwift.Map` mapping support
+
+
 ## [13.2.0](https://github.com/APUtils/LogsManager/releases/tag/13.2.0)
 Released on `2024-03-27`
 

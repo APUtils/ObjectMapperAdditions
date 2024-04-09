@@ -28,6 +28,7 @@ class RealmSpec: QuickSpec {
                     "string": "123",
                     "myOtherRealmModel": ["string":"string"],
                     "myOtherRealmModels": [["string":"string"], ["string":"string"]],
+                    "myRealmMap": ["key":"value"],
                     "strings": ["123.0", "321.0"]
                 ]
                 
@@ -41,6 +42,7 @@ class RealmSpec: QuickSpec {
                     expect(model?.myOtherRealmModels.count).to(equal(2))
                     expect(model?.myOtherRealmModels[0].string).to(equal("string"))
                     expect(model?.myOtherRealmModels[1].string).to(equal("string"))
+                    expect(model?.myRealmMap["key"]).to(equal("value"))
                     expect(Array(model!.strings)).to(equal(["123.0", "321.0"]))
                 }
                 
@@ -54,7 +56,7 @@ class RealmSpec: QuickSpec {
                         
                         model = realm.object(ofType: MyRealmModel.self, forPrimaryKey: model.id)!
                         let json = model.toJSON()
-                        expect(json.count).to(equal(7))
+                        expect(json.count).to(equal(8))
                     }
                 }
             }

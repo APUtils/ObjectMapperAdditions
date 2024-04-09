@@ -13,6 +13,8 @@ import RealmSwift
 import ObjectMapperAdditions
 #endif
 
+// ******************************* MARK: - List
+
 public func <- <T: RealmCollectionValue & Mappable>(left: List<T>, right: ObjectMapper.Map) {
     if right.mappingType == .toJSON {
         Array(left) >>> right
@@ -79,6 +81,38 @@ public func <- <T: RealmCollectionValue, Transform: TransformType>(left: List<T>
         }
     }
 }
+
+// ******************************* MARK: - Map
+
+public func <- <K, V>(left: RealmSwift.Map<K, V>, right: ObjectMapper.Map) {
+    if right.mappingType == .toJSON {
+        let dictionary = left.reduce(into: [K: V]()) { dictionary, tuple in
+            dictionary[tuple.key] = tuple.value
+        }
+        
+        dictionary >>> right
+        
+    } else if right.mappingType == .fromJSON {
+        if right.isKeyPresent {
+            var keyValues: [K: V]?
+            keyValues <- right
+            
+            if let keyValues {
+                if left.count > 0 {
+                    left.removeAll()
+                }
+                for keyValue in keyValues {
+                    left[keyValue.key] = keyValue.value
+                }
+                
+            } else {
+                left.removeAll()
+            }
+        }
+    }
+}
+
+// ******************************* MARK: - RealmProperty
 
 public func <- <T: RealmCollectionValue>(left: RealmProperty<T?>, right: ObjectMapper.Map) {
     if right.mappingType == .toJSON {
