@@ -10,7 +10,6 @@ import Foundation
 import ObjectMapper
 import ObjectMapperAdditions
 
-
 struct MyModel: Mappable {
     var string: String?
     var stringsArray: [String]?
@@ -58,5 +57,7 @@ extension MyModel: Equatable {
             && lhs.double == rhs.double
             && lhs.myOtherModel == rhs.myOtherModel
             && lhs.myOtherModelsArray == rhs.myOtherModelsArray
+            && lhs.intEnum == rhs.intEnum
+            && lhs.stringEnum == rhs.stringEnum
     }
 }

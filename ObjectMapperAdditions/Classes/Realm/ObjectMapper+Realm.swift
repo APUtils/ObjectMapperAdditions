@@ -84,9 +84,10 @@ public func <- <T: RealmCollectionValue, Transform: TransformType>(left: List<T>
 
 // ******************************* MARK: - Map
 
-public func <- <K, V>(left: RealmSwift.Map<K, V>, right: ObjectMapper.Map) {
+/// Old sytax with `let`
+public func <- <Key: _MapKey, Value: RealmCollectionValue>(left: RealmSwift.Map<Key, Value>, right: ObjectMapper.Map) {
     if right.mappingType == .toJSON {
-        let dictionary = left.reduce(into: [K: V]()) { dictionary, tuple in
+        let dictionary = left.reduce(into: [Key: Value]()) { dictionary, tuple in
             dictionary[tuple.key] = tuple.value
         }
         
@@ -94,7 +95,7 @@ public func <- <K, V>(left: RealmSwift.Map<K, V>, right: ObjectMapper.Map) {
         
     } else if right.mappingType == .fromJSON {
         if right.isKeyPresent {
-            var keyValues: [K: V]?
+            var keyValues: [Key: Value]?
             keyValues <- right
             
             if let keyValues {

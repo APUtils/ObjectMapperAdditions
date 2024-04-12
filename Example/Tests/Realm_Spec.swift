@@ -32,11 +32,25 @@ class RealmSpec: QuickSpec {
                     "strings": ["123.0", "321.0"]
                 ]
                 
-                it("should map properly from JSON") {
+                it("should map properly from JSON to MyRealmModel") {
                     let model = MyRealmModel(JSON: realmJSON)
                     expect(model?.id).to(equal(id))
                     expect(model?.double).to(equal(1.1))
                     expect(model?.optionalDouble.value).to(equal(2.2))
+                    expect(model?.string).to(equal("123"))
+                    expect(model?.myOtherRealmModel?.string).to(equal("string"))
+                    expect(model?.myOtherRealmModels.count).to(equal(2))
+                    expect(model?.myOtherRealmModels[0].string).to(equal("string"))
+                    expect(model?.myOtherRealmModels[1].string).to(equal("string"))
+                    expect(model?.myRealmMap["key"]).to(equal("value"))
+                    expect(Array(model!.strings)).to(equal(["123.0", "321.0"]))
+                }
+                
+                it("should map properly from JSON to MyPersistedRealmModel") {
+                    let model = MyPersistedRealmModel(JSON: realmJSON)
+                    expect(model?.id).to(equal(id))
+                    expect(model?.double).to(equal(1.1))
+                    expect(model?.optionalDouble).to(equal(2.2))
                     expect(model?.string).to(equal("123"))
                     expect(model?.myOtherRealmModel?.string).to(equal("string"))
                     expect(model?.myOtherRealmModels.count).to(equal(2))

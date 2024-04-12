@@ -26,6 +26,7 @@
 		B0D3A0331F7A54E90062AD2B /* TimestampTransform_Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D3A0311F7A54BC0062AD2B /* TimestampTransform_Spec.swift */; };
 		B0D3A03A1F7A5D740062AD2B /* ISO8601JustDateTransform_Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D3A0381F7A5D710062AD2B /* ISO8601JustDateTransform_Spec.swift */; };
 		E28C98D72255F4AA00C5DA49 /* ExampleEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = E28C98D62255F4AA00C5DA49 /* ExampleEnums.swift */; };
+		E2D5E3942BC9231900E746C8 /* MyPersistedRealmModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2D5E3932BC9231900E746C8 /* MyPersistedRealmModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +79,7 @@
 		DDEDDCD09D65355F843EFBC5 /* Pods_ObjectMapperAdditions_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ObjectMapperAdditions_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E28C98D62255F4AA00C5DA49 /* ExampleEnums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleEnums.swift; sourceTree = "<group>"; };
 		E2D5E3922BC5760B00E746C8 /* packageUpdate.command */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; name = packageUpdate.command; path = ../packageUpdate.command; sourceTree = "<group>"; };
+		E2D5E3932BC9231900E746C8 /* MyPersistedRealmModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPersistedRealmModel.swift; sourceTree = "<group>"; };
 		F253760DFAA3796C1818AA2F /* CHANGELOG.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = CHANGELOG.md; path = ../CHANGELOG.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -136,6 +138,7 @@
 				B0B644791F2A07A100C3739E /* MyModel.swift */,
 				B0B6447B1F2A07EC00C3739E /* MyOtherModel.swift */,
 				B0B6447F1F2A11FC00C3739E /* MyOtherRealmModel.swift */,
+				E2D5E3932BC9231900E746C8 /* MyPersistedRealmModel.swift */,
 				B0B644801F2A11FC00C3739E /* MyRealmModel.swift */,
 				607FACD71AFB9204008FA782 /* ViewController.swift */,
 			);
@@ -426,6 +429,7 @@
 				E28C98D72255F4AA00C5DA49 /* ExampleEnums.swift in Sources */,
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
 				B02194911F2BAB3200E228EB /* MyModel.swift in Sources */,
+				E2D5E3942BC9231900E746C8 /* MyPersistedRealmModel.swift in Sources */,
 				B0B6447C1F2A07EC00C3739E /* MyOtherModel.swift in Sources */,
 				B0B644821F2A11FC00C3739E /* MyRealmModel.swift in Sources */,
 				B0B644811F2A11FC00C3739E /* MyOtherRealmModel.swift in Sources */,

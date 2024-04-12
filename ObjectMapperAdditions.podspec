@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'ObjectMapperAdditions'
-  s.version          = '13.2.0'
+  s.version          = '13.2.1'
   s.summary          = 'ObjectMapper Extensions and Transforms'
 
 # This description is used to generate tags and improve search results.
@@ -42,7 +42,7 @@ Pod::Spec.new do |s|
   
   s.default_subspec = 'Core'
   s.frameworks = 'Foundation'
-  s.dependency 'ObjectMapper'
+  s.dependency 'ObjectMapper', '>= 4.3.1'
   s.dependency 'RoutableLogger', '>= 12.0'
 
   s.subspec 'Core' do |core|
