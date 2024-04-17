@@ -15,7 +15,7 @@ import RealmSwift
 @testable import ObjectMapperAdditions_Example
 
 class RealmPropertyTypeCastTransform_Spec: QuickSpec {
-    override func spec() {
+    override class func spec() {
         describe("RealmPropertyTypeCastTransform") {
             it("should map from JSON") {
                 let t = RealmPropertyTypeCastTransform<Double>()

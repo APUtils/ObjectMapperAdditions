@@ -14,7 +14,7 @@ import Quick
 
 
 class TimestampTransformSpec: QuickSpec {
-    override func spec() {
+    override class func spec() {
         describe("TimestampTransform") {
             var transform: TimestampTransform!
             

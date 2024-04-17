@@ -15,7 +15,17 @@ PODS:
   - APExtensions/Storyboard (14.2.0):
     - RoutableLogger
   - APExtensions/ViewModel (14.2.0)
-  - Nimble (10.0.0)
+  - CwlCatchException (2.2.0):
+    - CwlCatchExceptionSupport (~> 2.2.0)
+  - CwlCatchExceptionSupport (2.2.0)
+  - CwlMachBadInstructionHandler (2.2.0)
+  - CwlPosixPreconditionTesting (2.2.0)
+  - CwlPreconditionTesting (2.2.1):
+    - CwlCatchException (~> 2.2.0)
+    - CwlMachBadInstructionHandler (~> 2.2.0)
+    - CwlPosixPreconditionTesting (~> 2.2.0)
+  - Nimble (13.3.0):
+    - CwlPreconditionTesting (~> 2.2.0)
   - ObjectMapper (4.2.0)
   - ObjectMapperAdditions/Core (13.2.1):
     - ObjectMapper
@@ -25,7 +35,7 @@ PODS:
     - ObjectMapperAdditions/Core
     - RealmSwift
     - RoutableLogger (>= 12.0)
-  - Quick (5.0.1)
+  - Quick (7.5.0)
   - Realm (10.49.1):
     - Realm/Headers (= 10.49.1)
   - Realm/Headers (10.49.1)
@@ -41,6 +51,11 @@ DEPENDENCIES:
 
 SPEC REPOS:
   trunk:
+    - CwlCatchException
+    - CwlCatchExceptionSupport
+    - CwlMachBadInstructionHandler
+    - CwlPosixPreconditionTesting
+    - CwlPreconditionTesting
     - Nimble
     - ObjectMapper
     - Quick
@@ -61,14 +76,19 @@ CHECKOUT OPTIONS:
 
 SPEC CHECKSUMS:
   APExtensions: 06c059d069034fb32db789432ee889274b453435
-  Nimble: 5316ef81a170ce87baf72dd961f22f89a602ff84
+  CwlCatchException: 51bf8319009a31104ea6f0568730d1ecc25b6454
+  CwlCatchExceptionSupport: 1345d6adb01a505933f2bc972dab60dcb9ce3e50
+  CwlMachBadInstructionHandler: ea1030428925d9bf340882522af30712fb4bf356
+  CwlPosixPreconditionTesting: a125dee731883f2582715f548c6b6c92c7fde145
+  CwlPreconditionTesting: ccfd08aca58d14e04062b2a3dd2fd52e09857453
+  Nimble: 3ac6c6b0b7e9835d1540b6507d8054b12a415536
   ObjectMapper: 1eb41f610210777375fa806bf161dc39fb832b81
-  ObjectMapperAdditions: b85afd61071b36c97cb8c941f324fa0c96337af4
-  Quick: 749aa754fd1e7d984f2000fe051e18a3a9809179
+  ObjectMapperAdditions: 4a0594acda4d3464de6a5e1048c46ae37d69d918
+  Quick: 2b651168441479b949ba987f3cee41a9cc53aa32
   Realm: 1fab4a224fd7a294eca142a0efe8b54546290fbf
   RealmSwift: 7c3a9c001161eb01b96b171ad965a9c498b962b0
   RoutableLogger: 5c0d14daf01b023d1506e5a426b53418daac3f8b
 
-PODFILE CHECKSUM: b7cadc42f11c288c6d3988183e9f301f4fe15655
+PODFILE CHECKSUM: 1d81a4dd769646c095d1769115a7868b1846bca9
 
 COCOAPODS: 1.15.2

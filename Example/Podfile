@@ -1,5 +1,5 @@
 # Deployment Target
-platform :ios, '12.0'
+platform :ios, '13.0'
 install! 'cocoapods', :warn_for_unused_master_specs_repo => false
 
 # Add pods as frameworks so we could add obj-c and swift 3.0 pods

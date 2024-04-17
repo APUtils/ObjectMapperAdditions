@@ -14,7 +14,7 @@ import APExtensions
 @testable import ObjectMapperAdditions_Example
 
 class Create_Spec: QuickSpec {
-    override func spec() {
+    override class func spec() {
         describe("Create") {
             
             let jsonObjectData = try! JSONSerialization.data(withJSONObject: ["string":"string"])

@@ -14,7 +14,7 @@ import Quick
 
 
 class ISO8601JustDateTransformSpec: QuickSpec {
-    override func spec() {
+    override class func spec() {
         describe("ISO8601JustDateTransform") {
             var transform: ISO8601JustDateTransform!
             let date = Date(timeIntervalSince1970: 0)

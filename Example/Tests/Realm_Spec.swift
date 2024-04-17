@@ -10,7 +10,7 @@ import APExtensions
 
 
 class RealmSpec: QuickSpec {
-    override func spec() {
+    override class func spec() {
         describe("Realm object") {
             beforeEach {
                 let realm = try! Realm(configuration: .init(deleteRealmIfMigrationNeeded: true))

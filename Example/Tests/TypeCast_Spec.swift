@@ -9,7 +9,7 @@ import APExtensions
 
 
 class TypeCastSpec: QuickSpec {
-    override func spec() {
+    override class func spec() {
         describe("Type cast") {
             context("when JSON contains proper type params") {
                 let typeMatchingJSON: [String: Any] = [
