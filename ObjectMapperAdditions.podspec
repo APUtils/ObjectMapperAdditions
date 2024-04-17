@@ -42,7 +42,7 @@ Pod::Spec.new do |s|
   
   s.default_subspec = 'Core'
   s.frameworks = 'Foundation'
-  s.dependency 'ObjectMapper', '>= 4.3.1'
+  s.dependency 'ObjectMapper'#, '>= 4.3.1'
   s.dependency 'RoutableLogger', '>= 12.0'
 
   s.subspec 'Core' do |core|
