@@ -21,7 +21,7 @@ let package = Package(
         )
     ],
     dependencies: [
-        .package(url: "https://github.com/realm/realm-swift", .upToNextMajor(from: "10.0.0")),
+        .package(url: "https://github.com/realm/realm-swift", .upToNextMajor(from: "10.50.0")),
         .package(url: "https://github.com/tristanhimmelman/ObjectMapper", .upToNextMinor(from: "4.2.0")),
         .package(url: "https://github.com/anton-plebanovich/RoutableLogger", .upToNextMajor(from: "1.0.0")),
     ],
@@ -45,7 +45,6 @@ let package = Package(
             name: "ObjectMapperAdditionsRealm",
             dependencies: [
                 "ObjectMapperAdditions",
-                .product(name: "Realm", package: "realm-swift"),
                 .product(name: "RealmSwift", package: "realm-swift"),
             ],
             path: "ObjectMapperAdditions",
