@@ -13,10 +13,12 @@ let package = Package(
     products: [
         .library(
             name: "ObjectMapperAdditions",
+            type: .dynamic,
             targets: ["ObjectMapperAdditions"]
         ),
         .library(
             name: "ObjectMapperAdditionsRealm",
+            type: .dynamic,
             targets: ["ObjectMapperAdditionsRealm"]
         )
     ],
