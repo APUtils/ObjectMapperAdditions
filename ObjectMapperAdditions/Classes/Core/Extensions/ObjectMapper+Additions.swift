@@ -26,6 +26,10 @@ public extension Map {
 
 public extension BaseMappable {
     
+    var jsonDescription: String {
+        toJSONString(options: .sortedKeysWithoutEscapingSlashesIfPossible) ?? "error"
+    }
+    
     /// Returns the JSON String for the object
     func toJSONString(options: JSONSerialization.WritingOptions) -> String? {
         let dictionary = Mapper<Self>().toJSON(self)
@@ -34,6 +38,11 @@ public extension BaseMappable {
 }
 
 public extension Array where Element: BaseMappable {
+    
+    /// Returns the JSON String for the object
+    var jsonDescription: String {
+        toJSONString(options: .sortedKeysWithoutEscapingSlashesIfPossible) ?? "error"
+    }
     
     /// Returns the JSON String for the object
     func toJSONString(options: JSONSerialization.WritingOptions) -> String? {
