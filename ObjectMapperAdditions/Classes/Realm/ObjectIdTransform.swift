@@ -10,21 +10,22 @@ import Foundation
 import ObjectMapper
 import RealmSwift
 
-final class ObjectIdTransform: TransformType {
-    typealias Object = ObjectId
-    typealias JSON = [String: String]
+public final class ObjectIdTransform: TransformType {
+    public typealias Object = ObjectId
+    public typealias JSON = [String: String]
     
-    static let shared = ObjectIdTransform()
+    public static let shared = ObjectIdTransform()
+    
     fileprivate init() {}
     
-    func transformFromJSON(_ value: Any?) -> Object? {
+    public func transformFromJSON(_ value: Any?) -> Object? {
         guard let dateDict = value as? JSON,
               let id = dateDict._getObjectID() else { return nil }
         
         return id
     }
     
-    func transformToJSON(_ value: Object?) -> JSON? {
+    public func transformToJSON(_ value: Object?) -> JSON? {
         if let id = value {
             let string = id.stringValue
             return ["$oid": string]
