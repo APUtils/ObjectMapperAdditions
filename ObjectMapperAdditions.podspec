@@ -54,6 +54,6 @@ Pod::Spec.new do |s|
     realm.source_files = 'ObjectMapperAdditions/Classes/Realm/**/*'
     realm.resource_bundle = {"ObjectMapperAdditions.Realm.privacy"=>"ObjectMapperAdditions/Privacy/ObjectMapperAdditions.Realm/PrivacyInfo.xcprivacy"}
     realm.dependency 'ObjectMapperAdditions/Core'
-    realm.dependency 'RealmSwift'
+    realm.dependency 'RealmSwift', '< 20.0'
   end
 end
