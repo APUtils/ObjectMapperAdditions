@@ -1,33 +1,32 @@
 //
-//  ObjectIdTransform.swift
+//  MongoDateTransform.swift
 //  Pods
 //
-//  Created by Anton Plebanovich on 12.12.21.
+//  Created by Anton Plebanovich on 10.10.21.
 //  Copyright © 2021 Anton Plebanovich. All rights reserved.
 //
 
 import Foundation
 import ObjectMapper
-import RealmSwift
 
-final class ObjectIdTransform: TransformType {
-    typealias Object = ObjectId
+final class MongoDateTransform: TransformType {
+    typealias Object = Date
     typealias JSON = [String: String]
     
-    static let shared = ObjectIdTransform()
+    static let shared = MongoDateTransform()
     fileprivate init() {}
     
     func transformFromJSON(_ value: Any?) -> Object? {
         guard let dateDict = value as? JSON,
-              let id = dateDict._getObjectID() else { return nil }
+              let date = dateDict._getMongoDate() else { return nil }
         
-        return id
+        return date
     }
     
     func transformToJSON(_ value: Object?) -> JSON? {
-        if let id = value {
-            let string = id.stringValue
-            return ["$oid": string]
+        if let date = value {
+            let string = ISO8601DateFormatter.default.string(from: date)
+            return ["$date": string]
         } else {
             return nil
         }
