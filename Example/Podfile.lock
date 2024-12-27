@@ -15,32 +15,32 @@ PODS:
   - APExtensions/Storyboard (14.2.0):
     - RoutableLogger
   - APExtensions/ViewModel (14.2.0)
-  - CwlCatchException (2.2.0):
-    - CwlCatchExceptionSupport (~> 2.2.0)
-  - CwlCatchExceptionSupport (2.2.0)
-  - CwlMachBadInstructionHandler (2.2.0)
-  - CwlPosixPreconditionTesting (2.2.0)
-  - CwlPreconditionTesting (2.2.1):
-    - CwlCatchException (~> 2.2.0)
-    - CwlMachBadInstructionHandler (~> 2.2.0)
-    - CwlPosixPreconditionTesting (~> 2.2.0)
-  - Nimble (13.3.0):
+  - CwlCatchException (2.2.1):
+    - CwlCatchExceptionSupport (~> 2.2.1)
+  - CwlCatchExceptionSupport (2.2.1)
+  - CwlMachBadInstructionHandler (2.2.2)
+  - CwlPosixPreconditionTesting (2.2.2)
+  - CwlPreconditionTesting (2.2.2):
+    - CwlCatchException (~> 2.2.1)
+    - CwlMachBadInstructionHandler (~> 2.2.2)
+    - CwlPosixPreconditionTesting (~> 2.2.2)
+  - Nimble (13.7.1):
     - CwlPreconditionTesting (~> 2.2.0)
-  - ObjectMapper (4.2.0)
+  - ObjectMapper (4.4.2)
   - ObjectMapperAdditions/Core (13.2.1):
     - ObjectMapper
     - RoutableLogger (>= 12.0)
   - ObjectMapperAdditions/Realm (13.2.1):
     - ObjectMapper
     - ObjectMapperAdditions/Core
-    - RealmSwift
+    - RealmSwift (< 20.0)
     - RoutableLogger (>= 12.0)
-  - Quick (7.5.0)
-  - Realm (10.49.1):
-    - Realm/Headers (= 10.49.1)
-  - Realm/Headers (10.49.1)
-  - RealmSwift (10.49.1):
-    - Realm (= 10.49.1)
+  - Quick (7.6.2)
+  - Realm (10.54.2):
+    - Realm/Headers (= 10.54.2)
+  - Realm/Headers (10.54.2)
+  - RealmSwift (10.54.2):
+    - Realm (= 10.54.2)
   - RoutableLogger (12.4.0)
 
 DEPENDENCIES:
@@ -50,7 +50,7 @@ DEPENDENCIES:
   - Quick
 
 SPEC REPOS:
-  trunk:
+  https://github.com/CocoaPods/Specs.git:
     - CwlCatchException
     - CwlCatchExceptionSupport
     - CwlMachBadInstructionHandler
@@ -71,24 +71,24 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   APExtensions:
-    :commit: 7cead7483a09dcf0de15264361f809014166d995
+    :commit: 286926727e456e5281431752d2954ef5eccdd7fe
     :git: https://github.com/APUtils/APExtensions
 
 SPEC CHECKSUMS:
   APExtensions: 06c059d069034fb32db789432ee889274b453435
-  CwlCatchException: 51bf8319009a31104ea6f0568730d1ecc25b6454
-  CwlCatchExceptionSupport: 1345d6adb01a505933f2bc972dab60dcb9ce3e50
-  CwlMachBadInstructionHandler: ea1030428925d9bf340882522af30712fb4bf356
-  CwlPosixPreconditionTesting: a125dee731883f2582715f548c6b6c92c7fde145
-  CwlPreconditionTesting: ccfd08aca58d14e04062b2a3dd2fd52e09857453
-  Nimble: 3ac6c6b0b7e9835d1540b6507d8054b12a415536
-  ObjectMapper: 1eb41f610210777375fa806bf161dc39fb832b81
-  ObjectMapperAdditions: 4a0594acda4d3464de6a5e1048c46ae37d69d918
-  Quick: 2b651168441479b949ba987f3cee41a9cc53aa32
-  Realm: 1fab4a224fd7a294eca142a0efe8b54546290fbf
-  RealmSwift: 7c3a9c001161eb01b96b171ad965a9c498b962b0
+  CwlCatchException: 7acc161b299a6de7f0a46a6ed741eae2c8b4d75a
+  CwlCatchExceptionSupport: 54ccab8d8c78907b57f99717fb19d4cc3bce02dc
+  CwlMachBadInstructionHandler: dae4fdd124d45c9910ac240287cc7b898f4502a1
+  CwlPosixPreconditionTesting: ecd095aa2129e740b44301c34571e8d85906fb88
+  CwlPreconditionTesting: 67a0047dd4de4382b93442c0e3f25207f984f35a
+  Nimble: 317d713c30c3336dd8571da1889f7ec3afc626e8
+  ObjectMapper: e6e4d91ff7f2861df7aecc536c92d8363f4c9677
+  ObjectMapperAdditions: c7fc9c29d25259e0118cfb9147005fe6f6d8c698
+  Quick: b8bec97cd4b9f21da0472d45580f763b801fc353
+  Realm: 16852517a207e98cc6acba9336b56c30d06d84ad
+  RealmSwift: bca777b3904ee58a9b16036e1840012f03348060
   RoutableLogger: 5c0d14daf01b023d1506e5a426b53418daac3f8b
 
-PODFILE CHECKSUM: 1d81a4dd769646c095d1769115a7868b1846bca9
+PODFILE CHECKSUM: e223c3e3286192f30711607ae0eaf728240324a6
 
-COCOAPODS: 1.15.2
+COCOAPODS: 1.16.2

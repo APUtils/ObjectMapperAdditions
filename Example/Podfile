@@ -5,6 +5,8 @@ install! 'cocoapods', :warn_for_unused_master_specs_repo => false
 # Add pods as frameworks so we could add obj-c and swift 3.0 pods
 use_frameworks!
 
+# https://github.com/CocoaPods/CocoaPods/issues/12574
+source 'https://github.com/CocoaPods/Specs.git'
 
 target 'ObjectMapperAdditions_Example' do
   pod 'APExtensions', :git => 'https://github.com/APUtils/APExtensions'
