@@ -28,10 +28,10 @@ PODS:
     - CwlPreconditionTesting (~> 2.2.0)
   - ObjectMapper (4.4.2)
   - ObjectMapperAdditions/Core (14.0.0):
-    - ObjectMapper
+    - ObjectMapper (>= 4.4.2)
     - RoutableLogger (>= 12.0)
   - ObjectMapperAdditions/Realm (14.0.0):
-    - ObjectMapper
+    - ObjectMapper (>= 4.4.2)
     - ObjectMapperAdditions/Core
     - RealmSwift (< 20.0)
     - RoutableLogger (>= 12.0)
@@ -83,7 +83,7 @@ SPEC CHECKSUMS:
   CwlPreconditionTesting: 67a0047dd4de4382b93442c0e3f25207f984f35a
   Nimble: 317d713c30c3336dd8571da1889f7ec3afc626e8
   ObjectMapper: e6e4d91ff7f2861df7aecc536c92d8363f4c9677
-  ObjectMapperAdditions: bf113600375554fd43b14f275379632c7a74723c
+  ObjectMapperAdditions: e571ea03eaa55bea1375a99f033dfa06403d40ac
   Quick: b8bec97cd4b9f21da0472d45580f763b801fc353
   Realm: 5383a96518b1dbff38b3403330e1d2e27f25c17c
   RealmSwift: 87fd7ca547e4cbbfbe0be2b0b2fb1ac7b95753e2

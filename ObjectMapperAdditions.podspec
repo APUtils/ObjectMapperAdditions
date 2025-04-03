@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'ObjectMapperAdditions'
-  s.version          = '14.0.0'
+  s.version          = '14.0.1'
   s.summary          = 'ObjectMapper Extensions and Transforms'
 
 # This description is used to generate tags and improve search results.
@@ -30,10 +30,9 @@ Pod::Spec.new do |s|
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '13.0'
-  s.osx.deployment_target = '10.13'
+  s.osx.deployment_target = '12.0'
   s.tvos.deployment_target = '12.0'
   s.watchos.deployment_target = '5.0'
-  s.swift_versions = ['5']
   
   # 1.12.0: Ensure developers won't hit CocoaPods/CocoaPods#11402 with the resource
   # bundle for the privacy manifest.
@@ -42,7 +41,7 @@ Pod::Spec.new do |s|
   
   s.default_subspec = 'Core'
   s.frameworks = 'Foundation'
-  s.dependency 'ObjectMapper'#, '>= 4.3.1'
+  s.dependency 'ObjectMapper', '>= 4.4.2'
   s.dependency 'RoutableLogger', '>= 12.0'
 
   s.subspec 'Core' do |core|
