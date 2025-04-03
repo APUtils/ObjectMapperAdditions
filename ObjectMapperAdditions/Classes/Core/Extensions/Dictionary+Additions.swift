@@ -10,7 +10,7 @@ import Foundation
 
 extension Dictionary where Key == String {
     func _getMongoDate() -> Date? {
-        guard let dateString = _string(forKey: "$date") else { return nil }
+        guard let dateString = self._string(forKey: "$date") else { return nil }
         return ISO8601DateFormatter.default.date(from: dateString)
     }
 }

@@ -25,7 +25,7 @@ let package = Package(
     dependencies: [
         .package(url: "https://github.com/realm/realm-swift", .upToNextMajor(from: "10.50.0")),
         .package(url: "https://github.com/tristanhimmelman/ObjectMapper", .upToNextMinor(from: "4.2.0")),
-        .package(url: "https://github.com/anton-plebanovich/RoutableLogger", .upToNextMajor(from: "1.0.0")),
+        .package(url: "https://github.com/anton-plebanovich/RoutableLogger", .upToNextMajor(from: "2.0.0")),
     ],
     targets: [
         .target(

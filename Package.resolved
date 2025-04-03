@@ -1,5 +1,5 @@
 {
-  "originHash" : "2481230eb10655e7865ea05da15017462a775e9c6b9aa899142e0fceb642db65",
+  "originHash" : "961e21c3896042ff6eade3920a606c2553f6483173677044d0197ef35f8304c7",
   "pins" : [
     {
       "identity" : "objectmapper",
@@ -15,8 +15,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/realm/realm-core.git",
       "state" : {
-        "revision" : "9cf7ef4ad8e2f4c7a519c9a395ca3d253bb87aa8",
-        "version" : "14.6.2"
+        "revision" : "cccb3ca9e26ec452a29f2f0d4050d1e38b8a3d43",
+        "version" : "14.14.0"
       }
     },
     {
@@ -24,8 +24,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/realm/realm-swift",
       "state" : {
-        "revision" : "2000569f03948c281afc83c36c710ab15e5dd33c",
-        "version" : "10.50.0"
+        "revision" : "8cb364a6a63695df296f05b53f7c3f3b1dda6af3",
+        "version" : "10.54.3"
       }
     },
     {
@@ -33,8 +33,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/anton-plebanovich/RoutableLogger",
       "state" : {
-        "revision" : "15961a556f5e8263e5ce777836f4bdf927839ae5",
-        "version" : "1.0.1"
+        "revision" : "e544488de124ab2a72a4e2490759ab6a8a084701",
+        "version" : "2.0.0"
       }
     }
   ],

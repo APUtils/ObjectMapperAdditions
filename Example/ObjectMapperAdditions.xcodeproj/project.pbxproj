@@ -41,12 +41,12 @@
 
 /* Begin PBXFileReference section */
 		0D2D24CD2171632B006817DE /* DEPLOY PROCESS.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = "DEPLOY PROCESS.md"; path = "../DEPLOY PROCESS.md"; sourceTree = "<group>"; };
-		0D2D24CF21716F8F006817DE /* checkBuild.command */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; name = checkBuild.command; path = ../checkBuild.command; sourceTree = "<group>"; };
+		0D2D24CF21716F8F006817DE /* checkBuild.command */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; name = checkBuild.command; path = ../../checkBuild.command; sourceTree = "<group>"; };
 		0D716B7026285E2200B28330 /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Package.swift; path = ../Package.swift; sourceTree = "<group>"; };
 		0DC249BA2737CA0F00623738 /* RealmPropertyTransform_Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmPropertyTransform_Spec.swift; sourceTree = "<group>"; };
 		0DC249BC2737CAED00623738 /* RealmPropertyTypeCastTransform_Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmPropertyTypeCastTransform_Spec.swift; sourceTree = "<group>"; };
 		0DDE964B278F046D00E346EA /* Create_Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Create_Spec.swift; sourceTree = "<group>"; };
-		1E6A5436B00ACF85E4A03951 /* podCheck.command */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; name = podCheck.command; path = ../podCheck.command; sourceTree = "<group>"; };
+		1E6A5436B00ACF85E4A03951 /* podCheck.command */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; name = podCheck.command; path = ../../podCheck.command; sourceTree = "<group>"; };
 		3306BDD26A7024542AF11D3D /* ObjectMapperAdditions.podspec */ = {isa = PBXFileReference; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = ObjectMapperAdditions.podspec; path = ../ObjectMapperAdditions.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		43260D3A6963AE16EDA55BBC /* Pods-ObjectMapperAdditions_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ObjectMapperAdditions_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ObjectMapperAdditions_Example/Pods-ObjectMapperAdditions_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		5CAD258AE7CB612216344F76 /* .gitignore */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = .gitignore; path = ../.gitignore; sourceTree = "<group>"; };
@@ -75,10 +75,10 @@
 		C4D05D631BC1A7024D3C6249 /* .travis.yml */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = .travis.yml; path = ../.travis.yml; sourceTree = "<group>"; };
 		CC7012B6B5FC05C395C0B729 /* Pods-ObjectMapperAdditions_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ObjectMapperAdditions_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-ObjectMapperAdditions_Example/Pods-ObjectMapperAdditions_Example.release.xcconfig"; sourceTree = "<group>"; };
 		D46646B272B8B5A8181F666B /* .cocoadocs.yml */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = .cocoadocs.yml; path = ../.cocoadocs.yml; sourceTree = "<group>"; };
-		D99D6198B7EB09C279219FB2 /* podPush.command */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; name = podPush.command; path = ../podPush.command; sourceTree = "<group>"; };
+		D99D6198B7EB09C279219FB2 /* podPush.command */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; name = podPush.command; path = ../../podPush.command; sourceTree = "<group>"; };
 		DDEDDCD09D65355F843EFBC5 /* Pods_ObjectMapperAdditions_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ObjectMapperAdditions_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E28C98D62255F4AA00C5DA49 /* ExampleEnums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleEnums.swift; sourceTree = "<group>"; };
-		E2D5E3922BC5760B00E746C8 /* packageUpdate.command */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; name = packageUpdate.command; path = ../packageUpdate.command; sourceTree = "<group>"; };
+		E2D5E3922BC5760B00E746C8 /* packageUpdate.command */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; name = packageUpdate.command; path = ../../packageUpdate.command; sourceTree = "<group>"; };
 		E2D5E3932BC9231900E746C8 /* MyPersistedRealmModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPersistedRealmModel.swift; sourceTree = "<group>"; };
 		F253760DFAA3796C1818AA2F /* CHANGELOG.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = CHANGELOG.md; path = ../CHANGELOG.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -106,6 +106,7 @@
 		607FACC71AFB9204008FA782 = {
 			isa = PBXGroup;
 			children = (
+				E27540EA2D9E8F3100CCE68F /* _Scripts */,
 				607FACF51AFB993E008FA782 /* Podspec Metadata */,
 				607FACD21AFB9204008FA782 /* Example for ObjectMapperAdditions */,
 				607FACE81AFB9204008FA782 /* Tests */,
@@ -184,14 +185,10 @@
 				5CAD258AE7CB612216344F76 /* .gitignore */,
 				C4D05D631BC1A7024D3C6249 /* .travis.yml */,
 				F253760DFAA3796C1818AA2F /* CHANGELOG.md */,
-				0D2D24CF21716F8F006817DE /* checkBuild.command */,
 				0D2D24CD2171632B006817DE /* DEPLOY PROCESS.md */,
 				9DFE7F9B21F6E89955E35AA5 /* LICENSE */,
 				3306BDD26A7024542AF11D3D /* ObjectMapperAdditions.podspec */,
 				0D716B7026285E2200B28330 /* Package.swift */,
-				E2D5E3922BC5760B00E746C8 /* packageUpdate.command */,
-				1E6A5436B00ACF85E4A03951 /* podCheck.command */,
-				D99D6198B7EB09C279219FB2 /* podPush.command */,
 				A7D8958764C84B431CB2CCEE /* README.md */,
 			);
 			name = "Podspec Metadata";
@@ -220,6 +217,17 @@
 				7780827ABC350B91C5BFF6F0 /* Pods-ObjectMapperAdditions_Tests.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		E27540EA2D9E8F3100CCE68F /* _Scripts */ = {
+			isa = PBXGroup;
+			children = (
+				0D2D24CF21716F8F006817DE /* checkBuild.command */,
+				E2D5E3922BC5760B00E746C8 /* packageUpdate.command */,
+				1E6A5436B00ACF85E4A03951 /* podCheck.command */,
+				D99D6198B7EB09C279219FB2 /* podPush.command */,
+			);
+			path = _Scripts;
 			sourceTree = "<group>";
 		};
 		EDA27D7F51BD1FF51FF63B95 /* Frameworks */ = {
@@ -281,7 +289,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = YES;
 				LastSwiftUpdateCheck = 0720;
-				LastUpgradeCheck = 1620;
+				LastUpgradeCheck = 1630;
 				ORGANIZATIONNAME = CocoaPods;
 				TargetAttributes = {
 					607FACCF1AFB9204008FA782 = {

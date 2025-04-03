@@ -11,7 +11,7 @@ import RealmSwift
 
 extension Dictionary where Key == String {
     func _getObjectID() -> ObjectId? {
-        guard let idString = _string(forKey: "$oid") else { return nil }
+        guard let idString = self._string(forKey: "$oid") else { return nil }
         return try? ObjectId(string: idString)
     }
 }
