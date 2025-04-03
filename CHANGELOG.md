@@ -3,6 +3,18 @@ All notable changes to this project will be documented in this file.
 `ObjectMapperAdditions` adheres to [Semantic Versioning](http://semver.org/).
 
 
+## [14.0.0](https://github.com/APUtils/LogsManager/releases/tag/14.0.0)
+Released on `2024-04-09`
+
+#### Added
+- `jsonDescription` for `BaseMappable` and `[BaseMappable]`
+- New transform: `ObjectIdTransform`
+- New transform: `MongoDateTransform`
+
+#### Changed
+- Realm podspec limitation `< 20.0`
+
+
 ## [13.2.1](https://github.com/APUtils/LogsManager/releases/tag/13.2.1)
 Released on `2024-04-09`
 

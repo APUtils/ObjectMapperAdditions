@@ -22,7 +22,7 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 
 - In Xcode select `File` > `Add Packages...`
 - Copy and paste the following into the search: `https://github.com/APUtils/ObjectMapperAdditions`
-- **‼️Make sure `Up to Next Major Version` is selected and put `13.2.0` into the lower bound if needed. There is a bug in 14.2 Xcode, it does not select versions higher than 9.0.0 by default‼️**
+- **‼️Make sure `Up to Next Major Version` is selected and put `14.0.0` into the lower bound if needed. There is a bug in 14.2 Xcode, it does not select versions higher than 9.0.0 by default‼️**
 - Tap `Add Package`
 - Select `ObjectMapperAdditions` to add core functionality
 - Optionally, select `ObjectMapperAdditionsRealm` to add `Realm` related functionality
@@ -35,13 +35,13 @@ ObjectMapperAdditions is available through [CocoaPods](http://cocoapods.org).
 To install Core features, simply add the following line to your Podfile:
 
 ```ruby
-pod 'ObjectMapperAdditions/Core', '~> 13.2'
+pod 'ObjectMapperAdditions/Core', '~> 14.0'
 ```
 
 To add Realm transform to your project add the following line to your Podfile:
 
 ```ruby
-pod 'ObjectMapperAdditions/Realm', '~> 13.2'
+pod 'ObjectMapperAdditions/Realm', '~> 14.0'
 ```
 
 ## Usage
