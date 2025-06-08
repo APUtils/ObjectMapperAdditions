@@ -10,4 +10,18 @@ import Foundation
 
 extension ISO8601DateFormatter {
     static let `default`: ISO8601DateFormatter = ISO8601DateFormatter()
+    
+    static let withMillisAndTimeZone: ISO8601DateFormatter = {
+        let df = ISO8601DateFormatter()
+        df.formatOptions = [
+            .withInternetDateTime,
+            .withDashSeparatorInDate,
+            .withColonSeparatorInTime,
+            .withTimeZone,
+            .withFractionalSeconds,
+            .withColonSeparatorInTimeZone
+        ]
+        
+        return df
+    }()
 }

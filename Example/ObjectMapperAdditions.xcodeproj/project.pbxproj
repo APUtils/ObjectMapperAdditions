@@ -27,6 +27,7 @@
 		B0D3A03A1F7A5D740062AD2B /* ISO8601JustDateTransform_Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D3A0381F7A5D710062AD2B /* ISO8601JustDateTransform_Spec.swift */; };
 		E28C98D72255F4AA00C5DA49 /* ExampleEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = E28C98D62255F4AA00C5DA49 /* ExampleEnums.swift */; };
 		E2D5E3942BC9231900E746C8 /* MyPersistedRealmModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2D5E3932BC9231900E746C8 /* MyPersistedRealmModel.swift */; };
+		E2EC16302DF5ABB500F22701 /* MongoDateTransform_Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2EC162F2DF5ABB500F22701 /* MongoDateTransform_Spec.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +81,7 @@
 		E28C98D62255F4AA00C5DA49 /* ExampleEnums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleEnums.swift; sourceTree = "<group>"; };
 		E2D5E3922BC5760B00E746C8 /* packageUpdate.command */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; name = packageUpdate.command; path = ../../packageUpdate.command; sourceTree = "<group>"; };
 		E2D5E3932BC9231900E746C8 /* MyPersistedRealmModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPersistedRealmModel.swift; sourceTree = "<group>"; };
+		E2EC162F2DF5ABB500F22701 /* MongoDateTransform_Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MongoDateTransform_Spec.swift; sourceTree = "<group>"; };
 		F253760DFAA3796C1818AA2F /* CHANGELOG.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = CHANGELOG.md; path = ../CHANGELOG.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -161,9 +163,10 @@
 				607FACE91AFB9204008FA782 /* _Supporting Files */,
 				0DDE964B278F046D00E346EA /* Create_Spec.swift */,
 				B0D3A0381F7A5D710062AD2B /* ISO8601JustDateTransform_Spec.swift */,
+				E2EC162F2DF5ABB500F22701 /* MongoDateTransform_Spec.swift */,
+				B02194961F2BAE7B00E228EB /* Realm_Spec.swift */,
 				0DC249BA2737CA0F00623738 /* RealmPropertyTransform_Spec.swift */,
 				0DC249BC2737CAED00623738 /* RealmPropertyTypeCastTransform_Spec.swift */,
-				B02194961F2BAE7B00E228EB /* Realm_Spec.swift */,
 				B0D3A0311F7A54BC0062AD2B /* TimestampTransform_Spec.swift */,
 				607FACEB1AFB9204008FA782 /* TypeCast_Spec.swift */,
 			);
@@ -463,6 +466,7 @@
 				B02194981F2BAF3700E228EB /* Realm_Spec.swift in Sources */,
 				B0D3A0331F7A54E90062AD2B /* TimestampTransform_Spec.swift in Sources */,
 				B0D3A03A1F7A5D740062AD2B /* ISO8601JustDateTransform_Spec.swift in Sources */,
+				E2EC16302DF5ABB500F22701 /* MongoDateTransform_Spec.swift in Sources */,
 				607FACEC1AFB9204008FA782 /* TypeCast_Spec.swift in Sources */,
 				0DC249BB2737CA0F00623738 /* RealmPropertyTransform_Spec.swift in Sources */,
 				0DC249BD2737CAED00623738 /* RealmPropertyTypeCastTransform_Spec.swift in Sources */,
