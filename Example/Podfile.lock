@@ -27,13 +27,13 @@ PODS:
   - Nimble (13.7.1):
     - CwlPreconditionTesting (~> 2.2.0)
   - ObjectMapper (4.4.2)
-  - ObjectMapperAdditions/Core (14.0.1):
+  - ObjectMapperAdditions/Core (14.0.2):
     - ObjectMapper (>= 4.4.2)
     - RoutableLogger (>= 12.0)
-  - ObjectMapperAdditions/Realm (14.0.1):
+  - ObjectMapperAdditions/Realm (14.0.2):
     - ObjectMapper (>= 4.4.2)
     - ObjectMapperAdditions/Core
-    - RealmSwift (>= 20.0)
+    - RealmSwift
     - RoutableLogger (>= 12.0)
   - Quick (7.6.2)
   - Realm (20.0.2):
@@ -71,7 +71,7 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   APExtensions:
-    :commit: 6dcfed3a7d7c7940860c3099a86ebae638eefec1
+    :commit: bdf28983549e0cdb4b60becb9323cc814c09b86a
     :git: https://github.com/APUtils/APExtensions
 
 SPEC CHECKSUMS:
@@ -83,7 +83,7 @@ SPEC CHECKSUMS:
   CwlPreconditionTesting: 67a0047dd4de4382b93442c0e3f25207f984f35a
   Nimble: 317d713c30c3336dd8571da1889f7ec3afc626e8
   ObjectMapper: e6e4d91ff7f2861df7aecc536c92d8363f4c9677
-  ObjectMapperAdditions: f59c21cfeef24d557494ad23ce8f3b6b93e03f71
+  ObjectMapperAdditions: fff03f0b2841d95a7269c70df90d99107698f78c
   Quick: b8bec97cd4b9f21da0472d45580f763b801fc353
   Realm: 395416e3b150a37ca12fee6477a2ec8c11f8a048
   RealmSwift: 199fd4d7e86491d1147c662c6a36aa55136a54d0
