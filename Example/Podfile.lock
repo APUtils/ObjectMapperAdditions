@@ -1,20 +1,20 @@
 PODS:
-  - APExtensions (15.0.0):
-    - APExtensions/Core (= 15.0.0)
-    - APExtensions/Dispatch (= 15.0.0)
-    - APExtensions/Occupiable (= 15.0.0)
-    - APExtensions/OptionalType (= 15.0.0)
-    - APExtensions/Storyboard (= 15.0.0)
-    - APExtensions/ViewModel (= 15.0.0)
-  - APExtensions/Core (15.0.0):
+  - APExtensions (15.0.1):
+    - APExtensions/Core (= 15.0.1)
+    - APExtensions/Dispatch (= 15.0.1)
+    - APExtensions/Occupiable (= 15.0.1)
+    - APExtensions/OptionalType (= 15.0.1)
+    - APExtensions/Storyboard (= 15.0.1)
+    - APExtensions/ViewModel (= 15.0.1)
+  - APExtensions/Core (15.0.1):
     - RoutableLogger
-  - APExtensions/Dispatch (15.0.0):
+  - APExtensions/Dispatch (15.0.1):
     - RoutableLogger
-  - APExtensions/Occupiable (15.0.0)
-  - APExtensions/OptionalType (15.0.0)
-  - APExtensions/Storyboard (15.0.0):
+  - APExtensions/Occupiable (15.0.1)
+  - APExtensions/OptionalType (15.0.1)
+  - APExtensions/Storyboard (15.0.1):
     - RoutableLogger
-  - APExtensions/ViewModel (15.0.0)
+  - APExtensions/ViewModel (15.0.1)
   - CwlCatchException (2.2.1):
     - CwlCatchExceptionSupport (~> 2.2.1)
   - CwlCatchExceptionSupport (2.2.1)
@@ -27,20 +27,20 @@ PODS:
   - Nimble (13.7.1):
     - CwlPreconditionTesting (~> 2.2.0)
   - ObjectMapper (4.4.2)
-  - ObjectMapperAdditions/Core (14.0.0):
+  - ObjectMapperAdditions/Core (14.0.1):
     - ObjectMapper (>= 4.4.2)
     - RoutableLogger (>= 12.0)
-  - ObjectMapperAdditions/Realm (14.0.0):
+  - ObjectMapperAdditions/Realm (14.0.1):
     - ObjectMapper (>= 4.4.2)
     - ObjectMapperAdditions/Core
-    - RealmSwift (< 20.0)
+    - RealmSwift (>= 20.0)
     - RoutableLogger (>= 12.0)
   - Quick (7.6.2)
-  - Realm (10.54.3):
-    - Realm/Headers (= 10.54.3)
-  - Realm/Headers (10.54.3)
-  - RealmSwift (10.54.3):
-    - Realm (= 10.54.3)
+  - Realm (20.0.2):
+    - Realm/Headers (= 20.0.2)
+  - Realm/Headers (20.0.2)
+  - RealmSwift (20.0.2):
+    - Realm (= 20.0.2)
   - RoutableLogger (13.0.0)
 
 DEPENDENCIES:
@@ -71,11 +71,11 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   APExtensions:
-    :commit: fc578689e8f792c0c9e87ce3150e241b0e1d976d
+    :commit: 6dcfed3a7d7c7940860c3099a86ebae638eefec1
     :git: https://github.com/APUtils/APExtensions
 
 SPEC CHECKSUMS:
-  APExtensions: d0692b34c786b9282e09b9cd519c58269f847c62
+  APExtensions: 1c783b402ac7100f54bc7073cf0e1621d3dcbc8d
   CwlCatchException: 7acc161b299a6de7f0a46a6ed741eae2c8b4d75a
   CwlCatchExceptionSupport: 54ccab8d8c78907b57f99717fb19d4cc3bce02dc
   CwlMachBadInstructionHandler: dae4fdd124d45c9910ac240287cc7b898f4502a1
@@ -83,10 +83,10 @@ SPEC CHECKSUMS:
   CwlPreconditionTesting: 67a0047dd4de4382b93442c0e3f25207f984f35a
   Nimble: 317d713c30c3336dd8571da1889f7ec3afc626e8
   ObjectMapper: e6e4d91ff7f2861df7aecc536c92d8363f4c9677
-  ObjectMapperAdditions: e571ea03eaa55bea1375a99f033dfa06403d40ac
+  ObjectMapperAdditions: f59c21cfeef24d557494ad23ce8f3b6b93e03f71
   Quick: b8bec97cd4b9f21da0472d45580f763b801fc353
-  Realm: 5383a96518b1dbff38b3403330e1d2e27f25c17c
-  RealmSwift: 87fd7ca547e4cbbfbe0be2b0b2fb1ac7b95753e2
+  Realm: 395416e3b150a37ca12fee6477a2ec8c11f8a048
+  RealmSwift: 199fd4d7e86491d1147c662c6a36aa55136a54d0
   RoutableLogger: 31ce799b16b4868c169ed68c36e25437dd0ca40e
 
 PODFILE CHECKSUM: e223c3e3286192f30711607ae0eaf728240324a6

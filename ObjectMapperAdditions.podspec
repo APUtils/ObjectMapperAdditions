@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'ObjectMapperAdditions'
-  s.version          = '14.0.1'
+  s.version          = '14.0.2'
   s.summary          = 'ObjectMapper Extensions and Transforms'
 
 # This description is used to generate tags and improve search results.
@@ -53,6 +53,6 @@ Pod::Spec.new do |s|
     realm.source_files = 'ObjectMapperAdditions/Classes/Realm/**/*'
     realm.resource_bundle = {"ObjectMapperAdditions.Realm.privacy"=>"ObjectMapperAdditions/Privacy/ObjectMapperAdditions.Realm/PrivacyInfo.xcprivacy"}
     realm.dependency 'ObjectMapperAdditions/Core'
-    realm.dependency 'RealmSwift', '< 20.0'
+    realm.dependency 'RealmSwift'
   end
 end
