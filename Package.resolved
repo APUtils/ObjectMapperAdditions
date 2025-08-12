@@ -1,13 +1,13 @@
 {
-  "originHash" : "961e21c3896042ff6eade3920a606c2553f6483173677044d0197ef35f8304c7",
+  "originHash" : "163b7b864558f0e693d0e42efce6b27bcdcad8c6e1626107f1da97bb4d5d4ab6",
   "pins" : [
     {
       "identity" : "objectmapper",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/tristanhimmelman/ObjectMapper",
       "state" : {
-        "revision" : "0b96a734de3ea1c87374ae677064f86adb0716ec",
-        "version" : "4.2.0"
+        "revision" : "6021c6035e83a306047348666f6400dc61445d3b",
+        "version" : "4.4.3"
       }
     },
     {
@@ -24,8 +24,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/realm/realm-swift",
       "state" : {
-        "revision" : "8cb364a6a63695df296f05b53f7c3f3b1dda6af3",
-        "version" : "10.54.3"
+        "revision" : "54eebd2b5e7a4a8055a7a8b55ac859a48462d722",
+        "version" : "10.54.5"
       }
     },
     {
