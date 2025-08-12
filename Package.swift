@@ -6,9 +6,9 @@ let package = Package(
     name: "ObjectMapperAdditions",
     platforms: [
         .iOS(.v13),
-        .macOS(.v10_13),
+        .macOS(.v12),
         .tvOS(.v12),
-        .watchOS(.v4),
+        .watchOS(.v5),
     ],
     products: [
         .library(
