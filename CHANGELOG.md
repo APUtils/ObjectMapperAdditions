@@ -3,6 +3,17 @@ All notable changes to this project will be documented in this file.
 `ObjectMapperAdditions` adheres to [Semantic Versioning](http://semver.org/).
 
 
+## [14.0.2](https://github.com/APUtils/LogsManager/releases/tag/14.0.2)
+Released on `2025-08-12`
+
+#### Changed
+- [MongoDateTransform] Better transform logic and tests
+- [RealmSwift] No strict limitation on dependency version
+
+#### Fixed
+- [SPM] Build and warning fixes [With [@AndreyzZz](https://github.com/AndreyzZz)]
+
+
 ## [14.0.0](https://github.com/APUtils/LogsManager/releases/tag/14.0.0)
 Released on `2025-04-03`
 
