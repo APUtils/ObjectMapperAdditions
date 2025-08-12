@@ -5,7 +5,7 @@ import PackageDescription
 let package = Package(
     name: "ObjectMapperAdditions",
     platforms: [
-        .iOS(.v12),
+        .iOS(.v13),
         .macOS(.v10_13),
         .tvOS(.v12),
         .watchOS(.v4),
@@ -24,7 +24,7 @@ let package = Package(
     ],
     dependencies: [
         .package(url: "https://github.com/realm/realm-swift", .upToNextMajor(from: "10.50.0")),
-        .package(url: "https://github.com/tristanhimmelman/ObjectMapper", .upToNextMinor(from: "4.2.0")),
+        .package(url: "https://github.com/tristanhimmelman/ObjectMapper", .upToNextMinor(from: "4.4.0")),
         .package(url: "https://github.com/anton-plebanovich/RoutableLogger", .upToNextMajor(from: "2.0.0")),
     ],
     targets: [
