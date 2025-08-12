@@ -35,6 +35,10 @@ let package = Package(
                 .product(name: "RoutableLogger", package: "RoutableLogger"),
             ],
             path: "ObjectMapperAdditions",
+            exclude: [
+                "Classes/Realm",
+                "Privacy/ObjectMapperAdditions.Realm",
+            ],
             sources: ["Classes/Core"],
             resources: [
                 .process("Privacy/ObjectMapperAdditions.Core/PrivacyInfo.xcprivacy")
@@ -50,6 +54,10 @@ let package = Package(
                 .product(name: "RealmSwift", package: "realm-swift"),
             ],
             path: "ObjectMapperAdditions",
+            exclude: [
+                "Classes/Core",
+                "Privacy/ObjectMapperAdditions.Core",
+            ],
             sources: ["Classes/Realm"],
             resources: [
                 .process("Privacy/ObjectMapperAdditions.Realm/PrivacyInfo.xcprivacy")
