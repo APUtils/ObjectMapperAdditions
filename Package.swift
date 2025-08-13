@@ -19,17 +19,6 @@ let package = Package(
             name: "ObjectMapperAdditionsRealm",
             targets: ["ObjectMapperAdditionsRealm"]
         ),
-// Let users to decide to use dynamic or static linking (SPM builds libraries statically by default)
-        .library(
-            name: "ObjectMapperAdditions-Dynamic",
-            type: .dynamic,
-            targets: ["ObjectMapperAdditions"]
-        ),
-        .library(
-            name: "ObjectMapperAdditionsRealm-Dynamic",
-            type: .dynamic,
-            targets: ["ObjectMapperAdditionsRealm"]
-        )
     ],
     dependencies: [
         .package(url: "https://github.com/realm/realm-swift", .upToNextMajor(from: "10.50.0")),
