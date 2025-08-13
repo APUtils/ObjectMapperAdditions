@@ -3,6 +3,13 @@ All notable changes to this project will be documented in this file.
 `ObjectMapperAdditions` adheres to [Semantic Versioning](http://semver.org/).
 
 
+## [14.0.3](https://github.com/APUtils/LogsManager/releases/tag/14.0.3)
+Released on `2025-08-13`
+
+#### Changed
+- [SPM] Use default `type` instead of `.dynamic` for libraries
+
+
 ## [14.0.2](https://github.com/APUtils/LogsManager/releases/tag/14.0.2)
 Released on `2025-08-12`
 
