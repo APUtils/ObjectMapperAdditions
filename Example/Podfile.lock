@@ -24,7 +24,7 @@ PODS:
     - CwlCatchException (~> 2.2.1)
     - CwlMachBadInstructionHandler (~> 2.2.2)
     - CwlPosixPreconditionTesting (~> 2.2.2)
-  - Nimble (13.7.1):
+  - Nimble (14.0.0):
     - CwlPreconditionTesting (~> 2.2.0)
   - ObjectMapper (4.4.2)
   - ObjectMapperAdditions/Core (14.0.2):
@@ -36,11 +36,11 @@ PODS:
     - RealmSwift
     - RoutableLogger (>= 12.0)
   - Quick (7.6.2)
-  - Realm (20.0.3):
-    - Realm/Headers (= 20.0.3)
-  - Realm/Headers (20.0.3)
-  - RealmSwift (20.0.3):
-    - Realm (= 20.0.3)
+  - Realm (20.0.4):
+    - Realm/Headers (= 20.0.4)
+  - Realm/Headers (20.0.4)
+  - RealmSwift (20.0.4):
+    - Realm (= 20.0.4)
   - RoutableLogger (13.0.0)
 
 DEPENDENCIES:
@@ -71,7 +71,7 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   APExtensions:
-    :commit: 9293dc8f0bbf9f6b7e1ea96e243f24ddeaafd6de
+    :commit: f3db744b655b8bedf5b56c4a52e3c105d1a36b69
     :git: https://github.com/APUtils/APExtensions
 
 SPEC CHECKSUMS:
@@ -81,12 +81,12 @@ SPEC CHECKSUMS:
   CwlMachBadInstructionHandler: dae4fdd124d45c9910ac240287cc7b898f4502a1
   CwlPosixPreconditionTesting: ecd095aa2129e740b44301c34571e8d85906fb88
   CwlPreconditionTesting: 67a0047dd4de4382b93442c0e3f25207f984f35a
-  Nimble: 317d713c30c3336dd8571da1889f7ec3afc626e8
+  Nimble: fcfcaab1cca78e301543f78669d70c166b4fadc3
   ObjectMapper: e6e4d91ff7f2861df7aecc536c92d8363f4c9677
   ObjectMapperAdditions: fff03f0b2841d95a7269c70df90d99107698f78c
   Quick: b8bec97cd4b9f21da0472d45580f763b801fc353
-  Realm: 853e5089d6042dff807bda000277eadfe2da93d2
-  RealmSwift: f33c19577cefcbf681345d721fcbc7b42be4c949
+  Realm: 1fca83c42ac1d5c7767974882c8de5a7abca4d89
+  RealmSwift: 84f36320f6133dea78d05c55bb46bba4387d6828
   RoutableLogger: 31ce799b16b4868c169ed68c36e25437dd0ca40e
 
 PODFILE CHECKSUM: e223c3e3286192f30711607ae0eaf728240324a6
