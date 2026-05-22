@@ -9,6 +9,9 @@
 import Foundation
 import ObjectMapper
 import RoutableLogger
+#if !COCOAPODS
+import ObjectMapperAdditions
+#endif
 
 public final class MongoDateTransform: TransformType {
     public typealias Object = Date

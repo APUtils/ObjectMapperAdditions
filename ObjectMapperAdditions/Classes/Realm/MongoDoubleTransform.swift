@@ -8,6 +8,9 @@
 
 import Foundation
 import ObjectMapper
+#if !COCOAPODS
+import ObjectMapperAdditions
+#endif
 
 public class MongoDoubleTransform: TransformType {
     public typealias Object = Double

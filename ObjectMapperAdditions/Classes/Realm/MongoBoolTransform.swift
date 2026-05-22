@@ -8,6 +8,9 @@
 
 import Foundation
 import ObjectMapper
+#if !COCOAPODS
+import ObjectMapperAdditions
+#endif
 
 public class MongoBoolTransform: TransformType {
     public typealias Object = Bool
