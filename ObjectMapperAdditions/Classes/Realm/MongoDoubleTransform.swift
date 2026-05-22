@@ -16,7 +16,7 @@ public class MongoDoubleTransform: TransformType {
     public typealias Object = Double
     public typealias JSON = Double
     
-    static let shared = MongoDoubleTransform()
+    public static let shared = MongoDoubleTransform()
     private init() {}
     
     public func transformFromJSON(_ value: Any?) -> Object? {

@@ -16,7 +16,7 @@ public class MongoBoolTransform: TransformType {
     public typealias Object = Bool
     public typealias JSON = Bool
     
-    static let shared = MongoBoolTransform()
+    public static let shared = MongoBoolTransform()
     private init() {}
     
     public func transformFromJSON(_ value: Any?) -> Object? {

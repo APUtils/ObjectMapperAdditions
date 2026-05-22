@@ -16,7 +16,7 @@ public class MongoIntTransform: TransformType {
     public typealias Object = Int
     public typealias JSON = Int
     
-    static let shared = MongoIntTransform()
+    public static let shared = MongoIntTransform()
     private init() {}
     
     public func transformFromJSON(_ value: Any?) -> Object? {
