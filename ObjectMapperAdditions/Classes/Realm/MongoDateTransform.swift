@@ -45,14 +45,9 @@ fileprivate extension Dictionary where Key == String {
             return ISO8601DateFormatter.default.date(from: dateString)
             ?? ISO8601DateFormatter.withMillisAndTimeZone.date(from: dateString)
             
-        } else if let dictionary = dateValue as? [String: Any] {
-            if let timestampMilliseconds = dictionary["$numberLong"] as? Int {
-                let timestamp = TimeInterval(timestampMilliseconds) / 1000
-                return Date(timeIntervalSince1970: timestamp)
-            } else if let timestampMilliseconds = dictionary["$numberLong"] as? Int64 {
-                let timestamp = TimeInterval(timestampMilliseconds) / 1000
-                return Date(timeIntervalSince1970: timestamp)
-            }
+        } else if let dictionary = dateValue as? [String: Any], let timestampMs = dictionary._int(forKey: "$numberLong") {
+            let timestamp = TimeInterval(timestampMs) / 1000
+            return Date(timeIntervalSince1970: timestamp)
         }
         
         RoutableLogger.logError("Unable to map Mongo date", data: ["self": self])
